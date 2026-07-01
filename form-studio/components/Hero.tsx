@@ -75,7 +75,7 @@ function AnimatedHeadline() {
     { text: 'Last.', green: true },
   ];
   return (
-    <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(34px, 4.2vw, 80px)', lineHeight: 0.95, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '24px', display: 'flex', flexWrap: 'wrap', gap: '0.22em', overflow: 'hidden' }}>
+    <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 5.5vw, 100px)', lineHeight: 0.95, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '24px', display: 'flex', flexWrap: 'wrap', gap: '0.22em', overflow: 'hidden' }}>
       {firstLine.map((word, i) => (
         <span key={i} style={{ overflow: 'hidden', display: 'inline-block' }}>
           <motion.span
@@ -139,117 +139,122 @@ export default function Hero() {
         style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #8B6914, transparent)', zIndex: 2, pointerEvents: 'none' }}
       />
 
+      {/* Architectural facade panel — desktop only, soccer-ball arc into position */}
+      <motion.div
+        initial={{ x: '-42vw', y: '0vh', opacity: 0 }}
+        animate={{
+          x: ['-42vw', '-14vw', '1.5vw', '0vw'],
+          y: ['0vh', '-22vh', '2vh', '0vh'],
+          opacity: [0, 1, 1, 1],
+        }}
+        transition={{ duration: 1.6, ease: 'easeOut', delay: 0.5, times: [0, 0.44, 0.82, 1] }}
+        className="hidden lg:block"
+        style={{ position: 'absolute', right: '6%', top: '50%', transform: 'translateY(-50%)', width: '30%', zIndex: 5, pointerEvents: 'none' }}
+      >
+        {/* Corner registration marks */}
+        <div style={{ position: 'absolute', top: '-10px', left: '-10px', width: '18px', height: '18px', borderTop: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
+        <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '18px', height: '18px', borderTop: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
+        <div style={{ position: 'absolute', bottom: '-10px', left: '-10px', width: '18px', height: '18px', borderBottom: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
+        <div style={{ position: 'absolute', bottom: '-10px', right: '-10px', width: '18px', height: '18px', borderBottom: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
+
+        <div style={{ border: '1px solid rgba(139,105,20,0.22)', padding: '24px', position: 'relative' }}>
+          {/* Top gold accent */}
+          <div style={{ position: 'absolute', top: 0, left: '8%', right: '8%', height: '3px', background: 'linear-gradient(to right, transparent, #8B6914, transparent)' }} />
+
+          {/* Facade panel grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', marginBottom: '6px' }}>
+            {[100, 100, 100, 72, 72, 72, 56, 56, 56, 40, 40, 40].map((h, i) => (
+              <div key={i} style={{
+                height: `${h}px`,
+                background: [0, 5, 10].includes(i) ? 'rgba(139,105,20,0.10)' : [2, 7].includes(i) ? 'rgba(139,105,20,0.06)' : 'rgba(10,10,10,0.03)',
+                border: '1px solid rgba(139,105,20,0.14)',
+                position: 'relative',
+              }}>
+                {i === 0 && <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'rgba(139,105,20,0.3)' }} />}
+              </div>
+            ))}
+          </div>
+
+          {/* Dimension line */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '14px', marginBottom: '10px' }}>
+            <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
+            <span style={{ fontFamily: 'Inter', fontSize: '8px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>Facade Section A-7</span>
+            <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
+          </div>
+
+          {/* Spec row */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
+            {[['Substrate', 'Mineral Bond'], ['System', 'ECT-2400'], ['Rating', 'Gulf+25']].map(([label, val]) => (
+              <div key={label}>
+                <div style={{ fontFamily: 'Inter', fontSize: '7px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '2px' }}>{label}</div>
+                <div style={{ fontFamily: 'Space Grotesk', fontSize: '9px', fontWeight: 600, color: '#8B6914', letterSpacing: '0.06em' }}>{val}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
       <motion.div
         style={{ position: 'relative', zIndex: 10, width: '100%', padding: 'clamp(80px,10vh,140px) 6% clamp(40px,5vh,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '100vh', y: contentY, opacity }}
       >
-        {/* ── 2-column: content left, panel right ── */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,80px)', alignItems: 'center', marginBottom: '48px' }}>
+        {/* Content area corner brackets */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="hidden md:block" style={{ position: 'absolute', top: 'clamp(60px,8vh,110px)', left: '5%', width: '24px', height: '24px', borderTop: '1.5px solid rgba(139,105,20,0.5)', borderLeft: '1.5px solid rgba(139,105,20,0.5)', pointerEvents: 'none' }} />
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="hidden md:block" style={{ position: 'absolute', bottom: 'clamp(30px,4vh,60px)', left: '5%', width: '24px', height: '24px', borderBottom: '1.5px solid rgba(139,105,20,0.5)', borderLeft: '1.5px solid rgba(139,105,20,0.5)', pointerEvents: 'none' }} />
 
-          {/* LEFT — headline + body + CTAs + stats */}
-          <div>
-            <motion.p
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-              style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#8B6914', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '20px' }}
-            >
-              Luxury Surface Enhancement
-            </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#8B6914', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '20px' }}
+        >
+          Luxury Surface Enhancement
+        </motion.p>
 
-            <AnimatedHeadline />
+        <AnimatedHeadline />
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.75 }}
-              style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: 'clamp(13px, 1.4vw, 15px)', color: '#808080', lineHeight: 1.65, marginBottom: '28px' }}
-            >
-              Mineral-based facade coatings engineered for 25-year durability and eco-certified performance. Trusted by architects, developers, and contractors across the Gulf.
-            </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 0.75 }}
+          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: 'clamp(14px, 1.6vw, 16px)', color: '#808080', lineHeight: 1.65, maxWidth: '520px', marginBottom: '32px' }}
+        >
+          Mineral-based facade coatings engineered for 25-year durability and eco-certified performance. Trusted by architects, developers, and contractors across the Gulf.
+        </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 0.9 }}
-              style={{ display: 'flex', gap: '12px', marginBottom: '36px', flexWrap: 'wrap' }}
-            >
-              <a href="/services" style={{ background: '#8B6914', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = '#664A0E')} onMouseLeave={(e) => (e.currentTarget.style.background = '#8B6914')}>
-                Explore Services
-              </a>
-              <a href="/contact" style={{ background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = '#0a0a0a'; e.currentTarget.style.color = '#ffffff'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0a0a0a'; }}>
-                Project Enquiry
-              </a>
-            </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 0.9 }}
+          style={{ display: 'flex', gap: '12px', marginBottom: '48px', flexWrap: 'wrap' }}
+        >
+          <a href="/services" style={{ background: '#8B6914', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#664A0E')} onMouseLeave={(e) => (e.currentTarget.style.background = '#8B6914')}>
+            Explore Services
+          </a>
+          <a href="/contact" style={{ background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = '#0a0a0a'; e.currentTarget.style.color = '#ffffff'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0a0a0a'; }}>
+            Project Enquiry
+          </a>
+        </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.0 }}
-              style={{ display: 'flex', gap: 'clamp(16px, 3vw, 32px)', flexWrap: 'wrap' }}
-            >
-              <StatCard number={25} suffix="yr" label="Performance Guarantee" delay={1.0} />
-              <StatCard number={1000} suffix="+" label="Projects Completed" delay={1.1} />
-              <StatCard number={55} suffix="°C+" label="Temperature Proven" delay={1.2} />
-            </motion.div>
-          </div>
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.0 }}
+          style={{ display: 'flex', gap: 'clamp(20px, 4vw, 40px)', marginBottom: '36px', flexWrap: 'wrap' }}
+        >
+          <StatCard number={25} suffix="yr" label="Performance Guarantee" delay={1.0} />
+          <StatCard number={1000} suffix="+" label="Projects Completed" delay={1.1} />
+          <StatCard number={55} suffix="°C+" label="Temperature Proven" delay={1.2} />
+        </motion.div>
 
-          {/* RIGHT — architectural panel */}
-          <motion.div
-            className="hidden lg:flex"
-            initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: EASE, delay: 0.5 }}
-            style={{ justifyContent: 'center', alignItems: 'center', pointerEvents: 'none' }}
-          >
-            <div style={{ width: '100%', maxWidth: '300px', position: 'relative' }}>
-              {/* Corner registration marks */}
-              <div style={{ position: 'absolute', top: '-10px', left: '-10px', width: '16px', height: '16px', borderTop: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
-              <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '16px', height: '16px', borderTop: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
-              <div style={{ position: 'absolute', bottom: '-10px', left: '-10px', width: '16px', height: '16px', borderBottom: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
-              <div style={{ position: 'absolute', bottom: '-10px', right: '-10px', width: '16px', height: '16px', borderBottom: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
-
-              <div style={{ border: '1px solid rgba(139,105,20,0.22)', padding: '20px', position: 'relative' }}>
-                {/* Top gold accent */}
-                <div style={{ position: 'absolute', top: 0, left: '8%', right: '8%', height: '3px', background: 'linear-gradient(to right, transparent, #8B6914, transparent)' }} />
-
-                {/* Facade panel grid — 3 cols × 3 rows */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '5px', marginBottom: '5px' }}>
-                  {[72, 72, 72, 52, 52, 52, 36, 36, 36].map((h, i) => (
-                    <div key={i} style={{
-                      height: `${h}px`,
-                      background: [0, 4, 8].includes(i) ? 'rgba(139,105,20,0.10)' : [2, 6].includes(i) ? 'rgba(139,105,20,0.06)' : 'rgba(10,10,10,0.03)',
-                      border: '1px solid rgba(139,105,20,0.14)',
-                    }} />
-                  ))}
-                </div>
-
-                {/* Dimension line */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '14px', marginBottom: '10px' }}>
-                  <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
-                  <span style={{ fontFamily: 'Inter', fontSize: '8px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>Facade Section A-7</span>
-                  <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
-                </div>
-
-                {/* Spec row */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  {[['Substrate', 'Mineral Bond'], ['System', 'ECT-2400'], ['Rating', 'Gulf+25']].map(([label, val]) => (
-                    <div key={label}>
-                      <div style={{ fontFamily: 'Inter', fontSize: '7px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '2px' }}>{label}</div>
-                      <div style={{ fontFamily: 'Space Grotesk', fontSize: '9px', fontWeight: 600, color: '#8B6914', letterSpacing: '0.06em' }}>{val}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-        </div>{/* end 2-col grid */}
-
-        {/* ── Full-width bottom bar ── */}
+        {/* Divider */}
         <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.8, ease: EASE, delay: 1.0 }}
           style={{ height: '1px', background: '#0a0a0a', width: '100%', marginBottom: '24px', transformOrigin: 'left' }} />
 
+        {/* Marquee */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.1 }} style={{ overflow: 'hidden', marginBottom: '32px' }}>
           <div className="animate-marquee"><MarqueeContent /><MarqueeContent /></div>
         </motion.div>
 
+        {/* Scroll button */}
         <motion.button
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 0.6 }}
           onClick={() => document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' })}
