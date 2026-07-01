@@ -65,27 +65,43 @@ function MarqueeContent() {
 }
 
 function AnimatedHeadline() {
-  const words = [
+  const firstLine = [
     { text: 'Climate-Proof', green: false },
     { text: 'Facades.', green: false },
+  ];
+  const secondLine = [
     { text: 'Built', green: true },
     { text: 'to', green: true },
     { text: 'Last.', green: true },
   ];
   return (
     <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 5.5vw, 100px)', lineHeight: 0.95, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '24px', display: 'flex', flexWrap: 'wrap', gap: '0.22em', overflow: 'hidden' }}>
-      {words.map((word, i) => (
+      {firstLine.map((word, i) => (
         <span key={i} style={{ overflow: 'hidden', display: 'inline-block' }}>
           <motion.span
             initial={{ y: '110%', opacity: 0 }}
             animate={{ y: '0%', opacity: 1 }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.2 + i * 0.1 }}
-            style={{ display: 'inline-block', color: word.green ? '#8B6914' : '#0a0a0a' }}
+            style={{ display: 'inline-block', color: '#0a0a0a' }}
           >
             {word.text}
           </motion.span>
         </span>
       ))}
+      <span style={{ display: 'inline-flex', gap: '0.22em', whiteSpace: 'nowrap' }}>
+        {secondLine.map((word, i) => (
+          <span key={i} style={{ overflow: 'hidden', display: 'inline-block' }}>
+            <motion.span
+              initial={{ y: '110%', opacity: 0 }}
+              animate={{ y: '0%', opacity: 1 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.4 + i * 0.1 }}
+              style={{ display: 'inline-block', color: '#8B6914' }}
+            >
+              {word.text}
+            </motion.span>
+          </span>
+        ))}
+      </span>
       <span style={{ overflow: 'hidden', display: 'inline-block' }}>
         <motion.span initial={{ y: '110%', opacity: 0 }} animate={{ y: '0%', opacity: 1 }} transition={{ duration: 0.7, ease: EASE, delay: 0.7 }} style={{ display: 'inline-block' }}>
           <span className="eco-dot" />
