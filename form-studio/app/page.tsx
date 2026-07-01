@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import VideoSection from '@/components/VideoSection';
 import AboutSection from '@/components/AboutSection';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import MaterialsSection from '@/components/MaterialsSection';
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main style={{ paddingTop: '64px' }}>
         <Hero />
+        <VideoSection />
         <AboutSection />
         <FeaturedProjects />
         <MaterialsSection />
