@@ -10,7 +10,7 @@ export default function ColourMatchingPage() {
 
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Precision Colour Solutions
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 5.5vw, 80px)', color: '#ffffff', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '20px' }}>
@@ -40,9 +40,9 @@ export default function ColourMatchingPage() {
                     <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: '#909090', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Before</span>
                   </div>
                   <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, right: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: '#2d6a4f', letterSpacing: '0.1em', textTransform: 'uppercase' }}>After</span>
+                    <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: '#A78048', letterSpacing: '0.1em', textTransform: 'uppercase' }}>After</span>
                   </div>
-                  <div style={{ width: '3px', height: '100%', background: '#2d6a4f', position: 'absolute', left: '50%' }} />
+                  <div style={{ width: '3px', height: '100%', background: '#A78048', position: 'absolute', left: '50%' }} />
                 </div>
               </div>
 
@@ -65,8 +65,8 @@ export default function ColourMatchingPage() {
             </div>
 
             {/* Case study */}
-            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #2d6a4f' }}>
-              <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
+            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #A78048' }}>
+              <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#A78048', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Case Study — Standard and Bespoke
               </span>
               <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#0a0a0a', marginBottom: '12px' }}>
@@ -81,7 +81,7 @@ export default function ColourMatchingPage() {
             </div>
 
             <div style={{ marginTop: '48px', display: 'flex', gap: '16px' }}>
-              <a href="/contact" style={{ display: 'inline-block', background: '#2d6a4f', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '14px 32px', textDecoration: 'none', textTransform: 'uppercase' }}>
+              <a href="/contact" style={{ display: 'inline-block', background: '#A78048', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '14px 32px', textDecoration: 'none', textTransform: 'uppercase' }}>
                 Get Colour Consultation
               </a>
               <a href="/ecotone-products" style={{ display: 'inline-block', background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '14px 32px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase' }}>

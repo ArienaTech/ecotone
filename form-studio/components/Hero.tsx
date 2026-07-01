@@ -34,7 +34,7 @@ function StatCard({ number, suffix, label, delay }: { number: number; suffix: st
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: EASE, delay }}
       onViewportEnter={() => setStarted(true)}
-      style={{ borderLeft: '2px solid #2d6a4f', paddingLeft: '16px' }}
+      style={{ borderLeft: '2px solid #A78048', paddingLeft: '16px' }}
     >
       <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 3vw, 30px)', color: '#0a0a0a', letterSpacing: '-0.03em', display: 'block', lineHeight: 1 }}>
         {count}{suffix}
@@ -55,11 +55,11 @@ function MarqueeContent() {
             {name}
           </span>
           {i < marqueeItems.length - 1 && (
-            <span style={{ color: '#2d6a4f', fontSize: '8px', padding: '0 20px' }}>●</span>
+            <span style={{ color: '#A78048', fontSize: '8px', padding: '0 20px' }}>●</span>
           )}
         </span>
       ))}
-      <span style={{ color: '#2d6a4f', fontSize: '8px', padding: '0 20px' }}>●</span>
+      <span style={{ color: '#A78048', fontSize: '8px', padding: '0 20px' }}>●</span>
     </>
   );
 }
@@ -80,7 +80,7 @@ function AnimatedHeadline() {
             initial={{ y: '110%', opacity: 0 }}
             animate={{ y: '0%', opacity: 1 }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.2 + i * 0.1 }}
-            style={{ display: 'inline-block', color: word.green ? '#2d6a4f' : '#0a0a0a' }}
+            style={{ display: 'inline-block', color: word.green ? '#A78048' : '#0a0a0a' }}
           >
             {word.text}
           </motion.span>
@@ -109,7 +109,7 @@ export default function Hero() {
       {/* Subtle grid */}
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}
-        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(45,106,79,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(45,106,79,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none' }}
+        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(167,128,72,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(167,128,72,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none' }}
       />
 
       {/* Left accent line — hidden on mobile via media query */}
@@ -117,7 +117,7 @@ export default function Hero() {
         initial={{ scaleY: 0, originY: 0 }} animate={{ scaleY: 1 }}
         transition={{ duration: 1.2, ease: EASE, delay: 0.3 }}
         className="hidden md:block"
-        style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #2d6a4f, transparent)', zIndex: 2, pointerEvents: 'none' }}
+        style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #A78048, transparent)', zIndex: 2, pointerEvents: 'none' }}
       />
 
       <motion.div
@@ -126,7 +126,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '20px' }}
+          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#A78048', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '20px' }}
         >
           Luxury Surface Enhancement
         </motion.p>
@@ -146,8 +146,8 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: EASE, delay: 0.9 }}
           style={{ display: 'flex', gap: '12px', marginBottom: '48px', flexWrap: 'wrap' }}
         >
-          <a href="/services" style={{ background: '#2d6a4f', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')} onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}>
+          <a href="/services" style={{ background: '#A78048', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#7A5C30')} onMouseLeave={(e) => (e.currentTarget.style.background = '#A78048')}>
             Explore Services
           </a>
           <a href="/contact" style={{ background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
@@ -185,7 +185,7 @@ export default function Hero() {
         >
           <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '10px', color: '#808080', letterSpacing: '0.16em', textTransform: 'uppercase' }}>Scroll</span>
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
-            <ChevronDown size={16} color="#2d6a4f" />
+            <ChevronDown size={16} color="#A78048" />
           </motion.div>
         </motion.button>
       </motion.div>

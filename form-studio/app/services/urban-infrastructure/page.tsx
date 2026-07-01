@@ -40,13 +40,13 @@ export default function UrbanInfrastructurePage() {
 
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Sustainable Infrastructure
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 5.5vw, 80px)', color: '#ffffff', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '16px' }}>
               Urban Infrastructure
             </h1>
-            <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '22px', color: '#74c69d', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '22px', color: '#D4A96A', marginBottom: '20px' }}>
               From Heritage Districts to Infrastructure Corridors.
             </p>
             <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '17px', color: 'rgba(255,255,255,0.65)', maxWidth: '640px', lineHeight: 1.65 }}>
@@ -56,7 +56,7 @@ export default function UrbanInfrastructurePage() {
         </section>
 
         {/* Stats bar */}
-        <section style={{ background: '#2d6a4f', padding: '32px 6%' }}>
+        <section style={{ background: '#A78048', padding: '32px 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px' }} className="stats-bar">
             {stats.map((s) => (
               <div key={s.val} style={{ textAlign: 'center' }}>
@@ -95,7 +95,7 @@ export default function UrbanInfrastructurePage() {
                     'Engineered and tested for 55°C+ Gulf conditions',
                   ].map((item) => (
                     <div key={item} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#2d6a4f', fontWeight: 700, flexShrink: 0, marginTop: '2px' }}>✓</span>
+                      <span style={{ color: '#A78048', fontWeight: 700, flexShrink: 0, marginTop: '2px' }}>✓</span>
                       <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#505050', lineHeight: 1.6 }}>{item}</span>
                     </div>
                   ))}
@@ -110,14 +110,14 @@ export default function UrbanInfrastructurePage() {
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="projects-grid three-col">
                 {whereWeWork.map((item) => (
-                  <div key={item.name} style={{ background: '#f5f4f2', padding: '32px 24px', borderTop: '3px solid #2d6a4f' }}>
+                  <div key={item.name} style={{ background: '#f5f4f2', padding: '32px 24px', borderTop: '3px solid #A78048' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#0a0a0a', marginBottom: '12px' }}>{item.name}</h3>
                     <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.65 }}>{item.desc}</p>
                   </div>
                 ))}
               </div>
               <div style={{ marginTop: '48px' }}>
-                <a href="/contact" style={{ display: 'inline-block', background: '#2d6a4f', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 36px', textDecoration: 'none', textTransform: 'uppercase' }}>
+                <a href="/contact" style={{ display: 'inline-block', background: '#A78048', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 36px', textDecoration: 'none', textTransform: 'uppercase' }}>
                   Infrastructure Consultation
                 </a>
               </div>

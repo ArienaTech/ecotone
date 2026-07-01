@@ -24,7 +24,7 @@ export default function MaterialsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}
+            style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}
           >
             Surface Expertise
           </motion.span>
@@ -62,14 +62,14 @@ export default function MaterialsSection() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.6, ease: EASE, delay: i * 0.1 }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              style={{ background: '#141414', padding: '36px 24px', borderTop: '2px solid #2d6a4f', cursor: 'default' }}
+              style={{ background: '#141414', padding: '36px 24px', borderTop: '2px solid #A78048', cursor: 'default' }}
             >
               <motion.span
                 initial={{ scale: 0.5, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                style={{ fontSize: '28px', display: 'block', marginBottom: '16px', color: '#2d6a4f' }}
+                style={{ fontSize: '28px', display: 'block', marginBottom: '16px', color: '#A78048' }}
               >
                 {material.icon}
               </motion.span>
@@ -96,9 +96,9 @@ export default function MaterialsSection() {
           </p>
           <a
             href="/contact"
-            style={{ display: 'inline-block', background: '#2d6a4f', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '12px 28px', textDecoration: 'none', textTransform: 'uppercase', transition: 'background 0.15s ease', flexShrink: 0 }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}
+            style={{ display: 'inline-block', background: '#A78048', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '12px 28px', textDecoration: 'none', textTransform: 'uppercase', transition: 'background 0.15s ease', flexShrink: 0 }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#7A5C30')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#A78048')}
           >
             Discuss Your Material
           </a>

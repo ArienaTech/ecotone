@@ -58,7 +58,7 @@ export default function Navbar() {
               color: '#0a0a0a',
               textDecoration: 'none',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#2d6a4f')}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#A78048')}
             onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
           >
             Home
@@ -86,7 +86,7 @@ export default function Navbar() {
                 gap: '4px',
                 padding: '0',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#2d6a4f')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#A78048')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
             >
               Services <ChevronDown size={12} />
@@ -128,7 +128,7 @@ export default function Navbar() {
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.background = '#f5f4f2';
-                        e.currentTarget.style.color = '#2d6a4f';
+                        e.currentTarget.style.color = '#A78048';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = 'transparent';
@@ -148,7 +148,7 @@ export default function Navbar() {
                       fontSize: '12px',
                       letterSpacing: '0.08em',
                       textTransform: 'uppercase',
-                      color: '#2d6a4f',
+                      color: '#A78048',
                       textDecoration: 'none',
                       transition: 'background 0.12s ease',
                     }}
@@ -175,7 +175,7 @@ export default function Navbar() {
                 color: '#0a0a0a',
                 textDecoration: 'none',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#2d6a4f')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#A78048')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
             >
               {link.label}
@@ -191,7 +191,7 @@ export default function Navbar() {
               fontFamily: 'Space Grotesk',
               fontWeight: 600,
               fontSize: '12px',
-              color: '#2d6a4f',
+              color: '#A78048',
               textDecoration: 'none',
               letterSpacing: '0.02em',
             }}
@@ -201,7 +201,7 @@ export default function Navbar() {
           <a
             href="/contact"
             style={{
-              background: '#2d6a4f',
+              background: '#A78048',
               color: '#ffffff',
               fontFamily: 'Space Grotesk',
               fontWeight: 700,
@@ -213,8 +213,8 @@ export default function Navbar() {
               display: 'inline-block',
               transition: 'background 0.15s ease',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#7A5C30')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#A78048')}
           >
             Enquire Now
           </a>
@@ -364,7 +364,7 @@ export default function Navbar() {
                     fontFamily: 'Space Grotesk',
                     fontWeight: 600,
                     fontSize: '15px',
-                    color: '#74c69d',
+                    color: '#D4A96A',
                     textDecoration: 'none',
                   }}
                 >
@@ -376,7 +376,7 @@ export default function Navbar() {
                     fontFamily: 'Space Grotesk',
                     fontWeight: 600,
                     fontSize: '15px',
-                    color: '#74c69d',
+                    color: '#D4A96A',
                     textDecoration: 'none',
                   }}
                 >
@@ -387,7 +387,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   style={{
                     display: 'inline-block',
-                    background: '#2d6a4f',
+                    background: '#A78048',
                     color: '#ffffff',
                     fontFamily: 'Space Grotesk',
                     fontWeight: 700,

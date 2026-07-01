@@ -16,6 +16,10 @@ module.exports = {
         primary: '#d42a1a',
         muted: '#808080',
         border: '#d6d6d6',
+        gold: '#A78048',
+        'gold-light': '#D4A96A',
+        'gold-dark': '#7A5C30',
+        navy: '#1A3A5C',
       },
       letterSpacing: {
         'tightest': '-0.04em',

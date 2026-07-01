@@ -21,7 +21,7 @@ export default function Footer() {
               <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '18px', color: '#ffffff', display: 'block' }}>
                 ECOTONE
               </span>
-              <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#74c69d', letterSpacing: '0.06em', display: 'block', marginTop: '4px' }}>
+              <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.06em', display: 'block', marginTop: '4px' }}>
                 Colour For Life Coatings
               </span>
             </div>
@@ -32,7 +32,7 @@ export default function Footer() {
               <a
                 href="tel:+971558934401"
                 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#808080', textDecoration: 'none', fontSize: '12px', fontFamily: 'Space Grotesk', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#D4A96A')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#808080')}
               >
                 <Phone size={13} /> +971 55 893 4401
@@ -40,7 +40,7 @@ export default function Footer() {
               <a
                 href="tel:+966501109913"
                 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#808080', textDecoration: 'none', fontSize: '12px', fontFamily: 'Space Grotesk', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#D4A96A')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#808080')}
               >
                 <Phone size={13} /> +966 50 110 9913
@@ -48,7 +48,7 @@ export default function Footer() {
               <a
                 href="mailto:info@ecotonearabia.com"
                 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#808080', textDecoration: 'none', fontSize: '12px', fontFamily: 'Space Grotesk', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#D4A96A')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#808080')}
               >
                 <Mail size={13} /> info@ecotonearabia.com
@@ -77,7 +77,7 @@ export default function Footer() {
                 key={item.href}
                 href={item.href}
                 style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', marginBottom: '10px', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#D4A96A')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
               >
                 {item.label}
@@ -99,7 +99,7 @@ export default function Footer() {
                 key={item.label}
                 href={item.href}
                 style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', marginBottom: '10px', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#D4A96A')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
               >
                 {item.label}
@@ -123,7 +123,7 @@ export default function Footer() {
                 key={item.href}
                 href={item.href}
                 style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', marginBottom: '10px', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#D4A96A')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
               >
                 {item.label}

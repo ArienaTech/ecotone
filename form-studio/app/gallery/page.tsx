@@ -20,7 +20,7 @@ export default function GalleryPage() {
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Visual Showcase
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(40px, 6vw, 96px)', color: '#ffffff', lineHeight: 0.95, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '24px' }}>
@@ -48,10 +48,10 @@ export default function GalleryPage() {
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   padding: '8px 18px',
-                  background: cat === 'All' ? '#2d6a4f' : 'transparent',
+                  background: cat === 'All' ? '#A78048' : 'transparent',
                   color: cat === 'All' ? '#ffffff' : '#0a0a0a',
                   border: '1px solid',
-                  borderColor: cat === 'All' ? '#2d6a4f' : '#d6d6d6',
+                  borderColor: cat === 'All' ? '#A78048' : '#d6d6d6',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
                 }}
@@ -96,7 +96,7 @@ export default function GalleryPage() {
                   <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '11px', color: '#a0a0a0', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '24px' }}>
                     Image {item.id}
                   </span>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '10px', color: '#ffffff', background: '#2d6a4f', padding: '3px 10px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '10px', color: '#ffffff', background: '#A78048', padding: '3px 10px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                     {item.category}
                   </span>
                 </div>
@@ -106,7 +106,7 @@ export default function GalleryPage() {
         </section>
 
         {/* CTA */}
-        <section style={{ background: '#2d6a4f', padding: '60px 6%', textAlign: 'center' }}>
+        <section style={{ background: '#A78048', padding: '60px 6%', textAlign: 'center' }}>
           <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(24px, 3vw, 40px)', color: '#ffffff', letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '16px' }}>
             Want to See More?
           </h2>
@@ -114,7 +114,7 @@ export default function GalleryPage() {
             Explore our full project portfolio or contact us to discuss your project.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-            <a href="/portfolio" style={{ display: 'inline-block', background: '#ffffff', color: '#2d6a4f', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 32px', textDecoration: 'none', textTransform: 'uppercase' }}>
+            <a href="/portfolio" style={{ display: 'inline-block', background: '#ffffff', color: '#A78048', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 32px', textDecoration: 'none', textTransform: 'uppercase' }}>
               View Portfolio
             </a>
             <a href="/contact" style={{ display: 'inline-block', background: 'transparent', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 32px', border: '1.5px solid rgba(255,255,255,0.5)', textDecoration: 'none', textTransform: 'uppercase' }}>

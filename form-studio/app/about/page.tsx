@@ -58,7 +58,7 @@ export default function AboutPage() {
                 fontFamily: 'Inter',
                 fontWeight: 500,
                 fontSize: '11px',
-                color: '#74c69d',
+                color: '#D4A96A',
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
                 display: 'block',
@@ -115,7 +115,7 @@ export default function AboutPage() {
         </section>
 
         {/* Stats bar */}
-        <section style={{ background: '#2d6a4f', padding: '40px 6%' }}>
+        <section style={{ background: '#A78048', padding: '40px 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px' }} className="stats-bar">
             {stats.map((s) => (
               <div key={s.val} style={{ textAlign: 'center' }}>
@@ -157,7 +157,7 @@ export default function AboutPage() {
                     fontFamily: 'Inter',
                     fontWeight: 500,
                     fontSize: '11px',
-                    color: '#2d6a4f',
+                    color: '#A78048',
                     letterSpacing: '0.18em',
                     textTransform: 'uppercase',
                     display: 'block',
@@ -232,7 +232,7 @@ export default function AboutPage() {
               <a
                 href="/contact"
                 style={{
-                  background: '#2d6a4f',
+                  background: '#A78048',
                   color: '#ffffff',
                   fontFamily: 'Space Grotesk',
                   fontWeight: 700,
