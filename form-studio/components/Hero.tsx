@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -121,7 +123,7 @@ export default function Hero() {
             marginBottom: '36px',
           }}
         >
-          Strategy. Identity. Motion. Web. Everything your brand needs to compete — nothing it doesn't.
+          Strategy. Identity. Motion. Web. Everything your brand needs to compete — nothing it doesn&apos;t.
         </motion.p>
 
         {/* CTAs */}
@@ -133,7 +135,6 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="cta-primary"
             style={{
               background: '#0a0a0a',
               color: '#ffffff',

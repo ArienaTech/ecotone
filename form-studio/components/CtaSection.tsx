@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 
 export default function CtaSection() {
@@ -27,7 +29,7 @@ export default function CtaSection() {
             marginBottom: '44px',
           }}
         >
-          LET'S BUILD<br />SOMETHING
+          LET&apos;S BUILD<br />SOMETHING
         </h2>
 
         <a
