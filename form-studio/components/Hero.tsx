@@ -69,8 +69,8 @@ export default function Hero() {
             fontFamily: 'Inter',
             fontWeight: 400,
             fontSize: '11px',
-            color: '#808080',
-            letterSpacing: '0.16em',
+            color: '#2d6a4f',
+            letterSpacing: '0.18em',
             textTransform: 'uppercase',
             marginBottom: '24px',
           }}
@@ -95,7 +95,7 @@ export default function Hero() {
           }}
         >
           Mineral-Based. Climate-Proof.<br />
-          Built to Last
+          <span style={{ color: '#2d6a4f' }}>Built to Last</span>
           <span className="eco-dot" />
         </motion.h1>
 
@@ -127,7 +127,7 @@ export default function Hero() {
           <a
             href="/services"
             style={{
-              background: '#0a0a0a',
+              background: '#2d6a4f',
               color: '#ffffff',
               fontFamily: 'Space Grotesk',
               fontWeight: 700,
@@ -139,8 +139,8 @@ export default function Hero() {
               display: 'inline-block',
               transition: 'background 0.15s ease',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#2d6a4f')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#0a0a0a')}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}
           >
             Explore Services
           </a>
