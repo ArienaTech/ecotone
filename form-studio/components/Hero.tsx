@@ -1,14 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const marqueeItems = ['UAE', 'Saudi Arabia', 'Bahrain', '25-Year Guarantee', '1000+ Projects', 'Eco-Certified', 'Australian Innovation', 'Gulf Climate Proven'];
 
-// Animated counter hook
 function useCounter(target: number, duration = 1.8, start = false) {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -29,16 +28,15 @@ function useCounter(target: number, duration = 1.8, start = false) {
 function StatCard({ number, suffix, label, delay }: { number: number; suffix: string; label: string; delay: number }) {
   const [started, setStarted] = useState(false);
   const count = useCounter(number, 1.6, started);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: EASE, delay }}
       onViewportEnter={() => setStarted(true)}
-      style={{ borderLeft: '2px solid #2d6a4f', paddingLeft: '20px' }}
+      style={{ borderLeft: '2px solid #2d6a4f', paddingLeft: '16px' }}
     >
-      <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '30px', color: '#0a0a0a', letterSpacing: '-0.03em', display: 'block', lineHeight: 1 }}>
+      <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 3vw, 30px)', color: '#0a0a0a', letterSpacing: '-0.03em', display: 'block', lineHeight: 1 }}>
         {count}{suffix}
       </span>
       <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '4px', display: 'block' }}>
@@ -66,7 +64,6 @@ function MarqueeContent() {
   );
 }
 
-// Word-by-word headline reveal
 function AnimatedHeadline() {
   const words = [
     { text: 'Climate-Proof', green: false },
@@ -75,23 +72,8 @@ function AnimatedHeadline() {
     { text: 'to', green: true },
     { text: 'Last.', green: true },
   ];
-
   return (
-    <h1
-      style={{
-        fontFamily: 'Space Grotesk',
-        fontWeight: 800,
-        fontSize: 'clamp(40px, 5.5vw, 100px)',
-        lineHeight: 0.95,
-        letterSpacing: '-0.02em',
-        textTransform: 'uppercase',
-        marginBottom: '28px',
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '0.25em',
-        overflow: 'hidden',
-      }}
-    >
+    <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 5.5vw, 100px)', lineHeight: 0.95, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '24px', display: 'flex', flexWrap: 'wrap', gap: '0.22em', overflow: 'hidden' }}>
       {words.map((word, i) => (
         <span key={i} style={{ overflow: 'hidden', display: 'inline-block' }}>
           <motion.span
@@ -105,12 +87,7 @@ function AnimatedHeadline() {
         </span>
       ))}
       <span style={{ overflow: 'hidden', display: 'inline-block' }}>
-        <motion.span
-          initial={{ y: '110%', opacity: 0 }}
-          animate={{ y: '0%', opacity: 1 }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.7 }}
-          style={{ display: 'inline-block' }}
-        >
+        <motion.span initial={{ y: '110%', opacity: 0 }} animate={{ y: '0%', opacity: 1 }} transition={{ duration: 0.7, ease: EASE, delay: 0.7 }} style={{ display: 'inline-block' }}>
           <span className="eco-dot" />
         </motion.span>
       </span>
@@ -126,115 +103,64 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section
-      ref={sectionRef}
-      id="hero"
-      style={{ background: '#f5f4f2', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}
-    >
-      {/* Parallax watermark */}
+    <section ref={sectionRef} id="hero" style={{ background: '#f5f4f2', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
       <motion.div className="bg-brand-text" style={{ y: bgY }}>ECO</motion.div>
 
-      {/* Animated background grid lines */}
+      {/* Subtle grid */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, delay: 0.5 }}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: 'linear-gradient(rgba(45,106,79,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(45,106,79,0.04) 1px, transparent 1px)',
-          backgroundSize: '80px 80px',
-          zIndex: 1,
-          pointerEvents: 'none',
-        }}
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}
+        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(45,106,79,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(45,106,79,0.04) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none' }}
       />
 
-      {/* Animated green accent line — left edge */}
+      {/* Left accent line — hidden on mobile via media query */}
       <motion.div
-        initial={{ scaleY: 0, originY: 0 }}
-        animate={{ scaleY: 1 }}
+        initial={{ scaleY: 0, originY: 0 }} animate={{ scaleY: 1 }}
         transition={{ duration: 1.2, ease: EASE, delay: 0.3 }}
-        style={{
-          position: 'absolute',
-          left: '3%',
-          top: '15%',
-          bottom: '15%',
-          width: '2px',
-          background: 'linear-gradient(to bottom, transparent, #2d6a4f, transparent)',
-          zIndex: 2,
-          pointerEvents: 'none',
-        }}
+        className="hidden md:block"
+        style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #2d6a4f, transparent)', zIndex: 2, pointerEvents: 'none' }}
       />
 
-      {/* Content */}
       <motion.div
-        style={{
-          position: 'relative',
-          zIndex: 10,
-          width: '100%',
-          padding: '0 6%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          minHeight: '100vh',
-          y: contentY,
-          opacity,
-        }}
+        style={{ position: 'relative', zIndex: 10, width: '100%', padding: 'clamp(80px,10vh,140px) 6% clamp(40px,5vh,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '100vh', y: contentY, opacity }}
       >
-        {/* Eyebrow */}
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '24px' }}
+          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: '20px' }}
         >
           Luxury Surface Enhancement
         </motion.p>
 
-        {/* Animated headline */}
         <AnimatedHeadline />
 
-        {/* Body */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.75 }}
-          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '16px', color: '#808080', lineHeight: 1.6, maxWidth: '520px', marginBottom: '36px' }}
+          style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: 'clamp(14px, 1.6vw, 16px)', color: '#808080', lineHeight: 1.65, maxWidth: '520px', marginBottom: '32px' }}
         >
           Mineral-based facade coatings engineered for 25-year durability and eco-certified performance. Trusted by architects, developers, and contractors across the Gulf.
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.9 }}
-          style={{ display: 'flex', gap: '14px', marginBottom: '56px', flexWrap: 'wrap' }}
+          style={{ display: 'flex', gap: '12px', marginBottom: '48px', flexWrap: 'wrap' }}
         >
-          <a
-            href="/services"
-            style={{ background: '#2d6a4f', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 32px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}
-          >
+          <a href="/services" style={{ background: '#2d6a4f', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')} onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}>
             Explore Services
           </a>
-          <a
-            href="/contact"
-            style={{ background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 32px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
+          <a href="/contact" style={{ background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
             onMouseEnter={(e) => { e.currentTarget.style.background = '#0a0a0a'; e.currentTarget.style.color = '#ffffff'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0a0a0a'; }}
-          >
+            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0a0a0a'; }}>
             Project Enquiry
           </a>
         </motion.div>
 
-        {/* Stats with animated counters */}
+        {/* Stats */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 1.0 }}
-          style={{ display: 'flex', gap: '40px', marginBottom: '40px', flexWrap: 'wrap' }}
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.0 }}
+          style={{ display: 'flex', gap: 'clamp(20px, 4vw, 40px)', marginBottom: '36px', flexWrap: 'wrap' }}
         >
           <StatCard number={25} suffix="yr" label="Performance Guarantee" delay={1.0} />
           <StatCard number={1000} suffix="+" label="Projects Completed" delay={1.1} />
@@ -242,34 +168,23 @@ export default function Hero() {
         </motion.div>
 
         {/* Divider */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 1.0 }}
-          style={{ height: '1px', background: '#0a0a0a', width: '100%', marginBottom: '28px', transformOrigin: 'left' }}
-        />
+        <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.8, ease: EASE, delay: 1.0 }}
+          style={{ height: '1px', background: '#0a0a0a', width: '100%', marginBottom: '24px', transformOrigin: 'left' }} />
 
         {/* Marquee */}
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.1 }} style={{ overflow: 'hidden', marginBottom: '40px' }}>
-          <div className="animate-marquee">
-            <MarqueeContent />
-            <MarqueeContent />
-          </div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.1 }} style={{ overflow: 'hidden', marginBottom: '32px' }}>
+          <div className="animate-marquee"><MarqueeContent /><MarqueeContent /></div>
         </motion.div>
 
-        {/* Scroll indicator — inside flow, no overlap */}
+        {/* Scroll button */}
         <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.6 }}
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 0.6 }}
           onClick={() => document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' })}
+          className="hero-scroll-btn"
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', background: 'none', border: 'none', cursor: 'pointer', padding: '8px', alignSelf: 'center' }}
         >
           <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '10px', color: '#808080', letterSpacing: '0.16em', textTransform: 'uppercase' }}>Scroll</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
-          >
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}>
             <ChevronDown size={16} color="#2d6a4f" />
           </motion.div>
         </motion.button>

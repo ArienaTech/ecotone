@@ -8,7 +8,7 @@ export default function ColourMatchingPage() {
       <Navbar />
       <main style={{ paddingTop: '64px' }}>
 
-        <section style={{ background: '#0a0a0a', padding: '100px 6% 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
             <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Precision Colour Solutions
@@ -22,10 +22,10 @@ export default function ColourMatchingPage() {
           </div>
         </section>
 
-        <section style={{ background: '#ffffff', padding: '100px 6%' }}>
+        <section style={{ background: '#ffffff', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
                 <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(24px, 2.5vw, 40px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
                   Before & After Transformations

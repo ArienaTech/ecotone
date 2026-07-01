@@ -13,7 +13,7 @@ export default function Footer() {
             gap: '48px',
             marginBottom: '56px',
           }}
-          className="footer-grid"
+          className="footer-grid four-col"
         >
           {/* Column 1: Brand */}
           <div>
@@ -141,7 +141,7 @@ export default function Footer() {
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '16px',
+            gap: '12px',
           }}
         >
           <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: 'rgba(255,255,255,0.35)' }}>

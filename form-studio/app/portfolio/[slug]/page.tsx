@@ -173,7 +173,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
         {/* Content */}
         <section style={{ background: '#ffffff', padding: '80px 6%' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '80px', alignItems: 'start' }} className="contact-grid">
+          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '80px', alignItems: 'start' }} className="contact-grid two-col">
             <div>
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '24px' }}>
                 Project Overview

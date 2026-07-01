@@ -47,7 +47,7 @@ export default function AboutPage() {
         <section
           style={{
             background: '#0a0a0a',
-            padding: '100px 6% 80px',
+            padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)',
             position: 'relative',
             overflow: 'hidden',
           }}
@@ -136,7 +136,7 @@ export default function AboutPage() {
             key={section.label}
             style={{
               background: i % 2 === 0 ? '#ffffff' : '#f5f4f2',
-              padding: '100px 6%',
+              padding: 'clamp(60px,8vh,100px) 6%',
             }}
           >
             <div
@@ -145,10 +145,11 @@ export default function AboutPage() {
                 margin: '0 auto',
                 display: 'grid',
                 gridTemplateColumns: '1fr 2fr',
+
                 gap: '80px',
                 alignItems: 'start',
               }}
-              className="about-grid"
+              className="about-grid two-col"
             >
               <div>
                 <span
@@ -200,7 +201,7 @@ export default function AboutPage() {
         ))}
 
         {/* CTA section */}
-        <section style={{ background: '#0a0a0a', padding: '100px 6%', textAlign: 'center' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%', textAlign: 'center' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
             <h2
               style={{

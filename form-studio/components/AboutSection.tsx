@@ -51,7 +51,7 @@ export default function AboutSection() {
   return (
     <section style={{ background: '#ffffff', padding: '120px 6%', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid two-col">
 
           {/* Left */}
           <div>

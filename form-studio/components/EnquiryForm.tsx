@@ -104,7 +104,7 @@ export default function EnquiryForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row">
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row two-col">
                 <div>
                   <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Full Name *
@@ -133,7 +133,7 @@ export default function EnquiryForm() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row">
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row two-col">
                 <div>
                   <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Phone Number

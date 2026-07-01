@@ -92,7 +92,7 @@ export default function ServicesPage() {
       <main style={{ paddingTop: '64px' }}>
 
         {/* Hero */}
-        <section style={{ background: '#0a0a0a', padding: '100px 6% 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
             <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Our Services
@@ -154,10 +154,10 @@ export default function ServicesPage() {
           <section
             key={service.slug}
             id={service.slug}
-            style={{ background: i % 2 === 0 ? '#ffffff' : '#f5f4f2', padding: '100px 6%', scrollMarginTop: '64px' }}
+            style={{ background: i % 2 === 0 ? '#ffffff' : '#f5f4f2', padding: 'clamp(60px,8vh,100px) 6%', scrollMarginTop: '64px' }}
           >
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid two-col">
                 <div>
                   <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                     {service.eyebrow}

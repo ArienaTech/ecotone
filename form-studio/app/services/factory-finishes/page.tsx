@@ -24,7 +24,7 @@ export default function FactoryFinishesPage() {
       <Navbar />
       <main style={{ paddingTop: '64px' }}>
 
-        <section style={{ background: '#0a0a0a', padding: '100px 6% 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
             <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Industrial Grade Solutions
@@ -53,10 +53,10 @@ export default function FactoryFinishesPage() {
           </div>
         </section>
 
-        <section style={{ background: '#ffffff', padding: '100px 6%' }}>
+        <section style={{ background: '#ffffff', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
                 <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   The Problem With Integral Oxide
@@ -83,7 +83,7 @@ export default function FactoryFinishesPage() {
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
                 What This Means For Your Operation
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }} className="comparison-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }} className="comparison-grid two-col">
                 {[
                   'One standard grey mix for all panels — no oxide dosing, no colour-specific batching',
                   'Colour approved before dispatch — zero site rejections from colour mismatch',
@@ -105,7 +105,7 @@ export default function FactoryFinishesPage() {
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
                 Available Finish Ranges
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="projects-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="projects-grid three-col">
                 {finishRanges.map((range) => (
                   <div key={range.name} style={{ background: '#f5f4f2', padding: '32px 24px', borderTop: '3px solid #2d6a4f' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '17px', color: '#0a0a0a', marginBottom: '10px' }}>{range.name}</h3>

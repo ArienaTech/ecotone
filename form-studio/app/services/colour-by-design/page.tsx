@@ -9,7 +9,7 @@ export default function ColourByDesignPage() {
       <main style={{ paddingTop: '64px' }}>
 
         {/* Hero */}
-        <section style={{ background: '#0a0a0a', padding: '100px 6% 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
             <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Architectural Excellence
@@ -27,10 +27,10 @@ export default function ColourByDesignPage() {
         </section>
 
         {/* Main content */}
-        <section style={{ background: '#ffffff', padding: '100px 6%' }}>
+        <section style={{ background: '#ffffff', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
                 <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(24px, 2.5vw, 40px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
                   We Make Stunning Work of Concrete and Cladding
@@ -81,7 +81,7 @@ export default function ColourByDesignPage() {
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
                 Sub-Specializations
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2px' }} className="materials-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2px' }} className="materials-grid five-col">
                 {[
                   { name: 'Concrete Facades', desc: 'Specialized concrete surface treatments' },
                   { name: 'Cladding Finishes', desc: 'Advanced cladding coating systems' },
@@ -97,7 +97,7 @@ export default function ColourByDesignPage() {
             </div>
 
             {/* Monolithic Materiality */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
                 <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   Monolithic Materiality — Seamless Aesthetic, Inside & Out
@@ -140,7 +140,7 @@ export default function ColourByDesignPage() {
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '40px' }}>
                 Customer Experience Process
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '24px' }} className="materials-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '24px' }} className="materials-grid five-col">
                 {[
                   { step: '01', title: 'Consultation & Vision Boards', desc: 'We review samples, images, and architectural plans to understand your aesthetic and technical requirements.' },
                   { step: '02', title: 'Sample Creation', desc: 'We develop bespoke coatings and finishes for your approval.' },

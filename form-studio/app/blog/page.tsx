@@ -10,7 +10,7 @@ export default function BlogPage() {
       <main style={{ paddingTop: '64px' }}>
 
         {/* Hero */}
-        <section style={{ background: '#0a0a0a', padding: '100px 6% 80px', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
             <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Insights & Expertise
@@ -29,7 +29,7 @@ export default function BlogPage() {
 
         {/* Blog listing */}
         <section style={{ background: '#f5f4f2', padding: '80px 6%' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 340px', gap: '64px', alignItems: 'start' }} className="contact-grid">
+          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 340px', gap: '64px', alignItems: 'start' }} className="contact-grid two-col">
 
             <div>
               {/* Placeholder - no real Ecotone posts yet */}
