@@ -15,10 +15,10 @@ function MarqueeContent() {
             style={{
               fontFamily: 'Space Grotesk',
               fontWeight: 300,
-              fontSize: '12px',
+              fontSize: '13px',
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: 'rgba(10,10,10,0.45)',
+              color: 'rgba(10,10,10,0.4)',
             }}
           >
             {name}
@@ -44,10 +44,10 @@ export default function Hero() {
         minHeight: '100vh',
       }}
     >
-      {/* Massive background brand text */}
+      {/* Massive background watermark */}
       <div className="bg-brand-text">ECO</div>
 
-      {/* Full-width content wrapper — no maxWidth, only side padding */}
+      {/* Content — full width, no maxWidth cap */}
       <div
         style={{
           position: 'relative',
@@ -58,7 +58,6 @@ export default function Hero() {
           flexDirection: 'column',
           justifyContent: 'center',
           minHeight: '100vh',
-          gap: '0',
         }}
       >
         {/* Eyebrow */}
@@ -68,10 +67,10 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           style={{
             fontFamily: 'Inter',
-            fontWeight: 500,
+            fontWeight: 400,
             fontSize: '11px',
-            color: '#2d6a4f',
-            letterSpacing: '0.18em',
+            color: '#808080',
+            letterSpacing: '0.16em',
             textTransform: 'uppercase',
             marginBottom: '24px',
           }}
@@ -79,161 +78,114 @@ export default function Hero() {
           Luxury Surface Enhancement
         </motion.p>
 
-        {/* Two-column layout: headline left, info right */}
-        <div
+        {/* Headline — matches original layout: large, uppercase, spans width naturally */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: EASE }}
           style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '0',
-            alignItems: 'center',
-            marginBottom: '56px',
+            fontFamily: 'Space Grotesk',
+            fontWeight: 800,
+            fontSize: 'clamp(40px, 5.5vw, 100px)',
+            lineHeight: 0.95,
+            color: '#0a0a0a',
+            letterSpacing: '-0.02em',
+            marginBottom: '28px',
+            textTransform: 'uppercase',
           }}
-          className="hero-grid"
         >
-          {/* Left — Headline */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h1
-              style={{
-                fontFamily: 'Space Grotesk',
-                fontWeight: 800,
-                fontSize: 'clamp(40px, 5.5vw, 100px)',
-                lineHeight: 0.94,
-                color: '#0a0a0a',
-                letterSpacing: '-0.03em',
-                textTransform: 'uppercase',
-                marginBottom: '0',
-              }}
-            >
-              Mineral-<br />Based.<br />Climate-<br />Proof.<br />
-              <span style={{ color: '#2d6a4f' }}>Built to Last</span>
-              <span className="eco-dot" />
-            </h1>
-          </motion.div>
+          Mineral-Based. Climate-Proof.<br />
+          Built to Last
+          <span className="eco-dot" />
+        </motion.h1>
 
-          {/* Right — Body + CTAs + Stats */}
-          <motion.div
-            initial={{ opacity: 0, x: 32 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
+        {/* Subheading */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
+          style={{
+            fontFamily: 'Inter',
+            fontWeight: 400,
+            fontSize: '16px',
+            color: '#808080',
+            lineHeight: 1.6,
+            maxWidth: '520px',
+            marginBottom: '36px',
+          }}
+        >
+          Premium facade solutions with 25-year durability and eco-certified protection. We work alongside architects, developers, and contractors to deliver sustainable, durable finishes.
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
+          style={{ display: 'flex', gap: '14px', marginBottom: '48px', flexWrap: 'wrap' }}
+        >
+          <a
+            href="/services"
             style={{
-              paddingLeft: '8%',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '32px',
+              background: '#0a0a0a',
+              color: '#ffffff',
+              fontFamily: 'Space Grotesk',
+              fontWeight: 700,
+              fontSize: '13px',
+              letterSpacing: '0.08em',
+              padding: '14px 32px',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              display: 'inline-block',
+              transition: 'background 0.15s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#2d6a4f')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#0a0a0a')}
+          >
+            Explore Services
+          </a>
+          <a
+            href="/contact"
+            style={{
+              background: 'transparent',
+              color: '#0a0a0a',
+              fontFamily: 'Space Grotesk',
+              fontWeight: 700,
+              fontSize: '13px',
+              letterSpacing: '0.08em',
+              padding: '14px 32px',
+              border: '1.5px solid #0a0a0a',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              display: 'inline-block',
+              transition: 'all 0.15s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#0a0a0a';
+              e.currentTarget.style.color = '#ffffff';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'transparent';
+              e.currentTarget.style.color = '#0a0a0a';
             }}
           >
-            <p
-              style={{
-                fontFamily: 'Inter',
-                fontWeight: 400,
-                fontSize: '17px',
-                color: '#606060',
-                lineHeight: 1.7,
-              }}
-            >
-              Premium facade solutions with 25-year durability and eco-certified protection. We work alongside architects, developers, and contractors to deliver sustainable, durable finishes that preserve and enhance architectural vision.
-            </p>
+            Project Enquiry
+          </a>
+        </motion.div>
 
-            {/* CTAs */}
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <a
-                href="/services"
-                style={{
-                  background: '#2d6a4f',
-                  color: '#ffffff',
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: 700,
-                  fontSize: '13px',
-                  letterSpacing: '0.08em',
-                  padding: '14px 32px',
-                  textDecoration: 'none',
-                  textTransform: 'uppercase',
-                  display: 'inline-block',
-                  transition: 'background 0.15s ease',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')}
-                onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}
-              >
-                Explore Services
-              </a>
-              <a
-                href="/contact"
-                style={{
-                  background: 'transparent',
-                  color: '#0a0a0a',
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: 700,
-                  fontSize: '13px',
-                  letterSpacing: '0.08em',
-                  padding: '14px 32px',
-                  border: '1.5px solid #0a0a0a',
-                  textDecoration: 'none',
-                  textTransform: 'uppercase',
-                  display: 'inline-block',
-                  transition: 'all 0.15s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#0a0a0a';
-                  e.currentTarget.style.color = '#ffffff';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = '#0a0a0a';
-                }}
-              >
-                Project Enquiry
-              </a>
-            </div>
+        {/* Thin divider */}
+        <div style={{ height: '1px', background: '#0a0a0a', width: '100%', marginBottom: '32px' }} />
 
-            {/* Stats strip */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                borderTop: '1px solid #d6d6d6',
-                paddingTop: '28px',
-              }}
-            >
-              {[
-                { number: '25yr', label: 'Performance Guarantee' },
-                { number: '1000+', label: 'Projects Completed' },
-                { number: '55°C+', label: 'Temperature Proven' },
-              ].map((stat, i) => (
-                <div
-                  key={stat.number}
-                  style={{
-                    paddingLeft: i > 0 ? '24px' : '0',
-                    borderLeft: i > 0 ? '1px solid #d6d6d6' : 'none',
-                  }}
-                >
-                  <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', letterSpacing: '-0.02em', display: 'block' }}>
-                    {stat.number}
-                  </span>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#808080', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Full-width divider + marquee */}
+        {/* Marquee */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          style={{ overflow: 'hidden' }}
         >
-          <div style={{ height: '1px', background: '#d6d6d6', width: '100%', marginBottom: '24px' }} />
-          <div style={{ overflow: 'hidden' }}>
-            <div className="animate-marquee">
-              <MarqueeContent />
-              <MarqueeContent />
-            </div>
+          <div className="animate-marquee">
+            <MarqueeContent />
+            <MarqueeContent />
           </div>
         </motion.div>
       </div>
