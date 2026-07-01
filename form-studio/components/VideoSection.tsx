@@ -17,7 +17,7 @@ export default function VideoSection() {
   }
 
   return (
-    <section style={{ position: 'relative', width: '100%', background: '#0a0a0a', lineHeight: 0 }}>
+    <section id="video-section" style={{ position: 'relative', width: '100%', background: '#0a0a0a', lineHeight: 0 }}>
       <video
         ref={videoRef}
         src={VIDEO_URL}
