@@ -28,7 +28,7 @@ export default function VideoSection() {
         style={{
           width: '100%',
           display: 'block',
-          maxHeight: '85vh',
+          maxHeight: '60vh',
           objectFit: 'cover',
         }}
       />
