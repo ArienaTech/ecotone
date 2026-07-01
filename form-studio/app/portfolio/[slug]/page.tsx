@@ -111,7 +111,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <a
             href="/portfolio"
             style={{
-              background: '#A78048',
+              background: '#8B6914',
               color: '#ffffff',
               fontFamily: 'Space Grotesk',
               fontWeight: 700,
@@ -138,10 +138,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: '80px 6% 60px' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <a href="/portfolio" style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#D4A96A', textDecoration: 'none', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'inline-block', marginBottom: '28px' }}>
+            <a href="/portfolio" style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#C4902E', textDecoration: 'none', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'inline-block', marginBottom: '28px' }}>
               ← Back to Portfolio
             </a>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
               {project.category}
             </span>
             <h1
@@ -186,7 +186,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 href="/contact"
                 style={{
                   display: 'inline-block',
-                  background: '#A78048',
+                  background: '#8B6914',
                   color: '#ffffff',
                   fontFamily: 'Space Grotesk',
                   fontWeight: 700,
@@ -257,12 +257,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                           color: '#0a0a0a',
                         }}
                       >
-                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#A78048', flexShrink: 0, display: 'inline-block' }} />
+                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#8B6914', flexShrink: 0, display: 'inline-block' }} />
                         {product}
                       </div>
                     ))}
                   </div>
-                  <a href="/ecotone-products" style={{ display: 'inline-block', marginTop: '20px', fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#A78048', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                  <a href="/ecotone-products" style={{ display: 'inline-block', marginTop: '20px', fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#8B6914', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     View All Products →
                   </a>
                 </div>

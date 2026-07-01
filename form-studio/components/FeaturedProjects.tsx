@@ -15,10 +15,10 @@ const projects = [
 ];
 
 const categoryColors: Record<string, string> = {
-  'Colour By Design': '#A78048',
+  'Colour By Design': '#8B6914',
   'Functional Coatings': '#1A3A5C',
   'Urban Infrastructure': '#4a4a8a',
-  'Prefabricated Facades': '#7A5030',
+  'Prefabricated Facades': '#6A4010',
   'Cladding Finishes': '#6a2d4a',
   'Factory Finishes': '#2d4a6a',
 };
@@ -50,14 +50,14 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         <motion.div
           animate={{ opacity: hovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          style={{ position: 'absolute', inset: 0, background: 'rgba(167,128,72,0.15)' }}
+          style={{ position: 'absolute', inset: 0, background: 'rgba(139,105,20,0.15)' }}
         />
       </div>
 
       {/* Card body */}
       <div style={{ padding: '24px 24px 28px' }}>
         <span
-          style={{ display: 'inline-block', background: categoryColors[project.category] || '#A78048', color: '#ffffff', fontFamily: 'Inter', fontWeight: 500, fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '4px 10px', marginBottom: '14px' }}
+          style={{ display: 'inline-block', background: categoryColors[project.category] || '#8B6914', color: '#ffffff', fontFamily: 'Inter', fontWeight: 500, fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '4px 10px', marginBottom: '14px' }}
         >
           {project.category}
         </span>
@@ -69,7 +69,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         <motion.span
           animate={{ x: hovered ? 6 : 0 }}
           transition={{ duration: 0.2 }}
-          style={{ display: 'inline-block', fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#A78048', textTransform: 'uppercase', letterSpacing: '0.06em' }}
+          style={{ display: 'inline-block', fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#8B6914', textTransform: 'uppercase', letterSpacing: '0.06em' }}
         >
           View Project →
         </motion.span>
@@ -79,7 +79,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       <motion.div
         animate={{ scaleX: hovered ? 1 : 0 }}
         transition={{ duration: 0.3, ease: EASE }}
-        style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: '#A78048', transformOrigin: 'left' }}
+        style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: '#8B6914', transformOrigin: 'left' }}
       />
     </motion.a>
   );
@@ -129,9 +129,9 @@ export default function FeaturedProjects() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             href="/portfolio"
-            style={{ display: 'inline-block', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#A78048', textDecoration: 'none', border: '1.5px solid #A78048', padding: '12px 28px', transition: 'all 0.15s ease', flexShrink: 0 }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = '#A78048'; e.currentTarget.style.color = '#ffffff'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#A78048'; }}
+            style={{ display: 'inline-block', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#8B6914', textDecoration: 'none', border: '1.5px solid #8B6914', padding: '12px 28px', transition: 'all 0.15s ease', flexShrink: 0 }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = '#8B6914'; e.currentTarget.style.color = '#ffffff'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#8B6914'; }}
           >
             View All Projects →
           </motion.a>

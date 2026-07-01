@@ -76,7 +76,7 @@ export default function VideoSection() {
           position: 'absolute',
           bottom: '28px',
           right: '6%',
-          background: muted ? 'rgba(255,255,255,0.95)' : 'rgba(167,128,72,0.95)',
+          background: muted ? 'rgba(255,255,255,0.95)' : 'rgba(139,105,20,0.95)',
           backdropFilter: 'blur(10px)',
           border: 'none',
           borderRadius: '0',
@@ -92,10 +92,10 @@ export default function VideoSection() {
           boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.background = muted ? '#ffffff' : '#7A5C30';
+          e.currentTarget.style.background = muted ? '#ffffff' : '#664A0E';
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.background = muted ? 'rgba(255,255,255,0.95)' : 'rgba(167,128,72,0.95)';
+          e.currentTarget.style.background = muted ? 'rgba(255,255,255,0.95)' : 'rgba(139,105,20,0.95)';
         }}
       >
         {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}

@@ -84,15 +84,15 @@ const products = [
 ];
 
 const categoryColors: Record<string, string> = {
-  'Emulsion Stains': '#A78048',
+  'Emulsion Stains': '#8B6914',
   'Protective Coatings': '#1A3A5C',
   'Decorative Finishes': '#4a4a8a',
-  'Mineral Coatings': '#7A5030',
-  'Primers & Preparation': '#8A6832',
+  'Mineral Coatings': '#6A4010',
+  'Primers & Preparation': '#7A5810',
   'Protective Sealers': '#4a2d6a',
   'Waterproof Systems': '#2d4a6a',
   'Cleaning Solutions': '#6a2d4a',
-  'Functional Coatings': '#A78048',
+  'Functional Coatings': '#8B6914',
 };
 
 export default function EcotoneProductsPage() {
@@ -104,7 +104,7 @@ export default function EcotoneProductsPage() {
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               ECOTONE Products
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(40px, 6vw, 96px)', color: '#ffffff', lineHeight: 0.95, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '24px' }}>
@@ -120,7 +120,7 @@ export default function EcotoneProductsPage() {
         </section>
 
         {/* Technical presentations */}
-        <section style={{ background: '#A78048', padding: '48px 6%' }}>
+        <section style={{ background: '#8B6914', padding: '48px 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <p style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.7)', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '16px' }}>
               Technical Presentations
@@ -170,7 +170,7 @@ export default function EcotoneProductsPage() {
                   <span
                     style={{
                       display: 'inline-block',
-                      background: categoryColors[product.category] || '#A78048',
+                      background: categoryColors[product.category] || '#8B6914',
                       color: '#ffffff',
                       fontFamily: 'Inter',
                       fontWeight: 500,
@@ -193,12 +193,12 @@ export default function EcotoneProductsPage() {
                   </p>
 
                   <div style={{ marginBottom: '16px' }}>
-                    <p style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#A78048', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                    <p style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
                       Key Features
                     </p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                       {product.features.map((f) => (
-                        <span key={f} style={{ background: '#FBF3E4', border: '1px solid #E5C88C', color: '#7A5C30', fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', padding: '3px 10px' }}>
+                        <span key={f} style={{ background: '#F5EAD0', border: '1px solid #D4A838', color: '#664A0E', fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', padding: '3px 10px' }}>
                           {f}
                         </span>
                       ))}
@@ -211,7 +211,7 @@ export default function EcotoneProductsPage() {
                     </p>
                     {product.applications.map((a) => (
                       <p key={a} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: '#606060', marginBottom: '4px', display: 'flex', gap: '6px' }}>
-                        <span style={{ color: '#A78048', flexShrink: 0 }}>→</span>{a}
+                        <span style={{ color: '#8B6914', flexShrink: 0 }}>→</span>{a}
                       </p>
                     ))}
                   </div>
@@ -220,8 +220,8 @@ export default function EcotoneProductsPage() {
                     href="#"
                     style={{
                       display: 'inline-block',
-                      border: '1.5px solid #A78048',
-                      color: '#A78048',
+                      border: '1.5px solid #8B6914',
+                      color: '#8B6914',
                       fontFamily: 'Space Grotesk',
                       fontWeight: 700,
                       fontSize: '11px',
@@ -232,8 +232,8 @@ export default function EcotoneProductsPage() {
                       alignSelf: 'flex-start',
                       transition: 'all 0.15s ease',
                     }}
-                    onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.background = '#A78048'; e.currentTarget.style.color = '#ffffff'; }}
-                    onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#A78048'; }}
+                    onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.background = '#8B6914'; e.currentTarget.style.color = '#ffffff'; }}
+                    onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#8B6914'; }}
                   >
                     Datasheet ↓
                   </a>
@@ -252,7 +252,7 @@ export default function EcotoneProductsPage() {
             <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '16px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '36px' }}>
               Our team provides full technical support across UAE and Saudi Arabia. Contact us to discuss your project requirements and product selection.
             </p>
-            <a href="/contact" style={{ display: 'inline-block', background: '#A78048', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 40px', textDecoration: 'none', textTransform: 'uppercase' }}>
+            <a href="/contact" style={{ display: 'inline-block', background: '#8B6914', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 40px', textDecoration: 'none', textTransform: 'uppercase' }}>
               Get Technical Support
             </a>
           </div>

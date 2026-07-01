@@ -37,7 +37,7 @@ function AnimatedStat({ val, numericVal, suffix, label, delay }: { val: string; 
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
       style={{ background: '#f5f4f2', border: '1px solid #e5e5e5', padding: '16px 20px', textAlign: 'center', cursor: 'default' }}
     >
-      <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#A78048', display: 'block' }}>
+      <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#8B6914', display: 'block' }}>
         {display}
       </span>
       <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '10px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -83,7 +83,7 @@ export default function AboutSection() {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: EASE, delay: 0.3 }}
-              style={{ height: '3px', background: '#A78048', width: '60px', marginBottom: '32px', transformOrigin: 'left' }}
+              style={{ height: '3px', background: '#8B6914', width: '60px', marginBottom: '32px', transformOrigin: 'left' }}
             />
 
             {/* Stat badges */}
@@ -122,9 +122,9 @@ export default function AboutSection() {
             >
               <a
                 href="/about"
-                style={{ background: '#A78048', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '12px 28px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = '#7A5C30')}
-                onMouseLeave={(e) => (e.currentTarget.style.background = '#A78048')}
+                style={{ background: '#8B6914', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '12px 28px', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'background 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = '#664A0E')}
+                onMouseLeave={(e) => (e.currentTarget.style.background = '#8B6914')}
               >
                 About Us
               </a>

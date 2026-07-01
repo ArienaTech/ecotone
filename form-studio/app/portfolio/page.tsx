@@ -87,14 +87,14 @@ const projects = [
 
 const categoryColors: Record<string, string> = {
   'Urban Infrastructure': '#2d4a6a',
-  'Residential': '#A78048',
+  'Residential': '#8B6914',
   'Marine / Coastal': '#1A3A5C',
   'Coastal Residential': '#4a6a2d',
-  'Education': '#7A5030',
+  'Education': '#6A4010',
   'Heritage / Commercial': '#6a2d4a',
   'Mixed Use': '#4a2d6a',
   'Commercial': '#2d4a6a',
-  'Student Accommodation': '#8A6832',
+  'Student Accommodation': '#7A5810',
 };
 
 export default function PortfolioPage() {
@@ -106,7 +106,7 @@ export default function PortfolioPage() {
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Our Work
             </span>
             <h1
@@ -170,7 +170,7 @@ export default function PortfolioPage() {
                   <span
                     style={{
                       display: 'inline-block',
-                      background: categoryColors[project.category] || '#A78048',
+                      background: categoryColors[project.category] || '#8B6914',
                       color: '#ffffff',
                       fontFamily: 'Inter',
                       fontWeight: 500,
@@ -207,7 +207,7 @@ export default function PortfolioPage() {
                   <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.65, marginBottom: '20px' }}>
                     {project.description}
                   </p>
-                  <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#A78048', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                  <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#8B6914', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                     View Project →
                   </span>
                 </a>

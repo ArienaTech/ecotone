@@ -40,13 +40,13 @@ export default function WeatherProofFinishesPage() {
 
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Ultimate Weather Protection
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(32px, 5vw, 76px)', color: '#ffffff', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '16px' }}>
               Weather Defense Systems
             </h1>
-            <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '20px', color: '#D4A96A', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '20px', color: '#C4902E', marginBottom: '20px' }}>
               Engineered for the Gulf. Built to Last 25 Years.
             </p>
             <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '17px', color: 'rgba(255,255,255,0.65)', maxWidth: '640px', lineHeight: 1.65 }}>
@@ -56,7 +56,7 @@ export default function WeatherProofFinishesPage() {
         </section>
 
         {/* Stats bar */}
-        <section style={{ background: '#A78048', padding: '32px 6%' }}>
+        <section style={{ background: '#8B6914', padding: '32px 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px' }} className="stats-bar">
             {stats.map((s) => (
               <div key={s.val} style={{ textAlign: 'center' }}>
@@ -102,8 +102,8 @@ export default function WeatherProofFinishesPage() {
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="projects-grid">
                 {keyProperties.map((prop) => (
-                  <div key={prop.title} style={{ borderTop: '2px solid #A78048', paddingTop: '20px' }}>
-                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '15px', color: '#D4A96A', marginBottom: '10px' }}>{prop.title}</h3>
+                  <div key={prop.title} style={{ borderTop: '2px solid #8B6914', paddingTop: '20px' }}>
+                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '15px', color: '#C4902E', marginBottom: '10px' }}>{prop.title}</h3>
                     <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.65 }}>{prop.desc}</p>
                   </div>
                 ))}
@@ -116,7 +116,7 @@ export default function WeatherProofFinishesPage() {
                 <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>Compatible Surfaces</h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {['Precast concrete', 'GFRC', 'GRC', 'Fair-faced concrete', 'Fibre cement', 'Brick', 'Masonry', 'CFC'].map((s) => (
-                    <span key={s} style={{ background: '#FBF3E4', border: '1px solid #E5C88C', color: '#7A5C30', fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', padding: '5px 12px' }}>{s}</span>
+                    <span key={s} style={{ background: '#F5EAD0', border: '1px solid #D4A838', color: '#664A0E', fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', padding: '5px 12px' }}>{s}</span>
                   ))}
                 </div>
               </div>
@@ -125,14 +125,14 @@ export default function WeatherProofFinishesPage() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {['Building facades and residential towers', 'Commercial and hospitality developments', 'Heritage district restoration and replication', 'Coastal and marine-adjacent buildings', 'Government and civic infrastructure', 'Colour rescue and repair on existing structures'].map((a) => (
                     <p key={a} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#505050', display: 'flex', gap: '8px' }}>
-                      <span style={{ color: '#A78048', fontWeight: 700, flexShrink: 0 }}>→</span>{a}
+                      <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>→</span>{a}
                     </p>
                   ))}
                 </div>
               </div>
             </div>
 
-            <a href="/contact" style={{ display: 'inline-block', background: '#A78048', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 36px', textDecoration: 'none', textTransform: 'uppercase' }}>
+            <a href="/contact" style={{ display: 'inline-block', background: '#8B6914', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 36px', textDecoration: 'none', textTransform: 'uppercase' }}>
               Weather Assessment
             </a>
           </div>

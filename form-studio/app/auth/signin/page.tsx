@@ -30,7 +30,7 @@ export default function AdminSignInPage() {
             <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '20px', color: '#ffffff', display: 'block' }}>
               ECOTONE
             </span>
-            <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.06em' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#C4902E', letterSpacing: '0.06em' }}>
               Colour For Life Coatings
             </span>
           </a>
@@ -89,7 +89,7 @@ export default function AdminSignInPage() {
                   border: '1px solid #2a2a2a',
                   outline: 'none',
                 }}
-                onFocus={(e) => (e.currentTarget.style.borderColor = '#A78048')}
+                onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
                 onBlur={(e) => (e.currentTarget.style.borderColor = '#2a2a2a')}
               />
             </div>
@@ -123,7 +123,7 @@ export default function AdminSignInPage() {
                   border: '1px solid #2a2a2a',
                   outline: 'none',
                 }}
-                onFocus={(e) => (e.currentTarget.style.borderColor = '#A78048')}
+                onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
                 onBlur={(e) => (e.currentTarget.style.borderColor = '#2a2a2a')}
               />
             </div>
@@ -132,7 +132,7 @@ export default function AdminSignInPage() {
               disabled={loading}
               style={{
                 width: '100%',
-                background: loading ? '#808080' : '#A78048',
+                background: loading ? '#808080' : '#8B6914',
                 color: '#ffffff',
                 fontFamily: 'Space Grotesk',
                 fontWeight: 700,
@@ -145,8 +145,8 @@ export default function AdminSignInPage() {
                 marginTop: '8px',
                 transition: 'background 0.15s ease',
               }}
-              onMouseEnter={(e) => { if (!loading) e.currentTarget.style.background = '#7A5C30'; }}
-              onMouseLeave={(e) => { if (!loading) e.currentTarget.style.background = '#A78048'; }}
+              onMouseEnter={(e) => { if (!loading) e.currentTarget.style.background = '#664A0E'; }}
+              onMouseLeave={(e) => { if (!loading) e.currentTarget.style.background = '#8B6914'; }}
             >
               {loading ? 'Signing in…' : 'Sign In'}
             </button>

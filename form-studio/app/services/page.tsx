@@ -94,7 +94,7 @@ export default function ServicesPage() {
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#D4A96A', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Our Services
             </span>
             <h1
@@ -121,7 +121,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Quick nav */}
-        <section style={{ background: '#A78048', padding: '24px 6%', overflowX: 'auto' }}>
+        <section style={{ background: '#8B6914', padding: '24px 6%', overflowX: 'auto' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '8px', flexWrap: 'nowrap', minWidth: 'max-content' }}>
             {services.map((s) => (
               <a
@@ -159,7 +159,7 @@ export default function ServicesPage() {
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid two-col">
                 <div>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#A78048', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
+                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                     {service.eyebrow}
                   </span>
                   <h2
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                   >
                     {service.heading}
                   </h2>
-                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '16px', color: '#A78048', marginBottom: '24px', lineHeight: 1.4 }}>
+                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '16px', color: '#8B6914', marginBottom: '24px', lineHeight: 1.4 }}>
                     {service.subheading}
                   </p>
                   <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '32px' }}>
@@ -185,7 +185,7 @@ export default function ServicesPage() {
                   {service.subServices.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '32px' }}>
                       {service.subServices.map((sub) => (
-                        <span key={sub} style={{ background: '#FBF3E4', border: '1px solid #E5C88C', color: '#7A5C30', fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', padding: '6px 14px', letterSpacing: '0.04em' }}>
+                        <span key={sub} style={{ background: '#F5EAD0', border: '1px solid #D4A838', color: '#664A0E', fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', padding: '6px 14px', letterSpacing: '0.04em' }}>
                           {sub}
                         </span>
                       ))}
@@ -195,7 +195,7 @@ export default function ServicesPage() {
                     href={service.cta.href}
                     style={{
                       display: 'inline-block',
-                      background: '#A78048',
+                      background: '#8B6914',
                       color: '#ffffff',
                       fontFamily: 'Space Grotesk',
                       fontWeight: 700,
@@ -224,7 +224,7 @@ export default function ServicesPage() {
                         { val: '1000+', label: 'Projects' },
                       ].map((stat) => (
                         <div key={stat.val}>
-                          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '24px', color: '#D4A96A', display: 'block', letterSpacing: '-0.02em' }}>{stat.val}</span>
+                          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '24px', color: '#C4902E', display: 'block', letterSpacing: '-0.02em' }}>{stat.val}</span>
                           <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: 'rgba(255,255,255,0.6)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>{stat.label}</span>
                         </div>
                       ))}
