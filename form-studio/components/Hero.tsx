@@ -4,40 +4,31 @@ import { motion } from 'motion/react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const clients = ['APEX', 'MERIDIAN', 'VANTAGE', 'STRATUM', 'ORION', 'VOLTA', 'HELIX', 'NOVA'];
+const marqueeItems = ['UAE', 'Saudi Arabia', 'Bahrain', '25-Year Guarantee', '1000+ Projects', 'Eco-Certified', 'Australian Innovation', 'Gulf Climate Proven'];
 
 function MarqueeContent() {
   return (
     <>
-      {clients.map((name, i) => (
+      {marqueeItems.map((name, i) => (
         <span key={i} className="flex items-center">
           <span
             style={{
               fontFamily: 'Space Grotesk',
               fontWeight: 300,
-              fontSize: '13px',
+              fontSize: '12px',
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: 'rgba(10,10,10,0.4)',
+              color: 'rgba(10,10,10,0.45)',
             }}
           >
             {name}
           </span>
-          {i < clients.length - 1 && (
-            <span
-              style={{
-                color: '#d42a1a',
-                fontSize: '8px',
-                padding: '0 20px',
-              }}
-            >
-              ●
-            </span>
+          {i < marqueeItems.length - 1 && (
+            <span style={{ color: '#2d6a4f', fontSize: '8px', padding: '0 20px' }}>●</span>
           )}
         </span>
       ))}
-      {/* Trailing separator for seamless loop */}
-      <span style={{ color: '#d42a1a', fontSize: '8px', padding: '0 20px' }}>●</span>
+      <span style={{ color: '#2d6a4f', fontSize: '8px', padding: '0 20px' }}>●</span>
     </>
   );
 }
@@ -45,7 +36,7 @@ function MarqueeContent() {
 export default function Hero() {
   return (
     <section
-      id="work"
+      id="hero"
       style={{
         background: '#f5f4f2',
         position: 'relative',
@@ -54,7 +45,7 @@ export default function Hero() {
       }}
     >
       {/* Massive background brand text */}
-      <div className="bg-brand-text">FORM</div>
+      <div className="bg-brand-text">ECO</div>
 
       {/* Content */}
       <div
@@ -77,15 +68,15 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           style={{
             fontFamily: 'Inter',
-            fontWeight: 400,
+            fontWeight: 500,
             fontSize: '11px',
-            color: '#808080',
-            letterSpacing: '0.16em',
+            color: '#2d6a4f',
+            letterSpacing: '0.18em',
             textTransform: 'uppercase',
             marginBottom: '24px',
           }}
         >
-          BRAND IDENTITY · STRATEGY · MOTION · WEB
+          Luxury Surface Enhancement
         </motion.p>
 
         {/* Headline */}
@@ -96,19 +87,20 @@ export default function Hero() {
           style={{
             fontFamily: 'Space Grotesk',
             fontWeight: 800,
-            fontSize: 'clamp(40px, 5.5vw, 100px)',
-            lineHeight: 0.95,
+            fontSize: 'clamp(36px, 5.5vw, 90px)',
+            lineHeight: 0.96,
             color: '#0a0a0a',
             letterSpacing: '-0.02em',
             marginBottom: '28px',
             textTransform: 'uppercase',
           }}
         >
-          We Build Brands<br />That Mean Something
-          <span className="red-dot" />
+          Mineral-Based.<br />Climate-Proof.<br />
+          <span style={{ color: '#2d6a4f' }}>Built to Last</span>
+          <span className="eco-dot" />
         </motion.h1>
 
-        {/* Subheading */}
+        {/* Body */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,13 +109,13 @@ export default function Hero() {
             fontFamily: 'Inter',
             fontWeight: 400,
             fontSize: '16px',
-            color: '#808080',
-            lineHeight: 1.6,
-            maxWidth: '520px',
+            color: '#606060',
+            lineHeight: 1.65,
+            maxWidth: '560px',
             marginBottom: '36px',
           }}
         >
-          Strategy. Identity. Motion. Web. Everything your brand needs to compete — nothing it doesn&apos;t.
+          Premium facade solutions with 25-year durability and eco-certified protection. We work alongside architects, developers, and contractors to deliver sustainable, durable finishes that preserve and enhance architectural vision.
         </motion.p>
 
         {/* CTAs */}
@@ -131,31 +123,30 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
-          style={{ display: 'flex', gap: '14px', marginBottom: '48px', flexWrap: 'wrap' }}
+          style={{ display: 'flex', gap: '14px', marginBottom: '56px', flexWrap: 'wrap' }}
         >
           <a
-            href="#contact"
+            href="/services"
             style={{
-              background: '#0a0a0a',
+              background: '#2d6a4f',
               color: '#ffffff',
               fontFamily: 'Space Grotesk',
               fontWeight: 700,
               fontSize: '13px',
               letterSpacing: '0.08em',
               padding: '14px 32px',
-              borderRadius: '0',
               textDecoration: 'none',
               textTransform: 'uppercase',
               display: 'inline-block',
               transition: 'background 0.15s ease',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#d42a1a')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#0a0a0a')}
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#1a4a35')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#2d6a4f')}
           >
-            Start a Project
+            Explore Services
           </a>
           <a
-            href="#work"
+            href="/contact"
             style={{
               background: 'transparent',
               color: '#0a0a0a',
@@ -165,7 +156,6 @@ export default function Hero() {
               letterSpacing: '0.08em',
               padding: '14px 32px',
               border: '1.5px solid #0a0a0a',
-              borderRadius: '0',
               textDecoration: 'none',
               textTransform: 'uppercase',
               display: 'inline-block',
@@ -180,18 +170,42 @@ export default function Hero() {
               e.currentTarget.style.color = '#0a0a0a';
             }}
           >
-            See Our Work
+            Project Enquiry
           </a>
         </motion.div>
 
+        {/* Stats strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 0.35 }}
+          style={{ display: 'flex', gap: '48px', marginBottom: '40px', flexWrap: 'wrap' }}
+          className="stats-bar"
+        >
+          {[
+            { number: '25yr', label: 'Performance Guarantee' },
+            { number: '1000+', label: 'Projects Completed' },
+            { number: '55°C+', label: 'Temperature Proven' },
+          ].map((stat) => (
+            <div key={stat.number}>
+              <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', letterSpacing: '-0.02em', display: 'block' }}>
+                {stat.number}
+              </span>
+              <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#808080', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+
         {/* Thin divider */}
-        <div style={{ height: '1px', background: '#0a0a0a', width: '100%', marginBottom: '32px' }} />
+        <div style={{ height: '1px', background: '#d6d6d6', width: '100%', marginBottom: '28px' }} />
 
         {/* Marquee */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           style={{ overflow: 'hidden' }}
         >
           <div className="animate-marquee">

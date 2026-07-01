@@ -1,23 +1,23 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import CaseStudies from '@/components/CaseStudies';
-import Process from '@/components/Process';
-import Pricing from '@/components/Pricing';
-import CtaSection from '@/components/CtaSection';
+import AboutSection from '@/components/AboutSection';
+import FeaturedProjects from '@/components/FeaturedProjects';
+import MaterialsSection from '@/components/MaterialsSection';
+import ComparisonSection from '@/components/ComparisonSection';
+import EnquiryForm from '@/components/EnquiryForm';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <div style={{ overflowX: 'hidden' }}>
       <Navbar />
-      <main style={{ paddingTop: '60px' }}>
+      <main style={{ paddingTop: '64px' }}>
         <Hero />
-        <Services />
-        <CaseStudies />
-        <Process />
-        <Pricing />
-        <CtaSection />
+        <AboutSection />
+        <FeaturedProjects />
+        <MaterialsSection />
+        <ComparisonSection />
+        <EnquiryForm />
       </main>
       <Footer />
     </div>
