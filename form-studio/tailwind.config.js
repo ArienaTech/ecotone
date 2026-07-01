@@ -1,0 +1,31 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        'space': ['"Space Grotesk"', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+      },
+      colors: {
+        background: '#f5f4f2',
+        foreground: '#0a0a0a',
+        primary: '#d42a1a',
+        muted: '#808080',
+        border: '#d6d6d6',
+      },
+      letterSpacing: {
+        'tightest': '-0.04em',
+        'tighter': '-0.02em',
+        'wide-xl': '0.16em',
+        'wide-lg': '0.12em',
+        'wide-md': '0.10em',
+        'wide-sm': '0.08em',
+      },
+    },
+  },
+  plugins: [],
+}

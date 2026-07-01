@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700;800&family=Inter:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 8% 96%;
+  --foreground: 0 0% 4%;
+  --primary: 4 76% 47%;
+  --primary-foreground: 0 0% 98%;
+  --muted-foreground: 0 0% 48%;
+  --border: 0 0% 84%;
+  --accent: 4 76% 47%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f4f2;
+  color: #0a0a0a;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive layouts */
+@media (max-width: 1023px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .process-inner {
+    flex-wrap: wrap !important;
+    gap: 40px !important;
+  }
+  .process-inner > div {
+    flex: 0 0 calc(50% - 20px) !important;
+    padding-right: 0 !important;
+  }
+  .process-line {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .process-inner {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  .process-inner > div {
+    flex: 1 1 100% !important;
+  }
+  .case-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .bg-brand-text {
+    font-size: clamp(120px, 38vw, 260px) !important;
+    opacity: 0.025 !important;
+  }
+}
+
+@layer utilities {
+  .bg-brand-text {
+    position: absolute;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: clamp(260px, 38vw, 560px);
+    opacity: 0.04;
+    color: #0a0a0a;
+    letter-spacing: -0.04em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 0;
+    overflow: visible;
+    line-height: 1;
+  }
+
+  .red-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d42a1a;
+    margin-left: 3px;
+    vertical-align: middle;
+    position: relative;
+    top: -4px;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
