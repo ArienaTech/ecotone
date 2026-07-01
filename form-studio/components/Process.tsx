@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 
 const steps = [
@@ -5,7 +7,7 @@ const steps = [
     number: '01',
     name: 'Discovery',
     description:
-      'Two weeks understanding your market, competitors, and what you\'re really building. Stakeholder interviews, brand audit, competitive analysis.',
+      "Two weeks understanding your market, competitors, and what you're really building. Stakeholder interviews, brand audit, competitive analysis.",
     timeframe: 'Approx. 2 weeks',
   },
   {

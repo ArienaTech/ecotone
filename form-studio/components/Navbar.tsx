@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { X, Menu } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -34,7 +36,6 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="nav-link"
               style={{
                 fontFamily: 'Inter',
                 fontWeight: 400,
