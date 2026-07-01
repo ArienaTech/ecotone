@@ -62,7 +62,7 @@ export default function AboutSection() {
               transition={{ duration: 0.5 }}
               className="section-eyebrow"
             >
-              About
+              About ECOTONE Arabia
             </motion.span>
 
             <div style={{ overflow: 'hidden', marginBottom: '32px' }}>
@@ -88,18 +88,18 @@ export default function AboutSection() {
 
             {/* Stat badges */}
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <AnimatedStat val="25yr" numericVal={25} suffix="yr" label="Guarantee" delay={0.2} />
-              <AnimatedStat val="1000+" numericVal={1000} suffix="+" label="Projects" delay={0.3} />
-              <AnimatedStat val="2023" label="Est. Middle East" delay={0.4} />
+              <AnimatedStat val="25yr" numericVal={25} suffix="yr" label="Performance Warranty" delay={0.2} />
+              <AnimatedStat val="1000+" numericVal={1000} suffix="+" label="Projects Globally" delay={0.3} />
+              <AnimatedStat val="3" label="Countries Served" delay={0.4} />
             </div>
           </div>
 
           {/* Right */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {[
-              'ECOTONE Arabia brings Australian coating innovation to the Middle East — proven across 1000+ extreme climate projects, backed by a 25-year performance guarantee.',
-              'As the exclusive regional distributor of ECOTONE coating systems, we partner with architects, developers, and contractors on custom finishes, colour matching, and protective coatings built for certainty of outcome.',
-              'With technical support across the UAE and Saudi Arabia, we deliver landmark projects built to last.',
+              'In the Gulf\'s extreme climate — 50°C+ surface temperatures, intense UV exposure, and salt-laden coastal air — conventional facade paints fail within 3 to 5 years. ECOTONE Arabia delivers the only mineral-based facade coating system in the Middle East backed by a 25-year performance guarantee: a solution that chemically bonds into concrete, masonry, and fibre cement rather than sitting on top of it.',
+              'Established in Dubai in 2023 as the exclusive authorised distributor of ECOTONE coating systems, we bring Australian coating technology — proven across 1,000+ extreme-climate projects — to architects, developers, and contractors across the UAE, Saudi Arabia, and Bahrain. The same systems protecting Australia\'s most demanding architectural landmarks now carry a full 25-year warranty across the Gulf.',
+              'From bespoke colour matching and factory-applied precast finishes to functional anti-carbonation and self-cleaning ECOCLEAN coatings, we deliver certainty of outcome on every project — and a finish built to outlast the building lifecycle.',
             ].map((text, i) => (
               <motion.p
                 key={i}
