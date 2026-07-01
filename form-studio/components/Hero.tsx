@@ -139,61 +139,6 @@ export default function Hero() {
         style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #8B6914, transparent)', zIndex: 2, pointerEvents: 'none' }}
       />
 
-      {/* Architectural facade panel — desktop only, soccer-ball arc into position */}
-      <motion.div
-        initial={{ x: '-42vw', y: '0vh', opacity: 0 }}
-        animate={{
-          x: ['-42vw', '-14vw', '1.5vw', '0vw'],
-          y: ['0vh', '-22vh', '2vh', '0vh'],
-          opacity: [0, 1, 1, 1],
-        }}
-        transition={{ duration: 1.6, ease: 'easeOut', delay: 0.5, times: [0, 0.44, 0.82, 1] }}
-        className="hidden lg:block"
-        style={{ position: 'absolute', right: '6%', top: '50%', transform: 'translateY(-50%)', width: '30%', zIndex: 5, pointerEvents: 'none' }}
-      >
-        {/* Corner registration marks */}
-        <div style={{ position: 'absolute', top: '-10px', left: '-10px', width: '18px', height: '18px', borderTop: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
-        <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '18px', height: '18px', borderTop: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
-        <div style={{ position: 'absolute', bottom: '-10px', left: '-10px', width: '18px', height: '18px', borderBottom: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
-        <div style={{ position: 'absolute', bottom: '-10px', right: '-10px', width: '18px', height: '18px', borderBottom: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
-
-        <div style={{ border: '1px solid rgba(139,105,20,0.22)', padding: '24px', position: 'relative' }}>
-          {/* Top gold accent */}
-          <div style={{ position: 'absolute', top: 0, left: '8%', right: '8%', height: '3px', background: 'linear-gradient(to right, transparent, #8B6914, transparent)' }} />
-
-          {/* Facade panel grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', marginBottom: '6px' }}>
-            {[100, 100, 100, 72, 72, 72, 56, 56, 56, 40, 40, 40].map((h, i) => (
-              <div key={i} style={{
-                height: `${h}px`,
-                background: [0, 5, 10].includes(i) ? 'rgba(139,105,20,0.10)' : [2, 7].includes(i) ? 'rgba(139,105,20,0.06)' : 'rgba(10,10,10,0.03)',
-                border: '1px solid rgba(139,105,20,0.14)',
-                position: 'relative',
-              }}>
-                {i === 0 && <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'rgba(139,105,20,0.3)' }} />}
-              </div>
-            ))}
-          </div>
-
-          {/* Dimension line */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '14px', marginBottom: '10px' }}>
-            <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
-            <span style={{ fontFamily: 'Inter', fontSize: '8px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>Facade Section A-7</span>
-            <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
-          </div>
-
-          {/* Spec row */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
-            {[['Substrate', 'Mineral Bond'], ['System', 'ECT-2400'], ['Rating', 'Gulf+25']].map(([label, val]) => (
-              <div key={label}>
-                <div style={{ fontFamily: 'Inter', fontSize: '7px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '2px' }}>{label}</div>
-                <div style={{ fontFamily: 'Space Grotesk', fontSize: '9px', fontWeight: 600, color: '#8B6914', letterSpacing: '0.06em' }}>{val}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
       <motion.div
         style={{ position: 'relative', zIndex: 10, width: '100%', padding: 'clamp(80px,10vh,140px) 6% clamp(40px,5vh,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '100vh', y: contentY, opacity }}
       >
