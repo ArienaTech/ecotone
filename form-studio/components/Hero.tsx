@@ -139,10 +139,15 @@ export default function Hero() {
         style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #8B6914, transparent)', zIndex: 2, pointerEvents: 'none' }}
       />
 
-      {/* Architectural facade panel — desktop only */}
+      {/* Architectural facade panel — desktop only, soccer-ball arc into position */}
       <motion.div
-        initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.0, ease: EASE, delay: 0.6 }}
+        initial={{ x: '-42vw', y: '0vh', opacity: 0 }}
+        animate={{
+          x: ['-42vw', '-14vw', '1.5vw', '0vw'],
+          y: ['0vh', '-22vh', '2vh', '0vh'],
+          opacity: [0, 1, 1, 1],
+        }}
+        transition={{ duration: 1.6, ease: 'easeOut', delay: 0.5, times: [0, 0.44, 0.82, 1] }}
         className="hidden lg:block"
         style={{ position: 'absolute', right: '6%', top: '50%', transform: 'translateY(-50%)', width: '30%', zIndex: 5, pointerEvents: 'none' }}
       >
