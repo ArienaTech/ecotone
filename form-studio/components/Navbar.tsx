@@ -39,12 +39,9 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <a href="/" className="flex items-baseline gap-[6px] no-underline" style={{ textDecoration: 'none' }}>
-          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '15px', color: '#0a0a0a', letterSpacing: '-0.01em' }}>
+        <a href="/" className="flex items-baseline no-underline" style={{ textDecoration: 'none' }}>
+          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '16px', color: '#0a0a0a', letterSpacing: '-0.01em' }}>
             ECOTONE
-          </span>
-          <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: 'rgba(10,10,10,0.5)', letterSpacing: '0.04em', marginLeft: '2px' }}>
-            Colour For Life Coatings
           </span>
         </a>
 
@@ -245,7 +242,7 @@ export default function Navbar() {
             style={{ background: '#0a0a0a' }}
           >
             <div className="flex items-center justify-between px-[6%]" style={{ height: '64px', flexShrink: 0 }}>
-              <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '15px', color: '#ffffff' }}>
+              <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '16px', color: '#ffffff', letterSpacing: '-0.01em' }}>
                 ECOTONE
               </span>
               <button

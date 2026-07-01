@@ -52,8 +52,6 @@ export default function Hero() {
         style={{
           position: 'relative',
           zIndex: 10,
-          maxWidth: '1200px',
-          margin: '0 auto',
           padding: '0 6%',
           display: 'flex',
           flexDirection: 'column',
@@ -87,7 +85,7 @@ export default function Hero() {
           style={{
             fontFamily: 'Space Grotesk',
             fontWeight: 800,
-            fontSize: 'clamp(36px, 5.5vw, 90px)',
+            fontSize: 'clamp(40px, 5.5vw, 100px)',
             lineHeight: 0.96,
             color: '#0a0a0a',
             letterSpacing: '-0.02em',
