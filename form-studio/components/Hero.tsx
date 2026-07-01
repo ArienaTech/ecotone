@@ -120,51 +120,86 @@ export default function Hero() {
 
   return (
     <section ref={sectionRef} id="hero" style={{ background: '#f5f4f2', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
-      <motion.div className="bg-brand-text" style={{ y: bgY, left: '28%', right: 'auto', transform: 'translateX(-50%) translateY(-50%)' }}>ECO</motion.div>
+      <motion.div className="bg-brand-text" style={{ y: bgY }}>ECO</motion.div>
 
-      {/* Right navy panel — desktop only */}
-      <motion.div
-        initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
-        transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
-        className="hidden lg:block"
-        style={{ position: 'absolute', top: 0, right: 0, width: '38%', height: '100%', background: '#1A3A5C', transformOrigin: 'right', zIndex: 2, pointerEvents: 'none' }}
-      >
-        {/* Gold grid overlay on navy panel */}
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.12) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
-        {/* Gold top edge accent */}
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right, transparent, #8B6914 40%, #8B6914)' }} />
-        {/* Vertical rotated label */}
-        <div style={{ position: 'absolute', left: '28px', top: '50%', transform: 'translateY(-50%) rotate(-90deg)', transformOrigin: 'center', whiteSpace: 'nowrap' }}>
-          <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '10px', color: 'rgba(212,169,106,0.5)', letterSpacing: '0.22em', textTransform: 'uppercase' }}>Ecotone Arabia · Est. 2023</span>
-        </div>
-        {/* Bottom-right credential badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE, delay: 1.1 }}
-          style={{ position: 'absolute', bottom: '10%', right: '10%', textAlign: 'right' }}
-        >
-          <div style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(48px, 5vw, 72px)', color: 'rgba(139,105,20,0.18)', lineHeight: 1, letterSpacing: '-0.04em' }}>25</div>
-          <div style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '10px', color: 'rgba(212,169,106,0.6)', letterSpacing: '0.16em', textTransform: 'uppercase', marginTop: '4px' }}>Year Guarantee</div>
-        </motion.div>
-      </motion.div>
+      {/* Gold atmosphere gradient */}
+      <div style={{ position: 'absolute', top: 0, right: 0, width: '65%', height: '100%', background: 'radial-gradient(ellipse at 85% 25%, rgba(139,105,20,0.09) 0%, rgba(139,105,20,0.04) 45%, transparent 72%)', zIndex: 1, pointerEvents: 'none' }} />
 
-      {/* Subtle grid — left panel only */}
+      {/* Subtle grid */}
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}
-        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.06) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none', right: '38%' }}
+        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.06) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none' }}
       />
 
-      {/* Left accent line */}
+      {/* Left accent line — hidden on mobile via media query */}
       <motion.div
         initial={{ scaleY: 0, originY: 0 }} animate={{ scaleY: 1 }}
         transition={{ duration: 1.2, ease: EASE, delay: 0.3 }}
         className="hidden md:block"
-        style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #8B6914, transparent)', zIndex: 3, pointerEvents: 'none' }}
+        style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #8B6914, transparent)', zIndex: 2, pointerEvents: 'none' }}
       />
 
+      {/* Architectural facade panel — desktop only, soccer-ball arc into position */}
       <motion.div
-        style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '62%', padding: 'clamp(80px,10vh,140px) 6% clamp(40px,5vh,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '100vh', y: contentY, opacity }}
+        initial={{ x: '-42vw', y: '0vh', opacity: 0 }}
+        animate={{
+          x: ['-42vw', '-14vw', '1.5vw', '0vw'],
+          y: ['0vh', '-22vh', '2vh', '0vh'],
+          opacity: [0, 1, 1, 1],
+        }}
+        transition={{ duration: 1.6, ease: 'easeOut', delay: 0.5, times: [0, 0.44, 0.82, 1] }}
+        className="hidden lg:block"
+        style={{ position: 'absolute', right: '6%', top: '50%', transform: 'translateY(-50%)', width: '30%', zIndex: 5, pointerEvents: 'none' }}
       >
+        {/* Corner registration marks */}
+        <div style={{ position: 'absolute', top: '-10px', left: '-10px', width: '18px', height: '18px', borderTop: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
+        <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '18px', height: '18px', borderTop: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
+        <div style={{ position: 'absolute', bottom: '-10px', left: '-10px', width: '18px', height: '18px', borderBottom: '2px solid #8B6914', borderLeft: '2px solid #8B6914' }} />
+        <div style={{ position: 'absolute', bottom: '-10px', right: '-10px', width: '18px', height: '18px', borderBottom: '2px solid #8B6914', borderRight: '2px solid #8B6914' }} />
+
+        <div style={{ border: '1px solid rgba(139,105,20,0.22)', padding: '24px', position: 'relative' }}>
+          {/* Top gold accent */}
+          <div style={{ position: 'absolute', top: 0, left: '8%', right: '8%', height: '3px', background: 'linear-gradient(to right, transparent, #8B6914, transparent)' }} />
+
+          {/* Facade panel grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', marginBottom: '6px' }}>
+            {[100, 100, 100, 72, 72, 72, 56, 56, 56, 40, 40, 40].map((h, i) => (
+              <div key={i} style={{
+                height: `${h}px`,
+                background: [0, 5, 10].includes(i) ? 'rgba(139,105,20,0.10)' : [2, 7].includes(i) ? 'rgba(139,105,20,0.06)' : 'rgba(10,10,10,0.03)',
+                border: '1px solid rgba(139,105,20,0.14)',
+                position: 'relative',
+              }}>
+                {i === 0 && <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: 'rgba(139,105,20,0.3)' }} />}
+              </div>
+            ))}
+          </div>
+
+          {/* Dimension line */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '14px', marginBottom: '10px' }}>
+            <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
+            <span style={{ fontFamily: 'Inter', fontSize: '8px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>Facade Section A-7</span>
+            <div style={{ flex: 1, height: '1px', background: 'rgba(139,105,20,0.25)' }} />
+          </div>
+
+          {/* Spec row */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
+            {[['Substrate', 'Mineral Bond'], ['System', 'ECT-2400'], ['Rating', 'Gulf+25']].map(([label, val]) => (
+              <div key={label}>
+                <div style={{ fontFamily: 'Inter', fontSize: '7px', color: 'rgba(10,10,10,0.35)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '2px' }}>{label}</div>
+                <div style={{ fontFamily: 'Space Grotesk', fontSize: '9px', fontWeight: 600, color: '#8B6914', letterSpacing: '0.06em' }}>{val}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        style={{ position: 'relative', zIndex: 10, width: '100%', padding: 'clamp(80px,10vh,140px) 6% clamp(40px,5vh,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '100vh', y: contentY, opacity }}
+      >
+        {/* Content area corner brackets */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="hidden md:block" style={{ position: 'absolute', top: 'clamp(60px,8vh,110px)', left: '5%', width: '24px', height: '24px', borderTop: '1.5px solid rgba(139,105,20,0.5)', borderLeft: '1.5px solid rgba(139,105,20,0.5)', pointerEvents: 'none' }} />
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="hidden md:block" style={{ position: 'absolute', bottom: 'clamp(30px,4vh,60px)', left: '5%', width: '24px', height: '24px', borderBottom: '1.5px solid rgba(139,105,20,0.5)', borderLeft: '1.5px solid rgba(139,105,20,0.5)', pointerEvents: 'none' }} />
 
         <motion.p
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
