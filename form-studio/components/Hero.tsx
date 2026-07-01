@@ -94,7 +94,7 @@ export default function Hero() {
             textTransform: 'uppercase',
           }}
         >
-          Mineral-Based. Climate-Proof.<br />
+          Climate-Proof Facades.<br />
           <span style={{ color: '#2d6a4f' }}>Built to Last</span>
           <span className="eco-dot" />
         </motion.h1>
@@ -114,7 +114,7 @@ export default function Hero() {
             marginBottom: '36px',
           }}
         >
-          Premium facade solutions with 25-year durability and eco-certified protection. We work alongside architects, developers, and contractors to deliver sustainable, durable finishes.
+          Mineral-based facade coatings engineered for 25-year durability and eco-certified performance. Trusted by architects, developers, and contractors across the Gulf.
         </motion.p>
 
         {/* CTAs */}
