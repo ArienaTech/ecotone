@@ -68,31 +68,48 @@ export default function VideoSection() {
         </span>
       </div>
 
-      {/* Mute toggle — bottom right */}
+      {/* Mute toggle — prominent, bottom right */}
       <button
         onClick={toggleMute}
         aria-label={muted ? 'Unmute video' : 'Mute video'}
         style={{
           position: 'absolute',
-          bottom: '24px',
+          bottom: '28px',
           right: '6%',
-          background: 'rgba(255,255,255,0.1)',
-          backdropFilter: 'blur(8px)',
-          border: '1px solid rgba(255,255,255,0.2)',
-          borderRadius: '50%',
-          width: '44px',
-          height: '44px',
+          background: muted ? 'rgba(255,255,255,0.95)' : 'rgba(45,106,79,0.95)',
+          backdropFilter: 'blur(10px)',
+          border: 'none',
+          borderRadius: '0',
+          height: '48px',
+          paddingLeft: '20px',
+          paddingRight: '20px',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          gap: '10px',
           cursor: 'pointer',
-          transition: 'background 0.15s ease',
-          color: '#ffffff',
+          transition: 'background 0.2s ease',
+          color: muted ? '#0a0a0a' : '#ffffff',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
         }}
-        onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
-        onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = muted ? '#ffffff' : '#1a4a35';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = muted ? 'rgba(255,255,255,0.95)' : 'rgba(45,106,79,0.95)';
+        }}
       >
         {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+        <span
+          style={{
+            fontFamily: 'Space Grotesk',
+            fontWeight: 700,
+            fontSize: '12px',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+          }}
+        >
+          {muted ? 'Unmute' : 'Mute'}
+        </span>
       </button>
     </section>
   );
