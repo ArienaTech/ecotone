@@ -74,9 +74,9 @@ export default function AboutSection() {
             style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}
           >
             {[
-              'ECOTONE Arabia is the Middle East\'s partner for advanced architectural coatings. We deliver Australian coating innovation proven in 1000+ extreme climate projects, bringing 25-year guaranteed performance to Gulf developments where traditional solutions fail within years.',
-              'As the exclusive regional distributor of ECOTONE coating systems, we work closely with architects, developers, and contractors to deliver certainty of outcome—from impossible colour matching challenges to stunning custom finishes and functional protective coatings.',
-              'With technical support in UAE and Saudi Arabia, we help clients deliver landmark projects that stand the test of time, with a total commitment to quality, durability, and excellence of execution.',
+              'ECOTONE Arabia brings Australian coating innovation to the Middle East — proven across 1000+ extreme climate projects, backed by a 25-year performance guarantee.',
+              'As the exclusive regional distributor of ECOTONE coating systems, we partner with architects, developers, and contractors on custom finishes, colour matching, and protective coatings built for certainty of outcome.',
+              'With technical support across the UAE and Saudi Arabia, we deliver landmark projects built to last.',
             ].map((text, i) => (
               <p
                 key={i}
