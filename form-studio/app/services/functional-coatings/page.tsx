@@ -10,7 +10,7 @@ export default function FunctionalCoatingsPage() {
 
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Next Generation Protection
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 5.5vw, 80px)', color: '#ffffff', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '20px' }}>
@@ -39,14 +39,14 @@ export default function FunctionalCoatingsPage() {
                     { title: 'Graffiti Resistance', desc: 'Prevents graffiti from clinging to a coated surface avoiding the need for destructive and abrasive cleaning.' },
                     { title: 'Self-Cleaning', desc: 'Continuously breaks down harmful compounds on a surface reducing cleaning and maintenance costs.' },
                   ].map((benefit) => (
-                    <div key={benefit.title} style={{ borderLeft: '3px solid #2d6a4f', paddingLeft: '16px' }}>
+                    <div key={benefit.title} style={{ borderLeft: '3px solid #8B6914', paddingLeft: '16px' }}>
                       <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '15px', color: '#0a0a0a', marginBottom: '6px' }}>{benefit.title}</h3>
                       <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#606060', lineHeight: 1.65 }}>{benefit.desc}</p>
                     </div>
                   ))}
                 </div>
-                <div style={{ background: '#f0f8f4', border: '1px solid #b8ddc8', padding: '16px' }}>
-                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#1a4a35', lineHeight: 1.65 }}>
+                <div style={{ background: '#F5EAD0', border: '1px solid #D4A838', padding: '16px' }}>
+                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#664A0E', lineHeight: 1.65 }}>
                     The use of functional and protective coatings means surfaces and buildings look almost as good as new. Lifecycle and cleaning costs are significantly reduced in addition to building materials having extended life.
                   </p>
                 </div>
@@ -67,7 +67,7 @@ export default function FunctionalCoatingsPage() {
                     <h4 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: '#0a0a0a', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '12px' }}>External Benefits</h4>
                     {['Maintains long-term appearance', 'Reduced lifecycle cost', 'Reduced cleaning cost', 'Longer asset life', 'Air purifying properties'].map((item) => (
                       <p key={item} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#505050', marginBottom: '8px', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                        <span style={{ color: '#2d6a4f', fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
+                        <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
                       </p>
                     ))}
                   </div>
@@ -75,7 +75,7 @@ export default function FunctionalCoatingsPage() {
                     <h4 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: '#0a0a0a', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '12px' }}>Internal Benefits</h4>
                     {['Improved Internal Air Quality (IAQ)', 'Antiviral/antibacterial/anti-mould', 'Reduced maintenance/cleaning costs', 'Deodorising', 'Reduced VOCs'].map((item) => (
                       <p key={item} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#505050', marginBottom: '8px', display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                        <span style={{ color: '#2d6a4f', fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
+                        <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
                       </p>
                     ))}
                   </div>
@@ -83,8 +83,8 @@ export default function FunctionalCoatingsPage() {
               </div>
             </div>
 
-            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #2d6a4f', marginBottom: '48px' }}>
-              <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
+            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #8B6914', marginBottom: '48px' }}>
+              <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Project References
               </span>
               <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '12px' }}>
@@ -95,7 +95,7 @@ export default function FunctionalCoatingsPage() {
               </p>
             </div>
 
-            <a href="/contact" style={{ display: 'inline-block', background: '#2d6a4f', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 36px', textDecoration: 'none', textTransform: 'uppercase' }}>
+            <a href="/contact" style={{ display: 'inline-block', background: '#8B6914', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '14px 36px', textDecoration: 'none', textTransform: 'uppercase' }}>
               Enquire About Functional Coatings
             </a>
           </div>

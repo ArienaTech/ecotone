@@ -11,7 +11,7 @@ export default function ContactPage() {
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Get in Touch
             </span>
             <h1
@@ -60,7 +60,7 @@ export default function ContactPage() {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
                 <div>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Phone
                   </span>
                   <a href="tel:+971558934401" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#0a0a0a', textDecoration: 'none', display: 'block', marginBottom: '4px' }}>
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Email
                   </span>
                   <a href="mailto:info@ecotonearabia.com" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#0a0a0a', textDecoration: 'none' }}>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Location
                   </span>
                   <p style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '15px', color: '#0a0a0a', lineHeight: 1.6 }}>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Service Areas
                   </span>
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                       <span
                         key={region}
                         style={{
-                          background: '#2d6a4f',
+                          background: '#8B6914',
                           color: '#ffffff',
                           fontFamily: 'Inter',
                           fontWeight: 500,

@@ -12,7 +12,7 @@ export default function BlogPage() {
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Insights & Expertise
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(40px, 6vw, 96px)', color: '#ffffff', lineHeight: 0.95, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '24px' }}>
@@ -47,7 +47,7 @@ export default function BlogPage() {
             {/* Sidebar */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
               {/* Newsletter */}
-              <div style={{ background: '#2d6a4f', padding: '36px 28px' }}>
+              <div style={{ background: '#8B6914', padding: '36px 28px' }}>
                 <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '20px', color: '#ffffff', marginBottom: '12px' }}>
                   Stay Updated
                 </h3>
@@ -107,7 +107,7 @@ export default function BlogPage() {
                     key={link.href}
                     href={link.href}
                     style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#0a0a0a', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid #f0f0f0', transition: 'color 0.15s ease' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#2d6a4f')}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#8B6914')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
                   >
                     {link.label} →

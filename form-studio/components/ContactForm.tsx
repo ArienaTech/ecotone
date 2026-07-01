@@ -52,7 +52,7 @@ export default function ContactForm() {
     return (
       <div style={{ background: '#ffffff', border: '1px solid #e5e5e5', padding: '56px', textAlign: 'center' }}>
         <span style={{ fontSize: '48px', display: 'block', marginBottom: '20px' }}>✓</span>
-        <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '22px', color: '#2d6a4f', marginBottom: '12px' }}>
+        <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '22px', color: '#8B6914', marginBottom: '12px' }}>
           Thank you for getting in touch!
         </h3>
         <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#606060' }}>
@@ -72,13 +72,13 @@ export default function ContactForm() {
           <div>
             <label style={labelStyle}>First Name *</label>
             <input type="text" required placeholder="First name" style={inputStyle}
-              onFocus={(e) => (e.currentTarget.style.borderColor = '#2d6a4f')}
+              onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
               onBlur={(e) => (e.currentTarget.style.borderColor = '#d6d6d6')} />
           </div>
           <div>
             <label style={labelStyle}>Last Name *</label>
             <input type="text" required placeholder="Last name" style={inputStyle}
-              onFocus={(e) => (e.currentTarget.style.borderColor = '#2d6a4f')}
+              onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
               onBlur={(e) => (e.currentTarget.style.borderColor = '#d6d6d6')} />
           </div>
         </div>
@@ -87,13 +87,13 @@ export default function ContactForm() {
           <div>
             <label style={labelStyle}>Email Address *</label>
             <input type="email" required placeholder="your@email.com" style={inputStyle}
-              onFocus={(e) => (e.currentTarget.style.borderColor = '#2d6a4f')}
+              onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
               onBlur={(e) => (e.currentTarget.style.borderColor = '#d6d6d6')} />
           </div>
           <div>
             <label style={labelStyle}>Phone Number</label>
             <input type="tel" placeholder="+971 55 000 0000" style={inputStyle}
-              onFocus={(e) => (e.currentTarget.style.borderColor = '#2d6a4f')}
+              onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
               onBlur={(e) => (e.currentTarget.style.borderColor = '#d6d6d6')} />
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function ContactForm() {
         <div>
           <label style={labelStyle}>Company / Organisation</label>
           <input type="text" placeholder="Your company name" style={inputStyle}
-            onFocus={(e) => (e.currentTarget.style.borderColor = '#2d6a4f')}
+            onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
             onBlur={(e) => (e.currentTarget.style.borderColor = '#d6d6d6')} />
         </div>
 
@@ -109,7 +109,7 @@ export default function ContactForm() {
           <label style={labelStyle}>Project Type</label>
           <select
             style={{ ...inputStyle, appearance: 'none', cursor: 'pointer', backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\' viewBox=\'0 0 12 8\'%3E%3Cpath d=\'M1 1l5 5 5-5\' stroke=\'%23808080\' stroke-width=\'1.5\' fill=\'none\'/%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = '#2d6a4f')}
+            onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
             onBlur={(e) => (e.currentTarget.style.borderColor = '#d6d6d6')}
           >
             <option value="">Select project type</option>
@@ -125,7 +125,7 @@ export default function ContactForm() {
             rows={5}
             placeholder="Tell us about your project requirements, timeline, and any specific challenges you're facing…"
             style={{ ...inputStyle, resize: 'vertical', minHeight: '120px' }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = '#2d6a4f')}
+            onFocus={(e) => (e.currentTarget.style.borderColor = '#8B6914')}
             onBlur={(e) => (e.currentTarget.style.borderColor = '#d6d6d6')}
           />
         </div>
@@ -140,7 +140,7 @@ export default function ContactForm() {
           type="submit"
           disabled={loading}
           style={{
-            background: loading ? '#808080' : '#2d6a4f',
+            background: loading ? '#808080' : '#8B6914',
             color: '#ffffff',
             fontFamily: 'Space Grotesk',
             fontWeight: 700,
@@ -153,8 +153,8 @@ export default function ContactForm() {
             transition: 'background 0.15s ease',
             alignSelf: 'flex-start',
           }}
-          onMouseEnter={(e) => { if (!loading) e.currentTarget.style.background = '#1a4a35'; }}
-          onMouseLeave={(e) => { if (!loading) e.currentTarget.style.background = '#2d6a4f'; }}
+          onMouseEnter={(e) => { if (!loading) e.currentTarget.style.background = '#664A0E'; }}
+          onMouseLeave={(e) => { if (!loading) e.currentTarget.style.background = '#8B6914'; }}
         >
           {loading ? 'Sending…' : 'Send Enquiry'}
         </button>

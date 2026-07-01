@@ -5,8 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --eco-green: #2d6a4f;
-  --eco-light: #74c69d;
+  --eco-gold: #8B6914;
+  --eco-gold-light: #C4902E;
+  --eco-gold-dark: #664A0E;
+  --eco-navy: #1A3A5C;
   --eco-dark: #0a0a0a;
   --section-pad-y: 120px;
   --section-pad-x: 6%;
@@ -51,7 +53,7 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #2d6a4f;
+    background-color: #8B6914;
     margin-left: 4px;
     vertical-align: middle;
     position: relative;
@@ -62,7 +64,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 11px;
-    color: #2d6a4f;
+    color: #8B6914;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 14px;

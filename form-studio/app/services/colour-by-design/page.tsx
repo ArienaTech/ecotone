@@ -11,13 +11,13 @@ export default function ColourByDesignPage() {
         {/* Hero */}
         <section style={{ background: '#0a0a0a', padding: 'clamp(80px,10vh,100px) 6% clamp(48px,6vh,80px)', position: 'relative', overflow: 'hidden' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#74c69d', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
+            <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#C4902E', letterSpacing: '0.18em', textTransform: 'uppercase', display: 'block', marginBottom: '20px' }}>
               Architectural Excellence
             </span>
             <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 5.5vw, 80px)', color: '#ffffff', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '20px' }}>
               Colour By Design
             </h1>
-            <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '20px', color: '#74c69d', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '20px', color: '#C4902E', marginBottom: '20px' }}>
               Bringing colour, protection & transformation to Architecture.
             </p>
             <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '17px', color: 'rgba(255,255,255,0.65)', maxWidth: '600px', lineHeight: 1.65 }}>
@@ -45,7 +45,7 @@ export default function ColourByDesignPage() {
                     'Ensure full Gulf building standards compliance while maintaining creative freedom for concrete surfaces',
                   ].map((item) => (
                     <li key={item} style={{ display: 'flex', gap: '12px', fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#505050', lineHeight: 1.6 }}>
-                      <span style={{ color: '#2d6a4f', fontWeight: 700, flexShrink: 0 }}>✓</span>
+                      <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>✓</span>
                       {item}
                     </li>
                   ))}
@@ -67,7 +67,7 @@ export default function ColourByDesignPage() {
                     { heading: 'Restore & Renew', desc: 'Correct colour inconsistencies, repair faded surfaces, and rejuvenate concrete without altering its texture.' },
                     { heading: 'Transform with Material Finishes', desc: 'Reimagine concrete with premium finishes that mimic stone, timber, brick, or metal, seamlessly integrating with or redefining the building\'s aesthetic.' },
                   ].map((item) => (
-                    <div key={item.heading} style={{ borderLeft: '3px solid #2d6a4f', paddingLeft: '16px' }}>
+                    <div key={item.heading} style={{ borderLeft: '3px solid #8B6914', paddingLeft: '16px' }}>
                       <h4 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#0a0a0a', marginBottom: '6px' }}>{item.heading}</h4>
                       <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.6 }}>{item.desc}</p>
                     </div>
@@ -88,7 +88,7 @@ export default function ColourByDesignPage() {
                   { name: 'Prefabricated Facades', desc: 'Factory-applied facade solutions' },
                   { name: 'Material Finishes', desc: 'Industrial-grade surface treatments' },
                 ].map((item) => (
-                  <div key={item.name} style={{ background: '#f5f4f2', padding: '28px 24px', borderTop: '3px solid #2d6a4f' }}>
+                  <div key={item.name} style={{ background: '#f5f4f2', padding: '28px 24px', borderTop: '3px solid #8B6914' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#0a0a0a', marginBottom: '8px' }}>{item.name}</h3>
                     <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.6 }}>{item.desc}</p>
                   </div>
@@ -112,7 +112,7 @@ export default function ColourByDesignPage() {
                     'Aesthetic freedom with custom colours and natural material effects',
                   ].map((item) => (
                     <li key={item} style={{ display: 'flex', gap: '12px', fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#505050', lineHeight: 1.6 }}>
-                      <span style={{ color: '#2d6a4f', fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
+                      <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
                     </li>
                   ))}
                 </ul>
@@ -127,8 +127,8 @@ export default function ColourByDesignPage() {
                 <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '16px' }}>
                   Our coatings can be applied off-site in a controlled environment, ensuring: Superior durability before installation, bespoke finishes that match architectural intent, and seamless integration with other materials and facade systems.
                 </p>
-                <div style={{ background: '#f0f8f4', border: '1px solid #b8ddc8', padding: '16px' }}>
-                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '14px', color: '#1a4a35', lineHeight: 1.6 }}>
+                <div style={{ background: '#F5EAD0', border: '1px solid #D4A838', padding: '16px' }}>
+                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '14px', color: '#664A0E', lineHeight: 1.6 }}>
                     Prefab panels no longer need to look generic. With ECOTONE, they become an extension of your architectural vision.
                   </p>
                 </div>
@@ -149,7 +149,7 @@ export default function ColourByDesignPage() {
                   { step: '05', title: 'Review & Support', desc: 'We conduct post-application checks and ongoing support to ensure long-term performance.' },
                 ].map((item) => (
                   <div key={item.step}>
-                    <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '36px', color: '#2d6a4f', display: 'block', marginBottom: '12px', lineHeight: 1 }}>
+                    <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '36px', color: '#8B6914', display: 'block', marginBottom: '12px', lineHeight: 1 }}>
                       {item.step}
                     </span>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', marginBottom: '8px', lineHeight: 1.3 }}>
@@ -164,8 +164,8 @@ export default function ColourByDesignPage() {
             </div>
 
             {/* Case study */}
-            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #2d6a4f' }}>
-              <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#2d6a4f', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
+            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #8B6914' }}>
+              <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Case Study
               </span>
               <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#0a0a0a', marginBottom: '12px' }}>

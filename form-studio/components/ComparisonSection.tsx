@@ -62,7 +62,7 @@ export default function ComparisonSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            style={{ background: '#2d6a4f', padding: '20px 32px', borderTop: '3px solid #1a4a35' }}
+            style={{ background: '#8B6914', padding: '20px 32px', borderTop: '3px solid #664A0E' }}
           >
             <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ffffff' }}>
               ECOTONE Solutions
@@ -100,18 +100,18 @@ export default function ComparisonSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-20px' }}
                 transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.06 }}
-                style={{ background: i % 2 === 0 ? '#f0f8f4' : '#e8f5ee', padding: '20px 32px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid #d8edd8' }}
+                style={{ background: i % 2 === 0 ? '#F5EAD0' : '#F5E5C0', padding: '20px 32px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid #E0CB80' }}
               >
                 <motion.span
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ type: 'spring', stiffness: 300, delay: 0.15 + i * 0.06 }}
-                  style={{ color: '#2d6a4f', fontSize: '16px', flexShrink: 0, fontWeight: 700 }}
+                  style={{ color: '#8B6914', fontSize: '16px', flexShrink: 0, fontWeight: 700 }}
                 >
                   ✓
                 </motion.span>
-                <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '14px', color: '#1a4a35', lineHeight: 1.5 }}>
+                <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '14px', color: '#664A0E', lineHeight: 1.5 }}>
                   {row.ecotone}
                 </span>
               </motion.div>
