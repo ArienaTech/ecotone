@@ -1,193 +1,134 @@
 'use client';
 
-import { ExternalLink, Mail } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#0a0a0a', padding: '64px 6% 40px' }}>
+    <footer style={{ background: '#0a0a0a', padding: '72px 6% 40px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '40px',
-            marginBottom: '48px',
+            gap: '48px',
+            marginBottom: '56px',
           }}
-          className="footer-grid"
+          className="footer-grid four-col"
         >
           {/* Column 1: Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '8px' }}>
-              <span
-                style={{
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: 800,
-                  fontSize: '16px',
-                  color: '#ffffff',
-                }}
-              >
-                Form Studio
+            <div style={{ marginBottom: '12px' }}>
+              <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '18px', color: '#ffffff', display: 'block' }}>
+                ECOTONE
               </span>
-              <span
-                style={{
-                  display: 'inline-block',
-                  width: '6px',
-                  height: '6px',
-                  borderRadius: '50%',
-                  background: '#d42a1a',
-                  marginLeft: '4px',
-                }}
-              />
+              <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#74c69d', letterSpacing: '0.06em', display: 'block', marginTop: '4px' }}>
+                Colour For Life Coatings
+              </span>
             </div>
-            <p
-              style={{
-                fontFamily: 'Space Grotesk',
-                fontWeight: 300,
-                fontSize: '13px',
-                color: '#808080',
-                marginBottom: '20px',
-                lineHeight: 1.6,
-              }}
-            >
-              Brand Identity Studio · London
+            <p style={{ fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', color: '#808080', marginBottom: '24px', lineHeight: 1.7 }}>
+              The Middle East&apos;s partner for advanced architectural coatings. Australian innovation. Gulf expertise.
             </p>
-            <div style={{ display: 'flex', gap: '16px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#808080', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                href="tel:+971558934401"
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#808080', textDecoration: 'none', fontSize: '12px', fontFamily: 'Space Grotesk', transition: 'color 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#808080')}
               >
-                <ExternalLink size={18} />
+                <Phone size={13} /> +971 55 893 4401
               </a>
               <a
-                href="mailto:hello@formstudio.co"
-                style={{ color: '#808080', transition: 'color 0.15s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
+                href="tel:+966501109913"
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#808080', textDecoration: 'none', fontSize: '12px', fontFamily: 'Space Grotesk', transition: 'color 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#808080')}
               >
-                <Mail size={18} />
+                <Phone size={13} /> +966 50 110 9913
               </a>
+              <a
+                href="mailto:info@ecotonearabia.com"
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#808080', textDecoration: 'none', fontSize: '12px', fontFamily: 'Space Grotesk', transition: 'color 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#808080')}
+              >
+                <Mail size={13} /> info@ecotonearabia.com
+              </a>
+              <p style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', color: '#808080', fontSize: '12px', fontFamily: 'Space Grotesk', margin: 0, lineHeight: 1.5 }}>
+                <MapPin size={13} style={{ flexShrink: 0, marginTop: '2px' }} />
+                Building A1 – Dubai Silicon Oasis, Dubai, UAE
+              </p>
             </div>
           </div>
 
-          {/* Column 2: Work */}
+          {/* Column 2: Services */}
           <div>
-            <p
-              style={{
-                fontFamily: 'Inter',
-                fontWeight: 400,
-                fontSize: '11px',
-                color: '#808080',
-                letterSpacing: '0.16em',
-                textTransform: 'uppercase',
-                marginBottom: '16px',
-              }}
-            >
-              Work
-            </p>
-            {['Brand Strategy', 'Visual Identity', 'Motion & Content', 'Web & Digital'].map((item) => (
-              <a
-                key={item}
-                href="#services"
-                style={{
-                  display: 'block',
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: 300,
-                  fontSize: '13px',
-                  color: 'rgba(255,255,255,0.7)',
-                  textDecoration: 'none',
-                  marginBottom: '10px',
-                  transition: 'color 0.15s ease',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
-          {/* Column 3: Studio */}
-          <div>
-            <p
-              style={{
-                fontFamily: 'Inter',
-                fontWeight: 400,
-                fontSize: '11px',
-                color: '#808080',
-                letterSpacing: '0.16em',
-                textTransform: 'uppercase',
-                marginBottom: '16px',
-              }}
-            >
-              Studio
+            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#808080', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '20px' }}>
+              Services
             </p>
             {[
-              'hello@formstudio.co',
-              '+44 (0)20 7000 0001',
-              '4 Shoreditch High Street, London E1 6PQ',
+              { label: 'Colour By Design', href: '/services/colour-by-design' },
+              { label: 'Colour Matching', href: '/services/colour-matching' },
+              { label: 'Factory Finishes', href: '/services/factory-finishes' },
+              { label: 'Functional Coatings', href: '/services/functional-coatings' },
+              { label: 'Urban Infrastructure', href: '/services/urban-infrastructure' },
+              { label: 'Weather Defense', href: '/services/weather-proof-finishes' },
             ].map((item) => (
-              <p
-                key={item}
-                style={{
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: 300,
-                  fontSize: '13px',
-                  color: 'rgba(255,255,255,0.7)',
-                  marginBottom: '10px',
-                  lineHeight: 1.5,
-                }}
+              <a
+                key={item.href}
+                href={item.href}
+                style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', marginBottom: '10px', transition: 'color 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
               >
-                {item}
-              </p>
+                {item.label}
+              </a>
             ))}
           </div>
 
-          {/* Column 4: Work with us */}
+          {/* Column 3: Products */}
           <div>
-            <p
-              style={{
-                fontFamily: 'Inter',
-                fontWeight: 400,
-                fontSize: '11px',
-                color: '#808080',
-                letterSpacing: '0.16em',
-                textTransform: 'uppercase',
-                marginBottom: '16px',
-              }}
-            >
-              Work with us
+            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#808080', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '20px' }}>
+              Products
             </p>
-            <p
-              style={{
-                fontFamily: 'Space Grotesk',
-                fontWeight: 300,
-                fontSize: '13px',
-                color: 'rgba(255,255,255,0.7)',
-                marginBottom: '10px',
-              }}
-            >
-              Currently booking: Q3 2025
+            {[
+              { label: 'ECOTONE Products', href: '/ecotone-products' },
+              { label: 'Product Catalogue', href: '/ecotone-products#catalogue' },
+              { label: 'Technical Data', href: '/ecotone-products#technical' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', marginBottom: '10px', transition: 'color 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Column 4: Company */}
+          <div>
+            <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#808080', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '20px' }}>
+              Company
             </p>
-            <a
-              href="mailto:studio@formstudio.co"
-              style={{
-                display: 'block',
-                fontFamily: 'Space Grotesk',
-                fontWeight: 300,
-                fontSize: '13px',
-                color: 'rgba(255,255,255,0.7)',
-                textDecoration: 'none',
-                transition: 'color 0.15s ease',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#ffffff')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
-            >
-              studio@formstudio.co
-            </a>
+            {[
+              { label: 'About Us', href: '/about' },
+              { label: 'Portfolio', href: '/portfolio' },
+              { label: 'Gallery', href: '/gallery' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Contact', href: '/contact' },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', marginBottom: '10px', transition: 'color 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#74c69d')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.65)')}
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -195,31 +136,34 @@ export default function Footer() {
         <div
           style={{
             borderTop: '1px solid #1f1f1f',
-            paddingTop: '24px',
+            paddingTop: '28px',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '12px',
           }}
         >
-          <p
-            style={{
-              fontFamily: 'Inter',
-              fontWeight: 400,
-              fontSize: '11px',
-              color: 'rgba(255,255,255,0.4)',
-            }}
-          >
-            © 2025 Form Studio Ltd. All rights reserved.
+          <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: 'rgba(255,255,255,0.35)' }}>
+            © 2024 ECOTONE Arabia. All rights reserved.
           </p>
-          <span
-            style={{
-              display: 'inline-block',
-              width: '5px',
-              height: '5px',
-              borderRadius: '50%',
-              background: '#d42a1a',
-            }}
-          />
+          <div style={{ display: 'flex', gap: '24px' }}>
+            {[
+              { label: 'Regions We Serve', href: '/about' },
+              { label: 'Privacy Policy', href: '#' },
+              { label: 'Terms & Conditions', href: '#' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: 'rgba(255,255,255,0.35)', textDecoration: 'none', transition: 'color 0.15s ease' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.35)')}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

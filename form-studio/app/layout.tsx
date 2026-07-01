@@ -2,9 +2,10 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Form Studio — Brand Identity Studio',
+  title: 'Ecotone | Colour For Life Coatings',
   description:
-    'Form Studio is a London-based brand identity studio. Strategy. Identity. Motion. Web. Everything your brand needs to compete.',
+    'Long-lasting colour and functional coatings designed for the building and construction industry in Arabia. Stunningly sustainable, weather-resistant solutions.',
+  keywords: 'colour coatings, functional coatings, building materials, sustainable coatings, architectural finishes, Arabia',
   manifest: '/manifest.json',
   icons: {
     icon: '/favicon.svg',
@@ -13,18 +14,18 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Form Studio',
+    title: 'ECOTONE Arabia',
   },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
     type: 'website',
-    locale: 'en_GB',
-    title: 'Form Studio — Brand Identity Studio',
+    locale: 'en_AE',
+    title: 'Ecotone | Colour For Life Coatings',
     description:
-      'Form Studio is a London-based brand identity studio. Strategy. Identity. Motion. Web.',
-    siteName: 'Form Studio',
+      'Long-lasting colour and functional coatings designed for the building and construction industry in Arabia. Stunningly sustainable, weather-resistant solutions.',
+    siteName: 'ECOTONE Arabia',
   },
 };
 
