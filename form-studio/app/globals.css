@@ -51,7 +51,17 @@ body {
   }
 }
 
+@media (max-width: 1023px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
 @media (max-width: 767px) {
+  .hero-grid > div:last-child {
+    padding-left: 0 !important;
+  }
   .footer-grid {
     grid-template-columns: 1fr !important;
   }
