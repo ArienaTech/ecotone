@@ -3,12 +3,12 @@
 import { motion } from 'motion/react';
 
 const projects = [
-  { name: 'Premium Development Project', category: 'Colour By Design', slug: 'premium-development-project' },
-  { name: 'Half Moon Bay Marina', category: 'Functional Coatings', slug: 'half-moon-bay-marina' },
-  { name: 'Commercial Infrastructure', category: 'Urban Infrastructure', slug: 'commercial-infrastructure' },
-  { name: 'Carlaw Park Student Village', category: 'Prefabricated Facades', slug: 'carlaw-park-student-village' },
-  { name: 'Macarthur Anglican School', category: 'Cladding Finishes', slug: 'macarthur-anglican-school' },
-  { name: 'Factory Applied Finishes', category: 'Factory Finishes', slug: 'factory-applied-finishes' },
+  { name: 'Premium Development Project', category: 'Colour By Design', slug: 'premium-development-project', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Premium%20Development%20Project.png' },
+  { name: 'Half Moon Bay Marina', category: 'Functional Coatings', slug: 'half-moon-bay-marina', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Half%20Moon%20Bay%20Marina.png' },
+  { name: 'Commercial Infrastructure', category: 'Urban Infrastructure', slug: 'commercial-infrastructure', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Commercial%20Infrastructure.png' },
+  { name: 'Carlaw Park Student Village', category: 'Prefabricated Facades', slug: 'carlaw-park-student-village', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Carlaw%20Park%20Student%20Village.png' },
+  { name: 'Macarthur Anglican School', category: 'Cladding Finishes', slug: 'macarthur-anglican-school', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Macarthur%20Anglican%20School.png' },
+  { name: 'Factory Applied Finishes', category: 'Factory Finishes', slug: 'factory-applied-finishes', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Factory%20Applied%20Finishes.png' },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -115,7 +115,7 @@ export default function FeaturedProjects() {
               style={{
                 display: 'block',
                 background: '#ffffff',
-                padding: '40px 32px',
+                padding: '24px 24px 32px',
                 textDecoration: 'none',
                 position: 'relative',
                 overflow: 'hidden',
@@ -143,21 +143,21 @@ export default function FeaturedProjects() {
                 {project.category}
               </span>
 
-              {/* Project image placeholder */}
-              <div
-                style={{
-                  width: '100%',
-                  height: '180px',
-                  background: '#f0eeeb',
-                  marginBottom: '20px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '11px', color: '#c0bdb8', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  Project Image
-                </span>
+              {/* Project image */}
+              <div style={{ width: '100%', height: '200px', overflow: 'hidden', marginBottom: '20px' }}>
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                    transition: 'transform 0.4s ease',
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                />
               </div>
 
               <h3
