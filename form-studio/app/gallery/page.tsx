@@ -6,14 +6,11 @@ import Footer from '@/components/Footer';
 
 const categories = [
   'All',
+  'Concrete Facades',
   'Cladding Finishes',
   'Colour By Design',
-  'Concrete Facades',
-  'Colour Matching',
   'Factory Finishes',
-  'Functional Coatings',
-  'Urban Infrastructure',
-  'Weather Defense',
+  'Featured Projects',
 ];
 
 const CBD = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/';
