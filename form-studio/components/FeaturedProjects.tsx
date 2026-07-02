@@ -5,19 +5,12 @@ import { motion } from 'motion/react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-// Hand-picked from the gallery using sale psychology:
-// 1. Saint Moritz Esplanade  — prestigious name, instant aspiration → hero position (large)
-// 2. Half Moon Bay Marina     — premium lifestyle landmark → reinforces aspiration
-// 3. Architectural Excellence — scale and craft → builds authority
-// 4. Design Excellence        — colour expertise → signals core service
-// 5. Queen Victoria Market    — iconic landmark → social proof / trust
-// 6. Contemporary Architecture— modern, clean → close with broad appeal
 const featured = [
   {
     title: 'Saint Moritz Esplanade',
     category: 'Featured Projects',
     src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Featured%20Projects/Saint%20Moritz%20Esplanade.jpg',
-    span: 2, // wide hero card
+    span: 2,
   },
   {
     title: 'Half Moon Bay Marina',
@@ -45,12 +38,15 @@ const featured = [
   },
 ];
 
-function GalleryCard({ item, index }: { item: typeof featured[0]; index: number }) {
+function GalleryCard({ item, index, onOpen }: { item: typeof featured[0]; index: number; onOpen: () => void }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <motion.a
-      href="/gallery"
+    <motion.div
+      role="button"
+      tabIndex={0}
+      onClick={onOpen}
+      onKeyDown={(e) => e.key === 'Enter' && onOpen()}
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
@@ -62,12 +58,11 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
         position: 'relative',
         overflow: 'hidden',
         gridColumn: item.span === 2 ? 'span 2' : 'span 1',
-        textDecoration: 'none',
         background: '#1a1a1a',
-        cursor: 'pointer',
+        cursor: 'zoom-in',
+        outline: 'none',
       }}
     >
-      {/* Image */}
       <motion.img
         src={item.src}
         alt={item.title}
@@ -76,7 +71,6 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
       />
 
-      {/* Dark gradient overlay — always visible at bottom */}
       <div style={{
         position: 'absolute',
         inset: 0,
@@ -84,14 +78,12 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
         pointerEvents: 'none',
       }} />
 
-      {/* Gold hover tint */}
       <motion.div
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
         style={{ position: 'absolute', inset: 0, background: 'rgba(139,105,20,0.18)', pointerEvents: 'none' }}
       />
 
-      {/* Title bar */}
       <div style={{
         position: 'absolute',
         bottom: 0,
@@ -130,7 +122,6 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
           </p>
         </div>
 
-        {/* View arrow — slides in on hover */}
         <motion.span
           animate={{ opacity: hovered ? 1 : 0, x: hovered ? 0 : 8 }}
           transition={{ duration: 0.2 }}
@@ -145,14 +136,37 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
             whiteSpace: 'nowrap',
           }}
         >
-          View Gallery →
+          View Larger ↗
         </motion.span>
       </div>
-    </motion.a>
+    </motion.div>
   );
 }
 
 export default function FeaturedProjects() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxIndex(null);
+    document.body.style.overflow = '';
+  };
+
+  const showPrev = () => setLightboxIndex((i) => (i !== null ? (i - 1 + featured.length) % featured.length : null));
+  const showNext = () => setLightboxIndex((i) => (i !== null ? (i + 1) % featured.length : null));
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') showPrev();
+    else if (e.key === 'ArrowRight') showNext();
+    else if (e.key === 'Escape') closeLightbox();
+  };
+
+  const activeItem = lightboxIndex !== null ? featured[lightboxIndex] : null;
+
   return (
     <section style={{ background: '#f5f4f2', padding: '120px 6%', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -204,15 +218,92 @@ export default function FeaturedProjects() {
           </motion.a>
         </div>
 
-        {/* Image grid — editorial 2-row layout:
-              Row 1 (420px): hero spans 2 cols + 1 companion
-              Row 2 (260px): 3 equal strips                    */}
+        {/* Image grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '420px 260px', gap: '4px' }} className="projects-grid">
           {featured.map((item, i) => (
-            <GalleryCard key={item.title} item={item} index={i} />
+            <GalleryCard key={item.title} item={item} index={i} onOpen={() => openLightbox(i)} />
           ))}
         </div>
       </div>
+
+      {/* Lightbox */}
+      {activeItem && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onKeyDown={handleKeyDown}
+          tabIndex={-1}
+          onClick={closeLightbox}
+          ref={(el) => el?.focus()}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 1000,
+            background: 'rgba(0,0,0,0.92)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            outline: 'none',
+          }}
+        >
+          {/* Close */}
+          <button
+            onClick={closeLightbox}
+            aria-label="Close"
+            style={{ position: 'absolute', top: '20px', right: '24px', background: 'none', border: 'none', cursor: 'pointer', color: '#ffffff', fontSize: '32px', lineHeight: 1, fontWeight: 300, zIndex: 10, padding: '4px 8px' }}
+          >
+            ×
+          </button>
+
+          {/* Prev */}
+          <button
+            onClick={(e) => { e.stopPropagation(); showPrev(); }}
+            aria-label="Previous"
+            style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#ffffff', cursor: 'pointer', width: '48px', height: '48px', fontSize: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10 }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+          >‹</button>
+
+          {/* Next */}
+          <button
+            onClick={(e) => { e.stopPropagation(); showNext(); }}
+            aria-label="Next"
+            style={{ position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#ffffff', cursor: 'pointer', width: '48px', height: '48px', fontSize: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10 }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+          >›</button>
+
+          {/* Image */}
+          <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: '90vw', maxHeight: '85vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={activeItem.src}
+              alt={activeItem.title}
+              style={{ maxWidth: '90vw', maxHeight: '78vh', objectFit: 'contain', display: 'block', boxShadow: '0 24px 80px rgba(0,0,0,0.6)' }}
+            />
+            <div style={{ marginTop: '16px', textAlign: 'center' }}>
+              <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block' }}>
+                {activeItem.title}
+              </span>
+              <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#C4902E', letterSpacing: '0.10em', textTransform: 'uppercase', marginTop: '4px', display: 'block' }}>
+                {activeItem.category}
+              </span>
+              <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: 'rgba(255,255,255,0.35)', marginTop: '6px', display: 'block' }}>
+                {(lightboxIndex ?? 0) + 1} / {featured.length}
+              </span>
+              <a
+                href="/gallery"
+                onClick={(e) => e.stopPropagation()}
+                style={{ display: 'inline-block', marginTop: '16px', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#C4902E', textDecoration: 'none', border: '1px solid rgba(196,144,46,0.5)', padding: '8px 20px', transition: 'all 0.15s ease' }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = '#C4902E'; e.currentTarget.style.color = '#ffffff'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#C4902E'; }}
+              >
+                View Full Gallery →
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
