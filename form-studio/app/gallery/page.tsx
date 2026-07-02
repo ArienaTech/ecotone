@@ -99,8 +99,8 @@ export default function GalleryPage() {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(4, 1fr)',
-                  gap: '4px',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: '8px',
                 }}
               >
                 {filtered.map((item, i) => (
@@ -108,7 +108,7 @@ export default function GalleryPage() {
                     key={item.id}
                     style={{
                       position: 'relative',
-                      aspectRatio: '4 / 3',
+                      aspectRatio: '16 / 10',
                       overflow: 'hidden',
                       cursor: 'pointer',
                       background: '#e8e5e0',
