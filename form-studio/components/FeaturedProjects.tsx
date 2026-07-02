@@ -103,7 +103,7 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
         bottom: 0,
         left: 0,
         right: 0,
-        padding: item.span === 2 ? '32px 28px 24px' : '24px 18px 18px',
+        padding: '20px 18px 16px',
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'space-between',
@@ -118,16 +118,16 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
             color: '#C4902E',
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
-            marginBottom: '6px',
+            marginBottom: '5px',
           }}>
             {item.category}
           </span>
           <p style={{
             fontFamily: 'Space Grotesk',
             fontWeight: 700,
-            fontSize: item.span === 2 ? 'clamp(16px, 2vw, 22px)' : '14px',
+            fontSize: '13px',
             color: '#ffffff',
-            letterSpacing: '-0.01em',
+            letterSpacing: '0.02em',
             textTransform: 'uppercase',
             margin: 0,
             lineHeight: 1.2,
@@ -210,8 +210,10 @@ export default function FeaturedProjects() {
           </motion.a>
         </div>
 
-        {/* Image grid — 3 columns, first card spans 2, fixed row height keeps all cards equal */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridAutoRows: '320px', gap: '4px' }} className="projects-grid">
+        {/* Image grid — editorial 2-row layout:
+              Row 1 (420px): hero spans 2 cols + 1 companion
+              Row 2 (260px): 3 equal strips                    */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '420px 260px', gap: '4px' }} className="projects-grid">
           {featured.map((item, i) => (
             <GalleryCard key={item.title} item={item} index={i} />
           ))}
