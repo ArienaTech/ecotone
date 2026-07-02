@@ -196,13 +196,7 @@ export default function GalleryPage() {
                 No projects in this category yet. Check back soon.
               </div>
             ) : (
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(3, 1fr)',
-                  gap: '8px',
-                }}
-              >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: '8px' }}>
                 {filtered.map((item, index) => (
                   <div
                     key={item.id}
@@ -227,7 +221,7 @@ export default function GalleryPage() {
                       src={item.src}
                       alt={item.title}
                       fill
-                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                      sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       style={{
                         objectFit: 'cover',
                         transition: 'transform 0.4s ease',
