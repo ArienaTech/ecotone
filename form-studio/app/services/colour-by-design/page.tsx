@@ -27,15 +27,15 @@ export default function ColourByDesignPage() {
         </section>
 
         {/* Main content */}
-        <section style={{ background: '#ffffff', padding: 'clamp(60px,8vh,100px) 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(24px, 2.5vw, 40px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(24px, 2.5vw, 40px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
                   We Make Stunning Work of Concrete and Cladding
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '20px' }}>
                   Concrete and cladding are blank canvases with endless possibilities. Our Colour By Design approach allows architects to preserve, protect, or transform these surfaces, achieving finishes that:
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px' }}>
@@ -44,21 +44,21 @@ export default function ColourByDesignPage() {
                     'Enhance monolithic materiality, creating seamless internal and external finishes',
                     'Ensure full Gulf building standards compliance while maintaining creative freedom for concrete surfaces',
                   ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '12px', fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#505050', lineHeight: 1.6 }}>
+                    <li key={item} style={{ display: 'flex', gap: '12px', fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
                       <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>✓</span>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                   By working with your designs, ECOTONE delivers long-lasting, sustainable architectural facades that will WOW you and your client. Our advanced coatings also provide apartment buildings with essential waterproofing and weathering ensuring durability and compliance with Gulf building standards.
                 </p>
               </div>
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
                   Concrete Facades: Designed to Inspire, Built to Last
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '20px' }}>
                   Concrete is a defining element in modern architecture, but exposure to the elements can cause weathering, discolouration, and surface wear over time. We can provide a complete solution.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -68,8 +68,8 @@ export default function ColourByDesignPage() {
                     { heading: 'Transform with Material Finishes', desc: 'Reimagine concrete with premium finishes that mimic stone, timber, brick, or metal, seamlessly integrating with or redefining the building\'s aesthetic.' },
                   ].map((item) => (
                     <div key={item.heading} style={{ borderLeft: '3px solid #8B6914', paddingLeft: '16px' }}>
-                      <h4 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#0a0a0a', marginBottom: '6px' }}>{item.heading}</h4>
-                      <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.6 }}>{item.desc}</p>
+                      <h4 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', marginBottom: '6px' }}>{item.heading}</h4>
+                      <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -78,7 +78,7 @@ export default function ColourByDesignPage() {
 
             {/* Sub-specializations */}
             <div style={{ marginBottom: '80px' }}>
-              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
+              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
                 Sub-Specializations
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2px' }} className="materials-grid five-col">
@@ -88,9 +88,9 @@ export default function ColourByDesignPage() {
                   { name: 'Prefabricated Facades', desc: 'Factory-applied facade solutions' },
                   { name: 'Material Finishes', desc: 'Industrial-grade surface treatments' },
                 ].map((item) => (
-                  <div key={item.name} style={{ background: '#f5f4f2', padding: '28px 24px', borderTop: '3px solid #8B6914' }}>
-                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#0a0a0a', marginBottom: '8px' }}>{item.name}</h3>
-                    <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.6 }}>{item.desc}</p>
+                  <div key={item.name} style={{ background: '#000000', padding: '28px 24px', borderTop: '3px solid #8B6914' }}>
+                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#ffffff', marginBottom: '8px' }}>{item.name}</h3>
+                    <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -99,10 +99,10 @@ export default function ColourByDesignPage() {
             {/* Monolithic Materiality */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   Monolithic Materiality — Seamless Aesthetic, Inside & Out
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '16px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '16px' }}>
                   Achieving monolithic materiality demands precision, innovation and durability. ECOTONE&apos;s advanced coatings allow architects to create cohesive, seamless surfaces across both interiors and exteriors, ensuring:
                 </p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -111,20 +111,20 @@ export default function ColourByDesignPage() {
                     'A fully integrated weatherproofing and waterproofing solution',
                     'Aesthetic freedom with custom colours and natural material effects',
                   ].map((item) => (
-                    <li key={item} style={{ display: 'flex', gap: '12px', fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#505050', lineHeight: 1.6 }}>
+                    <li key={item} style={{ display: 'flex', gap: '12px', fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
                       <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>✓</span>{item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   Prefabrication — Revolutionising Modern Construction
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '16px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '16px' }}>
                   Prefabrication has revolutionised modern construction, offering efficiency, cost-effectiveness, and precision. But what if prefab surfaces could also be custom-designed, weatherproof, and architecturally striking?
                 </p>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '16px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '16px' }}>
                   Our coatings can be applied off-site in a controlled environment, ensuring: Superior durability before installation, bespoke finishes that match architectural intent, and seamless integration with other materials and facade systems.
                 </p>
                 <div style={{ background: '#F5EAD0', border: '1px solid #D4A838', padding: '16px' }}>
@@ -164,17 +164,17 @@ export default function ColourByDesignPage() {
             </div>
 
             {/* Case study */}
-            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #8B6914' }}>
+            <div style={{ background: '#000000', padding: '48px', borderLeft: '4px solid #8B6914' }}>
               <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Case Study
               </span>
-              <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#0a0a0a', marginBottom: '12px' }}>
+              <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#ffffff', marginBottom: '12px' }}>
                 Eden View Apartments, Auckland – NZ
               </h3>
-              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#606060', lineHeight: 1.7, marginBottom: '16px' }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: '16px' }}>
                 Architect: Pb&amp;A Architects | Builder: Ganellen Constructions | Precaster: Concretec | Developer: Young &amp; Partners
               </p>
-              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                 This project showcases what ECOTONE&apos;s CXD process delivers — grey precast concrete transformed into a natural brick appearance using ECOTONE Matt and ECOTONE Sharp emulsion stains. The same system and results are now available across the Gulf.
               </p>
             </div>

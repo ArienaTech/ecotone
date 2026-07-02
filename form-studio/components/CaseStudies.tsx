@@ -45,12 +45,12 @@ function CaseCard({ item, index }: { item: (typeof cases)[0]; index: number }) {
           zIndex: 1,
         }}
       >
-        <h3
+        <        h3
           style={{
             fontFamily: 'Space Grotesk',
             fontWeight: 700,
             fontSize: '22px',
-            color: '#0a0a0a',
+            color: '#ffffff',
             marginBottom: '4px',
           }}
         >
@@ -154,7 +154,7 @@ function CaseCard({ item, index }: { item: (typeof cases)[0]; index: number }) {
 
 export default function CaseStudies() {
   return (
-    <section id="work-grid" style={{ background: '#f5f4f2', padding: '120px 6%' }}>
+    <section id="work-grid" style={{ background: '#000000', padding: '120px 6%' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <p
           style={{
@@ -174,7 +174,7 @@ export default function CaseStudies() {
             fontFamily: 'Space Grotesk',
             fontWeight: 800,
             fontSize: 'clamp(32px, 4.5vw, 72px)',
-            color: '#0a0a0a',
+            color: '#ffffff',
             lineHeight: 1.0,
             marginBottom: '56px',
           }}

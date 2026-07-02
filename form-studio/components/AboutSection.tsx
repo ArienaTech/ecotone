@@ -35,7 +35,7 @@ function AnimatedStat({ val, numericVal, suffix, label, delay }: { val: string; 
       transition={{ duration: 0.6, ease: EASE, delay }}
       onViewportEnter={() => setStarted(true)}
       whileHover={{ y: -4, transition: { duration: 0.2 } }}
-      style={{ background: '#f5f4f2', border: '1px solid #e5e5e5', padding: '16px 20px', textAlign: 'center', cursor: 'default' }}
+      style={{ background: '#111111', border: '1px solid #2a2a2a', padding: '16px 20px', textAlign: 'center', cursor: 'default' }}
     >
       <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#8B6914', display: 'block' }}>
         {display}
@@ -49,7 +49,7 @@ function AnimatedStat({ val, numericVal, suffix, label, delay }: { val: string; 
 
 export default function AboutSection() {
   return (
-    <section style={{ background: '#ffffff', padding: '120px 6%', overflow: 'hidden' }}>
+    <section style={{ background: '#000000', padding: '120px 6%', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid two-col">
 
@@ -71,7 +71,7 @@ export default function AboutSection() {
                 whileInView={{ y: '0%' }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-                style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 4vw, 64px)', color: '#0a0a0a', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase' }}
+                style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(36px, 4vw, 64px)', color: '#ffffff', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase' }}
               >
                 ECOTONE<br />ARABIA
               </motion.h2>
@@ -107,7 +107,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: i * 0.12 }}
-                style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}
+                style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}
               >
                 {text}
               </motion.p>
@@ -130,9 +130,9 @@ export default function AboutSection() {
               </a>
               <a
                 href="/contact"
-                style={{ background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '12px 28px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = '#0a0a0a'; e.currentTarget.style.color = '#ffffff'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0a0a0a'; }}
+                style={{ background: 'transparent', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '12px 28px', border: '1.5px solid rgba(255,255,255,0.5)', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; e.currentTarget.style.borderColor = '#ffffff'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'; }}
               >
                 Get in Touch
               </a>

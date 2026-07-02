@@ -160,7 +160,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Category filter */}
-        <section style={{ background: '#f5f4f2', padding: '32px 6%', borderBottom: '1px solid #e5e5e5' }}>
+        <section style={{ background: '#000000', padding: '32px 6%', borderBottom: '1px solid #2a2a2a' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             {categories.map((cat) => (
               <button
@@ -174,9 +174,9 @@ export default function GalleryPage() {
                   textTransform: 'uppercase',
                   padding: '8px 18px',
                   background: activeCategory === cat ? '#8B6914' : 'transparent',
-                  color: activeCategory === cat ? '#ffffff' : '#0a0a0a',
+                  color: activeCategory === cat ? '#ffffff' : 'rgba(255,255,255,0.65)',
                   border: '1px solid',
-                  borderColor: activeCategory === cat ? '#8B6914' : '#d6d6d6',
+                  borderColor: activeCategory === cat ? '#8B6914' : '#2a2a2a',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
                 }}
@@ -188,7 +188,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Gallery grid */}
-        <section style={{ background: '#f5f4f2', padding: '48px 6% 80px' }}>
+        <section style={{ background: '#000000', padding: '48px 6% 80px' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             {filtered.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '80px 0', fontFamily: 'Inter', color: '#888', fontSize: '15px' }}>
@@ -295,7 +295,7 @@ export default function GalleryPage() {
             Explore our full project portfolio or contact us to discuss your project.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-            <a href="/portfolio" style={{ display: 'inline-block', background: '#ffffff', color: '#8B6914', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 32px', textDecoration: 'none', textTransform: 'uppercase' }}>
+            <a href="/portfolio" style={{ display: 'inline-block', background: '#0a0a0a', color: '#8B6914', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 32px', textDecoration: 'none', textTransform: 'uppercase' }}>
               View Portfolio
             </a>
             <a href="/contact" style={{ display: 'inline-block', background: 'transparent', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 32px', border: '1.5px solid rgba(255,255,255,0.5)', textDecoration: 'none', textTransform: 'uppercase' }}>

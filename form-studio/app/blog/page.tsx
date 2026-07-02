@@ -28,17 +28,17 @@ export default function BlogPage() {
         </section>
 
         {/* Blog listing */}
-        <section style={{ background: '#f5f4f2', padding: '80px 6%' }}>
+        <section style={{ background: '#000000', padding: '80px 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 340px', gap: '64px', alignItems: 'start' }} className="contact-grid two-col">
 
             <div>
               {/* Placeholder - no real Ecotone posts yet */}
-              <div style={{ background: '#ffffff', border: '1px solid #e5e5e5', padding: '48px', textAlign: 'center' }}>
+              <div style={{ background: '#0a0a0a', border: '1px solid #2a2a2a', padding: '48px', textAlign: 'center' }}>
                 <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '48px', color: '#e8e5e0', display: 'block', marginBottom: '16px' }}>✍</span>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '22px', color: '#0a0a0a', marginBottom: '12px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '22px', color: '#ffffff', marginBottom: '12px' }}>
                   New Insights Coming Soon
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#606060', lineHeight: 1.7, maxWidth: '400px', margin: '0 auto' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, maxWidth: '400px', margin: '0 auto' }}>
                   We&apos;re preparing expert articles on Gulf building coating solutions, architectural finishes, and sustainability. Subscribe below to be notified when we publish.
                 </p>
               </div>
@@ -64,8 +64,8 @@ export default function BlogPage() {
                       fontFamily: 'Space Grotesk',
                       fontWeight: 400,
                       fontSize: '14px',
-                      color: '#0a0a0a',
-                      background: '#ffffff',
+                      color: '#ffffff',
+                      background: '#0a0a0a',
                       border: 'none',
                       outline: 'none',
                     }}
@@ -91,8 +91,8 @@ export default function BlogPage() {
               </div>
 
               {/* Quick links */}
-              <div style={{ background: '#ffffff', border: '1px solid #e5e5e5', padding: '28px' }}>
-                <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>
+              <div style={{ background: '#0a0a0a', border: '1px solid #2a2a2a', padding: '28px' }}>
+                <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>
                   Our Services
                 </h3>
                 {[
@@ -106,9 +106,9 @@ export default function BlogPage() {
                   <a
                     key={link.href}
                     href={link.href}
-                    style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#0a0a0a', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid #f0f0f0', transition: 'color 0.15s ease' }}
+                    style={{ display: 'block', fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#ffffff', textDecoration: 'none', padding: '8px 0', borderBottom: '1px solid #1f1f1f', transition: 'color 0.15s ease' }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = '#8B6914')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#ffffff')}
                   >
                     {link.label} →
                   </a>

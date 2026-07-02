@@ -19,9 +19,9 @@ const inputStyle: React.CSSProperties = {
   fontFamily: 'Space Grotesk',
   fontWeight: 400,
   fontSize: '14px',
-  color: '#0a0a0a',
-  background: '#ffffff',
-  border: '1px solid #d6d6d6',
+  color: '#ffffff',
+  background: '#111111',
+  border: '1px solid #2a2a2a',
   outline: 'none',
   transition: 'border-color 0.15s ease',
 };
@@ -39,7 +39,7 @@ export default function EnquiryForm() {
   }
 
   return (
-    <section id="enquiry" style={{ background: '#f5f4f2', padding: '120px 6%' }}>
+    <section id="enquiry" style={{ background: '#000000', padding: '120px 6%' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         {/* Header */}
         <motion.div
@@ -53,11 +53,11 @@ export default function EnquiryForm() {
             Project Enquiry
           </span>
           <h2
-            style={{
-              fontFamily: 'Space Grotesk',
-              fontWeight: 800,
-              fontSize: 'clamp(28px, 3.5vw, 52px)',
-              color: '#0a0a0a',
+          style={{
+            fontFamily: 'Space Grotesk',
+            fontWeight: 800,
+            fontSize: 'clamp(28px, 3.5vw, 52px)',
+            color: '#ffffff',
               lineHeight: 1.05,
               letterSpacing: '-0.02em',
               marginBottom: '16px',
@@ -71,7 +71,7 @@ export default function EnquiryForm() {
               fontFamily: 'Inter',
               fontWeight: 400,
               fontSize: '15px',
-              color: '#606060',
+              color: 'rgba(255,255,255,0.55)',
               lineHeight: 1.7,
               maxWidth: '560px',
               margin: '0 auto',
@@ -87,9 +87,9 @@ export default function EnquiryForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           style={{
-            background: '#ffffff',
+            background: '#0a0a0a',
             padding: '56px',
-            border: '1px solid #e5e5e5',
+            border: '1px solid #2a2a2a',
           }}
         >
           {status === 'success' ? (
@@ -98,7 +98,7 @@ export default function EnquiryForm() {
               <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '22px', color: '#8B6914', marginBottom: '12px' }}>
                 Thank you! Your enquiry has been submitted successfully.
               </h3>
-              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#606060' }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.55)' }}>
                 We&apos;ll be in touch soon.
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function EnquiryForm() {
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row two-col">
                 <div>
-                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Full Name *
                   </label>
                   <input
@@ -119,7 +119,7 @@ export default function EnquiryForm() {
                   />
                 </div>
                 <div>
-                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Email Address *
                   </label>
                   <input
@@ -135,7 +135,7 @@ export default function EnquiryForm() {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row two-col">
                 <div>
-                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Phone Number
                   </label>
                   <input
@@ -147,7 +147,7 @@ export default function EnquiryForm() {
                   />
                 </div>
                 <div>
-                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                  <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Company / Organisation
                   </label>
                   <input
@@ -161,7 +161,7 @@ export default function EnquiryForm() {
               </div>
 
               <div>
-                <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                   Project Type
                 </label>
                 <select
@@ -177,7 +177,7 @@ export default function EnquiryForm() {
               </div>
 
               <div>
-                <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: '#505050', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+                <label style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                   Project Details
                 </label>
                 <textarea
@@ -196,7 +196,7 @@ export default function EnquiryForm() {
               )}
 
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: '#909090', maxWidth: '400px', lineHeight: 1.6 }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: 'rgba(255,255,255,0.4)', maxWidth: '400px', lineHeight: 1.6 }}>
                   By submitting this form, you agree to our privacy policy. We&apos;ll only use your information to respond to your enquiry.
                 </p>
                 <button

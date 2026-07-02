@@ -35,7 +35,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" style={{ background: '#ffffff', padding: '120px 6%' }}>
+    <section id="process" style={{ background: '#000000', padding: '120px 6%' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <p
           style={{
@@ -55,7 +55,7 @@ export default function Process() {
             fontFamily: 'Space Grotesk',
             fontWeight: 800,
             fontSize: 'clamp(28px, 4vw, 62px)',
-            color: '#0a0a0a',
+            color: '#ffffff',
             lineHeight: 1.1,
             marginBottom: '80px',
           }}
@@ -73,8 +73,8 @@ export default function Process() {
               top: '6px',
               left: '6px',
               right: '6px',
-              height: '1px',
-              background: '#d6d6d6',
+            height: '1px',
+            background: '#2a2a2a',
               zIndex: 0,
             }}
           />
@@ -113,7 +113,7 @@ export default function Process() {
                     fontFamily: 'Space Grotesk',
                     fontWeight: 700,
                     fontSize: '18px',
-                    color: '#0a0a0a',
+                    color: '#ffffff',
                     marginBottom: '12px',
                   }}
                 >

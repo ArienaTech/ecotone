@@ -18,9 +18,9 @@ const inputStyle: React.CSSProperties = {
   fontFamily: 'Space Grotesk',
   fontWeight: 400,
   fontSize: '14px',
-  color: '#0a0a0a',
-  background: '#ffffff',
-  border: '1px solid #d6d6d6',
+  color: '#ffffff',
+  background: '#111111',
+  border: '1px solid #2a2a2a',
   outline: 'none',
   transition: 'border-color 0.15s ease',
 };
@@ -29,7 +29,7 @@ const labelStyle: React.CSSProperties = {
   fontFamily: 'Inter',
   fontWeight: 500,
   fontSize: '11px',
-  color: '#505050',
+  color: 'rgba(255,255,255,0.55)',
   letterSpacing: '0.10em',
   textTransform: 'uppercase',
   display: 'block',
@@ -50,12 +50,12 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div style={{ background: '#ffffff', border: '1px solid #e5e5e5', padding: '56px', textAlign: 'center' }}>
+      <div style={{ background: '#0a0a0a', border: '1px solid #2a2a2a', padding: '56px', textAlign: 'center' }}>
         <span style={{ fontSize: '48px', display: 'block', marginBottom: '20px' }}>✓</span>
         <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '22px', color: '#8B6914', marginBottom: '12px' }}>
           Thank you for getting in touch!
         </h3>
-        <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#606060' }}>
+        <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.55)' }}>
           Our team will respond to your enquiry within 24 hours.
         </p>
       </div>
@@ -63,8 +63,8 @@ export default function ContactForm() {
   }
 
   return (
-    <div style={{ background: '#ffffff', border: '1px solid #e5e5e5', padding: '48px' }}>
-      <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
+    <div style={{ background: '#0a0a0a', border: '1px solid #2a2a2a', padding: '48px' }}>
+      <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
         Contact Us
       </h3>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>

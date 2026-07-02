@@ -40,13 +40,13 @@ function ServiceRow({ service, index }: { service: (typeof services)[0]; index: 
       style={{
         position: 'relative',
         padding: '36px 0 36px 20px',
-        borderTop: '0.5px solid #d6d6d6',
+        borderTop: '0.5px solid #1f1f1f',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
         cursor: 'pointer',
         transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
-        boxShadow: hovered ? '0 2px 12px rgba(0,0,0,0.08)' : 'none',
+        boxShadow: hovered ? '0 2px 12px rgba(0,0,0,0.4)' : 'none',
         transition: 'transform 0.2s ease, box-shadow 0.2s ease',
       }}
     >
@@ -70,7 +70,7 @@ function ServiceRow({ service, index }: { service: (typeof services)[0]; index: 
             fontFamily: 'Space Grotesk',
             fontWeight: 700,
             fontSize: 'clamp(22px, 3vw, 40px)',
-            color: '#0a0a0a',
+            color: '#ffffff',
             marginBottom: '10px',
           }}
         >
@@ -96,7 +96,7 @@ function ServiceRow({ service, index }: { service: (typeof services)[0]; index: 
             fontFamily: 'Inter',
             fontWeight: 400,
             fontSize: '20px',
-            color: '#0a0a0a',
+            color: '#ffffff',
             letterSpacing: '-0.02em',
           }}
         >
@@ -109,7 +109,7 @@ function ServiceRow({ service, index }: { service: (typeof services)[0]; index: 
 
 export default function Services() {
   return (
-    <section id="services" style={{ background: '#ffffff', padding: '120px 6%' }}>
+    <section id="services" style={{ background: '#000000', padding: '120px 6%' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <p
           style={{
@@ -129,7 +129,7 @@ export default function Services() {
             fontFamily: 'Space Grotesk',
             fontWeight: 800,
             fontSize: 'clamp(32px, 4.5vw, 72px)',
-            color: '#0a0a0a',
+            color: '#ffffff',
             lineHeight: 1.0,
             marginBottom: '72px',
           }}
@@ -142,7 +142,7 @@ export default function Services() {
             <ServiceRow key={service.name} service={service} index={i} />
           ))}
           {/* Bottom border on last row */}
-          <div style={{ borderBottom: '0.5px solid #d6d6d6' }} />
+          <div style={{ borderBottom: '0.5px solid #1f1f1f' }} />
         </div>
       </div>
     </section>

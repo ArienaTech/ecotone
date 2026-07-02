@@ -154,7 +154,7 @@ export default function ServicesPage() {
           <section
             key={service.slug}
             id={service.slug}
-            style={{ background: i % 2 === 0 ? '#ffffff' : '#f5f4f2', padding: 'clamp(60px,8vh,100px) 6%', scrollMarginTop: '64px' }}
+            style={{ background: i % 2 === 0 ? '#000000' : '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%', scrollMarginTop: '64px' }}
           >
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid two-col">
@@ -167,7 +167,7 @@ export default function ServicesPage() {
                       fontFamily: 'Space Grotesk',
                       fontWeight: 800,
                       fontSize: 'clamp(28px, 3vw, 52px)',
-                      color: '#0a0a0a',
+                      color: '#ffffff',
                       lineHeight: 0.96,
                       letterSpacing: '-0.02em',
                       textTransform: 'uppercase',
@@ -179,7 +179,7 @@ export default function ServicesPage() {
                   <p style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '16px', color: '#8B6914', marginBottom: '24px', lineHeight: 1.4 }}>
                     {service.subheading}
                   </p>
-                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '32px' }}>
+                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '32px' }}>
                     {service.intro}
                   </p>
                   {service.subServices.length > 0 && (
@@ -211,7 +211,7 @@ export default function ServicesPage() {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                   {service.paragraphs.map((p, pi) => (
-                    <p key={pi} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                    <p key={pi} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                       {p}
                     </p>
                   ))}

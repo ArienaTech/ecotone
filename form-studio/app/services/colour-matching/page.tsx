@@ -22,15 +22,15 @@ export default function ColourMatchingPage() {
           </div>
         </section>
 
-        <section style={{ background: '#ffffff', padding: 'clamp(60px,8vh,100px) 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(24px, 2.5vw, 40px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(24px, 2.5vw, 40px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '24px' }}>
                   Before & After Transformations
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '20px' }}>
                   Our products and applications aim to deliver stunningly sustainable results – an enhanced aesthetic appeal that lasts the test of time. See the remarkable results of our colour matching expertise.
                 </p>
 
@@ -47,17 +47,17 @@ export default function ColourMatchingPage() {
               </div>
 
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   Unique Environmentally-Friendly Emulsion Stains
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                     ECOTONE products and applications are not comparable to paint. We call them emulsion stains to differentiate them from the properties of paint that prevent building materials from being able to &lsquo;breathe&rsquo; making them prone to fading, cracking and peeling in the built environment.
                   </p>
-                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                     Our ECOTONE emulsion stains are different. Each one provides a unique benefit based on building material application and desired finish. All have been scientifically formulated to preserve the breathability of existing surface materials making them an environmentally-friendly choice.
                   </p>
-                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                     Our emulsion stains are manufactured locally and made to last in our environment. They make better use of raw materials, energy and water than paint alternatives. The result is not only sustainable but stunning!
                   </p>
                 </div>
@@ -65,17 +65,17 @@ export default function ColourMatchingPage() {
             </div>
 
             {/* Case study */}
-            <div style={{ background: '#f5f4f2', padding: '48px', borderLeft: '4px solid #8B6914' }}>
+            <div style={{ background: '#000000', padding: '48px', borderLeft: '4px solid #8B6914' }}>
               <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Case Study — Standard and Bespoke
               </span>
-              <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#0a0a0a', marginBottom: '12px' }}>
+              <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '22px', color: '#ffffff', marginBottom: '12px' }}>
                 East Palm Beach Apartments, Gold Coast – QLD
               </h3>
-              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#606060', lineHeight: 1.7, marginBottom: '16px' }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: '16px' }}>
                 Builder: McNab Constructions | Developer: BluePoint Property | Architect: Archiodom
               </p>
-              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                 Said to be the benchmark in coastal living, our team restored the fair-faced concrete of this building, delivering a stunning, lasting finish that meets the demands of the coastal environment.
               </p>
             </div>
@@ -84,7 +84,7 @@ export default function ColourMatchingPage() {
               <a href="/contact" style={{ display: 'inline-block', background: '#8B6914', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '14px 32px', textDecoration: 'none', textTransform: 'uppercase' }}>
                 Get Colour Consultation
               </a>
-              <a href="/ecotone-products" style={{ display: 'inline-block', background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '14px 32px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase' }}>
+              <a href="/ecotone-products" style={{ display: 'inline-block', background: 'transparent', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '14px 32px', border: '1.5px solid rgba(255,255,255,0.5)', textDecoration: 'none', textTransform: 'uppercase' }}>
                 View Products
               </a>
             </div>

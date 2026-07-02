@@ -19,8 +19,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #f5f4f2;
-  color: #0a0a0a;
+  background-color: #000000;
+  color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,8 +34,8 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 800;
     font-size: clamp(200px, 30vw, 480px);
-    opacity: 0.035;
-    color: #0a0a0a;
+    opacity: 0.06;
+    color: #ffffff;
     letter-spacing: -0.04em;
     top: 50%;
     left: 50%;

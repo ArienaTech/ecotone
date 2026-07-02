@@ -104,8 +104,8 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
     return (
       <div style={{ overflowX: 'hidden' }}>
         <Navbar />
-        <main style={{ paddingTop: '64px', minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '24px', background: '#f5f4f2' }}>
-          <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '48px', color: '#0a0a0a', textTransform: 'uppercase' }}>
+        <main style={{ paddingTop: '64px', minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '24px', background: '#000000' }}>
+          <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '48px', color: '#ffffff', textTransform: 'uppercase' }}>
             Project Not Found
           </h1>
           <a
@@ -172,13 +172,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
 
         {/* Content */}
-        <section style={{ background: '#ffffff', padding: '80px 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: '80px 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '80px', alignItems: 'start' }} className="contact-grid two-col">
             <div>
-              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '24px' }}>
+              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '24px' }}>
                 Project Overview
               </h2>
-              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '16px', color: '#505050', lineHeight: 1.8, marginBottom: '40px' }}>
+              <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '16px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: '40px' }}>
                 {project.overview}
               </p>
 
@@ -204,33 +204,33 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div>
               {/* Project Details */}
               {(project.architect || project.builder || project.developer || project.year) && (
-                <div style={{ background: '#f5f4f2', padding: '28px', marginBottom: '24px' }}>
-                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '20px' }}>
+                <div style={{ background: '#000000', padding: '28px', marginBottom: '24px' }}>
+                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '20px' }}>
                     Project Details
                   </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                     {project.architect && (
                       <div>
-                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Architect</span>
-                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#0a0a0a' }}>{project.architect}</span>
+                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Architect</span>
+                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#ffffff' }}>{project.architect}</span>
                       </div>
                     )}
                     {project.builder && (
                       <div>
-                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Builder</span>
-                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#0a0a0a' }}>{project.builder}</span>
+                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Builder</span>
+                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#ffffff' }}>{project.builder}</span>
                       </div>
                     )}
                     {project.developer && (
                       <div>
-                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Developer</span>
-                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#0a0a0a' }}>{project.developer}</span>
+                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Developer</span>
+                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#ffffff' }}>{project.developer}</span>
                       </div>
                     )}
                     {project.year && (
                       <div>
-                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Year</span>
-                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#0a0a0a' }}>{project.year}</span>
+                        <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>Year</span>
+                        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '14px', color: '#ffffff' }}>{project.year}</span>
                       </div>
                     )}
                   </div>
@@ -239,8 +239,8 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
               {/* Products Used */}
               {project.products && project.products.length > 0 && (
-                <div style={{ background: '#f5f4f2', padding: '28px' }}>
-                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '20px' }}>
+                <div style={{ background: '#000000', padding: '28px' }}>
+                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '20px' }}>
                     Products Used
                   </h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -254,7 +254,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                           fontFamily: 'Space Grotesk',
                           fontWeight: 400,
                           fontSize: '14px',
-                          color: '#0a0a0a',
+                          color: '#ffffff',
                         }}
                       >
                         <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#8B6914', flexShrink: 0, display: 'inline-block' }} />
