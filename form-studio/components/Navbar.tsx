@@ -196,13 +196,30 @@ export default function Navbar() {
             href="tel:+971558934401"
             style={{
               fontFamily: 'Space Grotesk',
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: '12px',
-              color: '#8B6914',
+              color: '#ffffff',
               textDecoration: 'none',
-              letterSpacing: '0.02em',
+              letterSpacing: '0.06em',
+              background: 'rgba(0,0,0,0.45)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              padding: '6px 14px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              transition: 'background 0.2s ease, border-color 0.2s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(139,105,20,0.5)';
+              e.currentTarget.style.borderColor = 'rgba(139,105,20,0.7)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(0,0,0,0.45)';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.18)';
             }}
           >
+            <span style={{ color: '#C4902E', fontSize: '10px' }}>●</span>
             +971 55 893 4401
           </a>
           <a
