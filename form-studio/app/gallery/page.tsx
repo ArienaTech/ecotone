@@ -109,10 +109,32 @@ const allItems = [
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filtered = activeCategory === 'All'
     ? allItems
     : allItems.filter((item) => item.category === activeCategory);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxIndex(null);
+    document.body.style.overflow = '';
+  };
+
+  const showPrev = () => setLightboxIndex((i) => (i !== null ? (i - 1 + filtered.length) % filtered.length : null));
+  const showNext = () => setLightboxIndex((i) => (i !== null ? (i + 1) % filtered.length : null));
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') showPrev();
+    else if (e.key === 'ArrowRight') showNext();
+    else if (e.key === 'Escape') closeLightbox();
+  };
+
+  const activeLightboxItem = lightboxIndex !== null ? filtered[lightboxIndex] : null;
 
   return (
     <div style={{ overflowX: 'hidden' }}>
@@ -180,14 +202,15 @@ export default function GalleryPage() {
                   gap: '8px',
                 }}
               >
-                {filtered.map((item) => (
+                {filtered.map((item, index) => (
                   <div
                     key={item.id}
+                    onClick={() => openLightbox(index)}
                     style={{
                       position: 'relative',
                       aspectRatio: '16 / 10',
                       overflow: 'hidden',
-                      cursor: 'pointer',
+                      cursor: 'zoom-in',
                       background: '#e8e5e0',
                     }}
                     onMouseEnter={(e) => {
@@ -283,6 +306,166 @@ export default function GalleryPage() {
 
       </main>
       <Footer />
+
+      {/* Lightbox */}
+      {activeLightboxItem && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onKeyDown={handleKeyDown}
+          tabIndex={-1}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 1000,
+            background: 'rgba(0,0,0,0.92)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            outline: 'none',
+          }}
+          onClick={closeLightbox}
+          ref={(el) => el?.focus()}
+        >
+          {/* Close */}
+          <button
+            onClick={closeLightbox}
+            aria-label="Close"
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '24px',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: '#ffffff',
+              fontSize: '32px',
+              lineHeight: 1,
+              fontWeight: 300,
+              zIndex: 10,
+              padding: '4px 8px',
+            }}
+          >
+            ×
+          </button>
+
+          {/* Prev */}
+          <button
+            onClick={(e) => { e.stopPropagation(); showPrev(); }}
+            aria-label="Previous image"
+            style={{
+              position: 'absolute',
+              left: '16px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              color: '#ffffff',
+              cursor: 'pointer',
+              width: '48px',
+              height: '48px',
+              fontSize: '22px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 10,
+              transition: 'background 0.15s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+          >
+            ‹
+          </button>
+
+          {/* Next */}
+          <button
+            onClick={(e) => { e.stopPropagation(); showNext(); }}
+            aria-label="Next image"
+            style={{
+              position: 'absolute',
+              right: '16px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              color: '#ffffff',
+              cursor: 'pointer',
+              width: '48px',
+              height: '48px',
+              fontSize: '22px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              zIndex: 10,
+              transition: 'background 0.15s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+          >
+            ›
+          </button>
+
+          {/* Image */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '85vh',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={activeLightboxItem.src}
+              alt={activeLightboxItem.title}
+              style={{
+                maxWidth: '90vw',
+                maxHeight: '78vh',
+                objectFit: 'contain',
+                display: 'block',
+                boxShadow: '0 24px 80px rgba(0,0,0,0.6)',
+              }}
+            />
+            <div style={{ marginTop: '16px', textAlign: 'center' }}>
+              <span style={{
+                fontFamily: 'Space Grotesk',
+                fontWeight: 700,
+                fontSize: '14px',
+                color: '#ffffff',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                display: 'block',
+              }}>
+                {activeLightboxItem.title}
+              </span>
+              <span style={{
+                fontFamily: 'Inter',
+                fontWeight: 400,
+                fontSize: '11px',
+                color: '#C4902E',
+                letterSpacing: '0.10em',
+                textTransform: 'uppercase',
+                marginTop: '4px',
+                display: 'block',
+              }}>
+                {activeLightboxItem.category}
+              </span>
+              <span style={{
+                fontFamily: 'Inter',
+                fontWeight: 400,
+                fontSize: '11px',
+                color: 'rgba(255,255,255,0.35)',
+                marginTop: '6px',
+                display: 'block',
+              }}>
+                {(lightboxIndex ?? 0) + 1} / {filtered.length}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
