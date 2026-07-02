@@ -108,7 +108,7 @@ export default function GalleryPage() {
                     key={item.id}
                     style={{
                       position: 'relative',
-                      aspectRatio: i % 5 === 0 ? '3 / 4' : '1 / 1',
+                      aspectRatio: '4 / 3',
                       overflow: 'hidden',
                       cursor: 'pointer',
                       background: '#e8e5e0',
