@@ -4,38 +4,78 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const categories = ['All', 'Colour By Design', 'Colour Matching', 'Factory Finishes', 'Functional Coatings', 'Urban Infrastructure', 'Weather Defense'];
+const categories = [
+  'All',
+  'Cladding Finishes',
+  'Colour By Design',
+  'Concrete Facades',
+  'Colour Matching',
+  'Factory Finishes',
+  'Functional Coatings',
+  'Urban Infrastructure',
+  'Weather Defense',
+];
 
-const BASE = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/';
+const CBD = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/';
+const CLF = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Cladding%20Finishes/';
+const CNF = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/';
 
-// Ordered for optimal sale psychology:
-// 1. Open with the most impressive/aspirational to grab attention (Design Excellence)
-// 2. Reinforce premium positioning early (Premium Complex, Waterfront Development)
-// 3. Build authority and breadth (Architectural Design, Commercial Hospitality, ECOTONE Presentation)
-// 4. Sustain emotion and local relevance (Eden View, Canvas QLD)
-// 5. Demonstrate versatility (Bond Project, Colour Design Project)
-// 6. Close with personalisation/invitation (Custom Colour Solution, Custom Project)
-const colourByDesignItems = [
-  { title: 'Design Excellence',      src: BASE + 'Design%20Excellence.jpeg',        ext: 'jpeg' },
-  { title: 'Premium Complex',        src: BASE + 'Premium%20Complex.jpeg',           ext: 'jpeg' },
-  { title: 'Waterfront Development', src: BASE + 'Waterfront%20Development.jpeg',    ext: 'jpeg' },
-  { title: 'Architectural Design',   src: BASE + 'Architectural%20Design.png',       ext: 'png'  },
-  { title: 'Commercial Hospitality', src: BASE + 'Commercial%20Hospitality.jpg',     ext: 'jpg'  },
-  { title: 'ECOTONE Presentation',   src: BASE + 'ECOTONE%20Presentation.jpg',       ext: 'jpg'  },
-  { title: 'Eden View',              src: BASE + 'Eden%20View.png',                  ext: 'png'  },
-  { title: 'Canvas QLD',             src: BASE + 'Canvas%20QLD.png',                 ext: 'png'  },
-  { title: 'Bond Project',           src: BASE + 'Bond%20Project.png',               ext: 'png'  },
-  { title: 'Colour Design Project',  src: BASE + 'Colour%20Design%20Project.png',    ext: 'png'  },
-  { title: 'Custom Colour Solution', src: BASE + 'Custom%20Colour%20Solution.jpg',   ext: 'jpg'  },
-  { title: 'Custom Project',         src: BASE + 'Custom%20Project.png',             ext: 'png'  },
-].map((item, i) => ({ ...item, id: i + 1, category: 'Colour By Design' }));
+// --- Colour By Design ---
+// Psychology: aspiration → premium → authority → emotion/local → versatility → personalisation
+const colourByDesign = [
+  { title: 'Design Excellence',      src: CBD + 'Design%20Excellence.jpeg'      },
+  { title: 'Premium Complex',        src: CBD + 'Premium%20Complex.jpeg'         },
+  { title: 'Waterfront Development', src: CBD + 'Waterfront%20Development.jpeg'  },
+  { title: 'Architectural Design',   src: CBD + 'Architectural%20Design.png'     },
+  { title: 'Commercial Hospitality', src: CBD + 'Commercial%20Hospitality.jpg'   },
+  { title: 'ECOTONE Presentation',   src: CBD + 'ECOTONE%20Presentation.jpg'     },
+  { title: 'Eden View',              src: CBD + 'Eden%20View.png'                },
+  { title: 'Canvas QLD',             src: CBD + 'Canvas%20QLD.png'               },
+  { title: 'Bond Project',           src: CBD + 'Bond%20Project.png'             },
+  { title: 'Colour Design Project',  src: CBD + 'Colour%20Design%20Project.png'  },
+  { title: 'Custom Colour Solution', src: CBD + 'Custom%20Colour%20Solution.jpg' },
+  { title: 'Custom Project',         src: CBD + 'Custom%20Project.png'           },
+].map((item) => ({ ...item, category: 'Colour By Design' }));
+
+// --- Cladding Finishes ---
+// Psychology: landmark credibility first → premium material → modern aspiration →
+//             vibrant energy (×2) → completed projects close with authority
+const claddingFinishes = [
+  { title: 'Queen Victoria Market', src: CLF + 'Queen%20Victoria%20Market.png'  },
+  { title: 'The Bond Panelwood',    src: CLF + 'The%20Bond%20Panelwood.png'     },
+  { title: 'Modern Cladding',       src: CLF + 'Modern%20Cladding.png'          },
+  { title: 'Vivid VIC Project',     src: CLF + 'Vivid%20VIC%20Project.png'      },
+  { title: 'Vivid VIC',             src: CLF + 'Vivid%20VIC.png'                },
+  { title: 'Lansell Road Project',  src: CLF + 'Lansell%20Road%20Project.png'   },
+  { title: 'Lansell Road',          src: CLF + 'Lansell%20Road.png'             },
+].map((item) => ({ ...item, category: 'Cladding Finishes' }));
+
+// --- Concrete Facades ---
+// Psychology: design excellence → contemporary style → commercial scale →
+//             premium lifestyle landmark → urban breadth → core service → implicit CTA close
+const concreteFacades = [
+  { title: 'Architectural Excellence',    src: CNF + 'Architectural%20Excellence.jpeg'    },
+  { title: 'Contemporary Architecture',   src: CNF + 'Contemporary%20Architecture.jpeg'   },
+  { title: 'Modern Commercial Complex',   src: CNF + 'Modern%20Commercial%20Complex.jpeg' },
+  { title: 'Half Moon Bay Marina',        src: CNF + 'Half%20Moon%20Bay%20Marina.png'     },
+  { title: 'Premium Development',         src: CNF + 'Premium%20Development.png'          },
+  { title: 'City Development',            src: CNF + 'City%20Development.jpeg'            },
+  { title: 'Architectural Design',        src: CNF + 'Architectural%20Design.jpeg'        },
+  { title: 'Commercial Building',         src: CNF + 'Commercial%20Building.jpeg'         },
+  { title: 'Commercial Concrete Facade',  src: CNF + 'Commercial%20Concrete%20Facade.png'},
+  { title: 'Modern Infrastructure',       src: CNF + 'Modern%20Infrastructure.jpeg'       },
+  { title: 'Urban Development',           src: CNF + 'Urban%20Development.jpeg'           },
+  { title: 'Urban Project',               src: CNF + 'Urban%20Project.jpeg'               },
+].map((item) => ({ ...item, category: 'Concrete Facades' }));
+
+const allItems = [...colourByDesign, ...claddingFinishes, ...concreteFacades].map((item, i) => ({ ...item, id: i + 1 }));
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const filtered = activeCategory === 'All'
-    ? colourByDesignItems
-    : colourByDesignItems.filter((item) => item.category === activeCategory);
+    ? allItems
+    : allItems.filter((item) => item.category === activeCategory);
 
   return (
     <div style={{ overflowX: 'hidden' }}>
@@ -103,7 +143,7 @@ export default function GalleryPage() {
                   gap: '8px',
                 }}
               >
-                {filtered.map((item, i) => (
+                {filtered.map((item) => (
                   <div
                     key={item.id}
                     style={{
