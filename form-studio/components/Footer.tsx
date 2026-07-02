@@ -66,12 +66,11 @@ export default function Footer() {
               Services
             </p>
             {[
+              { label: 'Concrete Facades', href: '/gallery' },
+              { label: 'Cladding Finishes', href: '/gallery' },
               { label: 'Colour By Design', href: '/services/colour-by-design' },
-              { label: 'Colour Matching', href: '/services/colour-matching' },
               { label: 'Factory Finishes', href: '/services/factory-finishes' },
-              { label: 'Functional Coatings', href: '/services/functional-coatings' },
-              { label: 'Urban Infrastructure', href: '/services/urban-infrastructure' },
-              { label: 'Weather Defense', href: '/services/weather-proof-finishes' },
+              { label: 'Featured Projects', href: '/gallery' },
             ].map((item) => (
               <a
                 key={item.href}

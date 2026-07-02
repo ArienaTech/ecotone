@@ -10,6 +10,7 @@ const products = [
     category: 'Emulsion Stains',
     features: ['Matte finish', 'Multi-surface application', 'Water-based formula', 'Wide colour range'],
     applications: ['Concrete facades', 'Masonry surfaces', 'Cladding panels'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2021/08/TDS-ECOTONE-Matt_ECO-0037D.pdf',
   },
   {
     name: 'ECOTONE Matt Plus',
@@ -17,6 +18,7 @@ const products = [
     category: 'Protective Coatings',
     features: ['Water repellant', 'Enhanced durability', 'Matte finish', 'Breathable formula'],
     applications: ['Exposed facades', 'Coastal buildings', 'High-moisture environments'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2022/09/ECC-TDS-Self-Cleaning-Coating_ECC-0002.pdf',
   },
   {
     name: 'ECOTONE Sharp',
@@ -24,6 +26,7 @@ const products = [
     category: 'Decorative Finishes',
     features: ['Semi-gloss finish', 'Metallic effects', 'Vibrant colour depth', 'Enhanced sheen'],
     applications: ['Accent surfaces', 'Metallic replication', 'Interior feature walls'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2021/08/TDS-ECOTONE-Fix_ECO-0039D.pdf',
   },
   {
     name: 'ECOTONE Minsil',
@@ -31,6 +34,7 @@ const products = [
     category: 'Mineral Coatings',
     features: ['Deep penetration', 'Chemical bonding', 'High durability', 'Dense surface adhesion'],
     applications: ['Dense concrete', 'Engineering brick', 'Glazed surfaces'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2021/12/TDS-ECOTONE-Minsil_ECO-0036D.pdf',
   },
   {
     name: 'ECOTONE Prime',
@@ -38,6 +42,7 @@ const products = [
     category: 'Primers & Preparation',
     features: ['Adhesion promoter', 'Non-porous surface prep', 'Compatibility enhancer', 'Fast drying'],
     applications: ['Pre-treatment coat', 'Smooth surface preparation', 'Enhanced bond strength'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2021/08/TDS-ECOTONE-Prime_ECO-0040D.pdf',
   },
   {
     name: 'ECOTONE Seal',
@@ -45,6 +50,7 @@ const products = [
     category: 'Protective Sealers',
     features: ['Fluoropolymer technology', 'Graffiti resistance', 'Stain resistant', 'Long-term protection'],
     applications: ['Public infrastructure', 'High-traffic areas', 'Anti-graffiti applications'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2022/09/ECC-TDS-Ultra-Graffiti-Shield_ECC-0008.pdf',
   },
   {
     name: 'ECOTONE WP Membrane Primer',
@@ -52,6 +58,7 @@ const products = [
     category: 'Waterproof Systems',
     features: ['Deep penetration', 'Consolidating primer', 'Chalky surface treatment', 'Waterproofing preparation'],
     applications: ['Weathered masonry', 'Porous substrates', 'Membrane preparation'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2022/09/ECC-TDS-Porosity-Sealer_ECC-0003.pdf',
   },
   {
     name: 'ECOTONE Waterproof Membrane',
@@ -59,6 +66,7 @@ const products = [
     category: 'Waterproof Systems',
     features: ['Elastomeric formula', 'Crack bridging', 'Satin finish', 'Weather resistant'],
     applications: ['Waterproof facades', 'Planter boxes', 'Balconies and terraces'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2022/09/ECC-TDS-Barrier-Coating_ECC-0004.pdf',
   },
   {
     name: 'ECOTONE Graffiti Remover',
@@ -66,6 +74,7 @@ const products = [
     category: 'Cleaning Solutions',
     features: ['Surface-safe formula', 'Effective removal', 'No surface damage', 'Fast acting'],
     applications: ['Public buildings', 'Transport infrastructure', 'Urban surfaces'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2021/08/TDS-ECOTONE-Graffiti-Remover_ECO-0038D.pdf',
   },
   {
     name: 'ECOCLEAN Concrete Sealer',
@@ -73,6 +82,7 @@ const products = [
     category: 'Functional Coatings',
     features: ['Photocatalytic technology', 'Self-cleaning', 'UV activation', 'Long-lasting'],
     applications: ['External concrete', 'Public paving', 'Architectural surfaces'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2022/09/ECC-TDS-Concrete-Sealer_ECC-0006.pdf',
   },
   {
     name: 'ECOCLEAN Antiviral Coating',
@@ -80,6 +90,7 @@ const products = [
     category: 'Functional Coatings',
     features: ['Antiviral properties', 'Antibacterial', 'Anti-mould', 'Continuous protection'],
     applications: ['Hospitals', 'Schools', 'Public transport', 'Hospitality'],
+    datasheet: 'https://ecotonecoatings.com/wp-content/uploads/2022/09/ECC-TDS-Antiviral-Coating_ECC-0010.pdf',
   },
 ];
 
@@ -126,12 +137,21 @@ export default function EcotoneProductsPage() {
               Technical Presentations
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              {['ECOTONE Arabia Company Overview', 'Hybrid Stone Solutions'].map((pres) => (
+              {[
+                { label: 'ECOTONE Arabia',    href: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/PDF/ECOTONE-ARABIA.pdf' },
+                { label: 'Company Overview',  href: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/PDF/ECOTONE-ARABIA.pdf' },
+                { label: 'Hybrid Stone Solutions', href: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/PDF/Hybrid-Stone-Solutions-for-Saudi-Mega-Projects%20.pdf' },
+              ].map((pres) => (
                 <a
-                  key={pres}
-                  href="#"
+                  key={pres.label}
+                  href={pres.href}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
-                    display: 'inline-block',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
                     background: 'rgba(255,255,255,0.1)',
                     border: '1px solid rgba(255,255,255,0.3)',
                     color: '#ffffff',
@@ -146,7 +166,8 @@ export default function EcotoneProductsPage() {
                   onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.background = 'rgba(255,255,255,0.2)')}
                   onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
                 >
-                  📄 {pres}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  {pres.label}
                 </a>
               ))}
             </div>
@@ -217,7 +238,9 @@ export default function EcotoneProductsPage() {
                   </div>
 
                   <a
-                    href="#"
+                    href={product.datasheet}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       display: 'inline-block',
                       border: '1.5px solid #8B6914',
