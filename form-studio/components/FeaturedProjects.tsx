@@ -5,82 +5,156 @@ import { motion } from 'motion/react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const projects = [
-  { name: 'Premium Development Project', category: 'Colour By Design', slug: 'premium-development-project', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Premium%20Development%20Project.png' },
-  { name: 'Half Moon Bay Marina', category: 'Functional Coatings', slug: 'half-moon-bay-marina', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Half%20Moon%20Bay%20Marina.png' },
-  { name: 'Commercial Infrastructure', category: 'Urban Infrastructure', slug: 'commercial-infrastructure', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Commercial%20Infrastructure.png' },
-  { name: 'Carlaw Park Student Village', category: 'Prefabricated Facades', slug: 'carlaw-park-student-village', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Carlaw%20Park%20Student%20Village.png' },
-  { name: 'Macarthur Anglican School', category: 'Cladding Finishes', slug: 'macarthur-anglican-school', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Macarthur%20Anglican%20School.png' },
-  { name: 'Factory Applied Finishes', category: 'Factory Finishes', slug: 'factory-applied-finishes', image: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Factory%20Applied%20Finishes.png' },
+// Hand-picked from the gallery using sale psychology:
+// 1. Saint Moritz Esplanade  — prestigious name, instant aspiration → hero position (large)
+// 2. Half Moon Bay Marina     — premium lifestyle landmark → reinforces aspiration
+// 3. Architectural Excellence — scale and craft → builds authority
+// 4. Design Excellence        — colour expertise → signals core service
+// 5. Queen Victoria Market    — iconic landmark → social proof / trust
+// 6. Contemporary Architecture— modern, clean → close with broad appeal
+const featured = [
+  {
+    title: 'Saint Moritz Esplanade',
+    category: 'Featured Projects',
+    src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Featured%20Projects/Saint%20Moritz%20Esplanade.jpg',
+    span: 2, // wide hero card
+  },
+  {
+    title: 'Half Moon Bay Marina',
+    category: 'Concrete Facades',
+    src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/Half%20Moon%20Bay%20Marina.png',
+    span: 1,
+  },
+  {
+    title: 'Architectural Excellence',
+    category: 'Concrete Facades',
+    src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/Architectural%20Excellence.jpeg',
+    span: 1,
+  },
+  {
+    title: 'Design Excellence',
+    category: 'Colour By Design',
+    src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/Design%20Excellence.jpeg',
+    span: 1,
+  },
+  {
+    title: 'Queen Victoria Market',
+    category: 'Cladding Finishes',
+    src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Cladding%20Finishes/Queen%20Victoria%20Market.png',
+    span: 1,
+  },
+  {
+    title: 'Contemporary Architecture',
+    category: 'Concrete Facades',
+    src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/Contemporary%20Architecture.jpeg',
+    span: 1,
+  },
 ];
 
-const categoryColors: Record<string, string> = {
-  'Colour By Design': '#8B6914',
-  'Functional Coatings': '#1A3A5C',
-  'Urban Infrastructure': '#4a4a8a',
-  'Prefabricated Facades': '#6A4010',
-  'Cladding Finishes': '#6a2d4a',
-  'Factory Finishes': '#2d4a6a',
-};
-
-function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function GalleryCard({ item, index }: { item: typeof featured[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
 
   return (
     <motion.a
-      href={`/portfolio/${project.slug}`}
-      initial={{ opacity: 0, y: 40 }}
+      href="/gallery"
+      initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.6, ease: EASE, delay: index * 0.1 }}
+      transition={{ duration: 0.65, ease: EASE, delay: index * 0.08 }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      style={{ display: 'block', background: '#ffffff', textDecoration: 'none', overflow: 'hidden', position: 'relative' }}
+      style={{
+        display: 'block',
+        position: 'relative',
+        overflow: 'hidden',
+        gridColumn: item.span === 2 ? 'span 2' : 'span 1',
+        aspectRatio: item.span === 2 ? '16 / 7' : '4 / 3',
+        textDecoration: 'none',
+        background: '#1a1a1a',
+        cursor: 'pointer',
+      }}
     >
       {/* Image */}
-      <div style={{ width: '100%', height: '220px', overflow: 'hidden', position: 'relative' }}>
-        <motion.img
-          src={project.image}
-          alt={project.name}
-          animate={{ scale: hovered ? 1.06 : 1 }}
-          transition={{ duration: 0.5, ease: EASE }}
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-        />
-        {/* Overlay on hover */}
-        <motion.div
-          animate={{ opacity: hovered ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          style={{ position: 'absolute', inset: 0, background: 'rgba(139,105,20,0.15)' }}
-        />
-      </div>
+      <motion.img
+        src={item.src}
+        alt={item.title}
+        animate={{ scale: hovered ? 1.07 : 1 }}
+        transition={{ duration: 0.55, ease: EASE }}
+        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+      />
 
-      {/* Card body */}
-      <div style={{ padding: '24px 24px 28px' }}>
-        <span
-          style={{ display: 'inline-block', background: categoryColors[project.category] || '#8B6914', color: '#ffffff', fontFamily: 'Inter', fontWeight: 500, fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '4px 10px', marginBottom: '14px' }}
-        >
-          {project.category}
-        </span>
+      {/* Dark gradient overlay — always visible at bottom */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.08) 55%, rgba(0,0,0,0) 100%)',
+        pointerEvents: 'none',
+      }} />
 
-        <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '17px', color: '#0a0a0a', marginBottom: '16px', lineHeight: 1.3 }}>
-          {project.name}
-        </h3>
+      {/* Gold hover tint */}
+      <motion.div
+        animate={{ opacity: hovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        style={{ position: 'absolute', inset: 0, background: 'rgba(139,105,20,0.18)', pointerEvents: 'none' }}
+      />
 
+      {/* Title bar */}
+      <div style={{
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        padding: item.span === 2 ? '32px 28px 24px' : '24px 18px 18px',
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'space-between',
+        gap: '12px',
+      }}>
+        <div>
+          <span style={{
+            display: 'inline-block',
+            fontFamily: 'Inter',
+            fontWeight: 500,
+            fontSize: '10px',
+            color: '#C4902E',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            marginBottom: '6px',
+          }}>
+            {item.category}
+          </span>
+          <p style={{
+            fontFamily: 'Space Grotesk',
+            fontWeight: 700,
+            fontSize: item.span === 2 ? 'clamp(16px, 2vw, 22px)' : '14px',
+            color: '#ffffff',
+            letterSpacing: '-0.01em',
+            textTransform: 'uppercase',
+            margin: 0,
+            lineHeight: 1.2,
+          }}>
+            {item.title}
+          </p>
+        </div>
+
+        {/* View arrow — slides in on hover */}
         <motion.span
-          animate={{ x: hovered ? 6 : 0 }}
+          animate={{ opacity: hovered ? 1 : 0, x: hovered ? 0 : 8 }}
           transition={{ duration: 0.2 }}
-          style={{ display: 'inline-block', fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#8B6914', textTransform: 'uppercase', letterSpacing: '0.06em' }}
+          style={{
+            fontFamily: 'Space Grotesk',
+            fontWeight: 700,
+            fontSize: '11px',
+            color: '#ffffff',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            flexShrink: 0,
+            whiteSpace: 'nowrap',
+          }}
         >
-          View Project →
+          View Gallery →
         </motion.span>
       </div>
-
-      {/* Bottom green bar that grows on hover */}
-      <motion.div
-        animate={{ scaleX: hovered ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: EASE }}
-        style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '3px', background: '#8B6914', transformOrigin: 'left' }}
-      />
     </motion.a>
   );
 }
@@ -91,7 +165,7 @@ export default function FeaturedProjects() {
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '64px', flexWrap: 'wrap', gap: '24px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '48px', flexWrap: 'wrap', gap: '24px' }}>
           <div>
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -120,7 +194,7 @@ export default function FeaturedProjects() {
               transition={{ duration: 0.6, delay: 0.2 }}
               style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#606060', maxWidth: '560px', lineHeight: 1.7 }}
             >
-              Explore our portfolio of transformative coating solutions across residential, commercial and infrastructure projects. Each project reflects our commitment to innovation, sustainability and lasting beauty.
+              A selection of our most iconic projects — from landmark facades to bespoke colour solutions across residential, commercial and infrastructure.
             </motion.p>
           </div>
           <motion.a
@@ -128,19 +202,19 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            href="/portfolio"
+            href="/gallery"
             style={{ display: 'inline-block', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#8B6914', textDecoration: 'none', border: '1.5px solid #8B6914', padding: '12px 28px', transition: 'all 0.15s ease', flexShrink: 0 }}
             onMouseEnter={(e) => { e.currentTarget.style.background = '#8B6914'; e.currentTarget.style.color = '#ffffff'; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#8B6914'; }}
           >
-            View All Projects →
+            View Full Gallery →
           </motion.a>
         </div>
 
-        {/* Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="projects-grid">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} index={i} />
+        {/* Image grid — 3 columns, first card spans 2 */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px' }} className="projects-grid">
+          {featured.map((item, i) => (
+            <GalleryCard key={item.title} item={item} index={i} />
           ))}
         </div>
       </div>
