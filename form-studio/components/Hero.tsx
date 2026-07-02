@@ -2,9 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Volume2, VolumeX } from 'lucide-react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
+const VIDEO_URL = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/ECOTONE.mp4';
 
 const marqueeItems = ['UAE', 'Saudi Arabia', 'Bahrain', '25-Year Guarantee', '1000+ Projects', 'Eco-Certified', 'Australian Innovation', 'Gulf Climate Proven'];
 
@@ -113,22 +114,52 @@ function AnimatedHeadline() {
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] });
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '12%']);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
+  function toggleMute() {
+    if (videoRef.current) {
+      videoRef.current.muted = !muted;
+      setMuted(!muted);
+    }
+  }
+
   return (
     <section ref={sectionRef} id="hero" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
-      <motion.div className="bg-brand-text" style={{ y: bgY }}>ECO</motion.div>
+      {/* Full-viewport video background */}
+      <video
+        ref={videoRef}
+        src={VIDEO_URL}
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0,
+        }}
+      />
+
+      {/* Dark overlay so text remains legible over the video */}
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.55) 60%, rgba(10,10,10,0.4) 100%)', zIndex: 1, pointerEvents: 'none' }} />
+
+      <motion.div className="bg-brand-text" style={{ y: bgY, zIndex: 2 }}>ECO</motion.div>
 
       {/* Gold atmosphere gradient */}
-      <div style={{ position: 'absolute', top: 0, right: 0, width: '65%', height: '100%', background: 'radial-gradient(ellipse at 85% 25%, rgba(139,105,20,0.15) 0%, rgba(139,105,20,0.06) 45%, transparent 72%)', zIndex: 1, pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 0, right: 0, width: '65%', height: '100%', background: 'radial-gradient(ellipse at 85% 25%, rgba(139,105,20,0.15) 0%, rgba(139,105,20,0.06) 45%, transparent 72%)', zIndex: 2, pointerEvents: 'none' }} />
 
       {/* Subtle grid */}
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}
-        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.08) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none' }}
+        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.08) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 2, pointerEvents: 'none' }}
       />
 
       {/* Left accent line — hidden on mobile via media query */}
@@ -136,11 +167,11 @@ export default function Hero() {
         initial={{ scaleY: 0, originY: 0 }} animate={{ scaleY: 1 }}
         transition={{ duration: 1.2, ease: EASE, delay: 0.3 }}
         className="hidden md:block"
-        style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #8B6914, transparent)', zIndex: 2, pointerEvents: 'none' }}
+        style={{ position: 'absolute', left: '3%', top: '15%', bottom: '15%', width: '2px', background: 'linear-gradient(to bottom, transparent, #8B6914, transparent)', zIndex: 3, pointerEvents: 'none' }}
       />
 
       <motion.div
-        style={{ position: 'relative', zIndex: 10, width: '100%', padding: 'clamp(80px,10vh,140px) 6% clamp(40px,5vh,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '100vh', y: contentY, opacity }}
+        style={{ position: 'relative', zIndex: 10, width: '100%', padding: 'clamp(100px,12vh,160px) 6% clamp(40px,5vh,80px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '100vh', y: contentY, opacity }}
       >
         {/* Content area corner brackets */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="hidden md:block" style={{ position: 'absolute', top: 'clamp(60px,8vh,110px)', left: '5%', width: '24px', height: '24px', borderTop: '1.5px solid rgba(139,105,20,0.5)', borderLeft: '1.5px solid rgba(139,105,20,0.5)', pointerEvents: 'none' }} />
@@ -202,7 +233,13 @@ export default function Hero() {
         {/* Scroll button */}
         <motion.button
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5, duration: 0.6 }}
-          onClick={() => document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => {
+            const hero = document.getElementById('hero');
+            if (hero) {
+              const next = hero.nextElementSibling as HTMLElement | null;
+              next?.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
           className="hero-scroll-btn"
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', background: 'none', border: 'none', cursor: 'pointer', padding: '8px', alignSelf: 'center' }}
         >
@@ -212,6 +249,44 @@ export default function Hero() {
           </motion.div>
         </motion.button>
       </motion.div>
+
+      {/* Mute toggle — bottom right, above content layer */}
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6, duration: 0.5 }}
+        onClick={toggleMute}
+        aria-label={muted ? 'Unmute video' : 'Mute video'}
+        style={{
+          position: 'absolute',
+          bottom: '28px',
+          right: '6%',
+          zIndex: 20,
+          background: muted ? 'rgba(255,255,255,0.12)' : 'rgba(139,105,20,0.9)',
+          backdropFilter: 'blur(12px)',
+          border: muted ? '1px solid rgba(255,255,255,0.2)' : '1px solid rgba(139,105,20,0.5)',
+          height: '42px',
+          paddingLeft: '16px',
+          paddingRight: '16px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          cursor: 'pointer',
+          transition: 'background 0.2s ease, border 0.2s ease',
+          color: '#ffffff',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = muted ? 'rgba(255,255,255,0.22)' : '#664A0E';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = muted ? 'rgba(255,255,255,0.12)' : 'rgba(139,105,20,0.9)';
+        }}
+      >
+        {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+        <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+          {muted ? 'Unmute' : 'Mute'}
+        </span>
+      </motion.button>
     </section>
   );
 }
