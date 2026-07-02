@@ -1,11 +1,27 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
+const OG_IMAGE = {
+  url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Featured%20Projects/Saint%20Moritz%20Esplanade.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'Saint Moritz Esplanade — ECOTONE premium facade coating project',
+};
+
 export const metadata: Metadata = {
-  title: 'Ecotone | Colour For Life Coatings',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ecotone.ae'),
+  title: {
+    default: 'ECOTONE Arabia | Premium Facade Coatings for the Gulf',
+    template: '%s | ECOTONE Arabia',
+  },
   description:
-    'Long-lasting colour and functional coatings designed for the building and construction industry in Arabia. Stunningly sustainable, weather-resistant solutions.',
-  keywords: 'colour coatings, functional coatings, building materials, sustainable coatings, architectural finishes, Arabia',
+    'ECOTONE Arabia delivers mineral-based facade coatings engineered for 25-year durability and eco-certified performance — trusted by architects, developers and contractors across the Gulf.',
+  keywords: [
+    'facade coatings', 'architectural coatings', 'mineral coatings', 'concrete coatings',
+    'cladding finishes', 'colour by design', 'factory finishes', 'functional coatings',
+    'weather proof coatings', 'eco-certified coatings', 'Gulf coatings', 'UAE coatings',
+    'Saudi Arabia coatings', 'sustainable coatings', '25 year guarantee', 'ECOTONE',
+  ],
   manifest: '/manifest.json',
   icons: {
     icon: [{ url: '/icon.png', sizes: '1024x1024', type: 'image/png' }],
@@ -16,16 +32,28 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'ECOTONE Arabia',
   },
-  formatDetection: {
-    telephone: false,
-  },
+  formatDetection: { telephone: false },
   openGraph: {
     type: 'website',
     locale: 'en_AE',
-    title: 'Ecotone | Colour For Life Coatings',
-    description:
-      'Long-lasting colour and functional coatings designed for the building and construction industry in Arabia. Stunningly sustainable, weather-resistant solutions.',
     siteName: 'ECOTONE Arabia',
+    title: 'ECOTONE Arabia | Premium Facade Coatings for the Gulf',
+    description:
+      'ECOTONE Arabia delivers mineral-based facade coatings engineered for 25-year durability and eco-certified performance — trusted by architects, developers and contractors across the Gulf.',
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ecotone_arabia',
+    title: 'ECOTONE Arabia | Premium Facade Coatings for the Gulf',
+    description:
+      'Mineral-based facade coatings engineered for 25-year durability. Eco-certified. Gulf climate proven.',
+    images: [OG_IMAGE.url],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
 };
 

@@ -1,6 +1,23 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
+
+export const metadata: Metadata = {
+  title: 'Contact ECOTONE Arabia | Project Enquiries',
+  description:
+    'Get in touch with ECOTONE Arabia for facade coating project enquiries, colour consultations and technical support across the Gulf.',
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    url: '/contact',
+    images: [{
+      url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Featured%20Projects/Premium%20Finish.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'ECOTONE premium facade finish — contact us for your project',
+    }],
+  },
+};
 
 export default function ContactPage() {
   return (

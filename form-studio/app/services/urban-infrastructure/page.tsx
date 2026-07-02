@@ -1,6 +1,23 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EnquiryForm from '@/components/EnquiryForm';
+
+export const metadata: Metadata = {
+  title: 'Urban Infrastructure Coatings | ECOTONE Arabia',
+  description:
+    'ECOTONE urban infrastructure coatings protect and beautify bridges, tunnels, transit hubs and public structures — engineered for the Gulf\'s extreme climate.',
+  alternates: { canonical: '/services/urban-infrastructure' },
+  openGraph: {
+    url: '/services/urban-infrastructure',
+    images: [{
+      url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/Urban%20Development.jpeg',
+      width: 1200,
+      height: 630,
+      alt: 'Urban development with ECOTONE infrastructure coating',
+    }],
+  },
+};
 
 const whereWeWork = [
   {

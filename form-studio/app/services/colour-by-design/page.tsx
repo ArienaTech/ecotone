@@ -1,6 +1,23 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EnquiryForm from '@/components/EnquiryForm';
+
+export const metadata: Metadata = {
+  title: 'Colour By Design | Architectural Surface Transformation',
+  description:
+    'ECOTONE\'s Colour By Design service allows architects to preserve, protect or transform concrete and cladding surfaces — achieving any finish imaginable with eco-certified coatings.',
+  alternates: { canonical: '/services/colour-by-design' },
+  openGraph: {
+    url: '/services/colour-by-design',
+    images: [{
+      url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/Design%20Excellence.jpeg',
+      width: 1200,
+      height: 630,
+      alt: 'Design Excellence — ECOTONE Colour By Design facade coating',
+    }],
+  },
+};
 
 export default function ColourByDesignPage() {
   return (

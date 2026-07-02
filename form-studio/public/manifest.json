@@ -1,15 +1,15 @@
 {
-  "name": "Form Studio — Brand Identity Studio",
-  "short_name": "Form Studio",
-  "description": "London-based brand identity studio. Strategy. Identity. Motion. Web.",
+  "name": "ECOTONE Arabia — Premium Facade Coatings",
+  "short_name": "ECOTONE",
+  "description": "Mineral-based facade coatings engineered for 25-year durability and eco-certified performance across the Gulf.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f5f4f2",
-  "theme_color": "#f5f4f2",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "en-GB",
-  "categories": ["business", "design"],
+  "lang": "en-AE",
+  "categories": ["business", "construction"],
   "icons": [
     {
       "src": "/icons/icon-72x72.png",

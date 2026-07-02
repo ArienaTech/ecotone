@@ -1,6 +1,23 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EnquiryForm from '@/components/EnquiryForm';
+
+export const metadata: Metadata = {
+  title: 'Functional Coatings | Performance Facade Solutions',
+  description:
+    'ECOTONE functional coatings go beyond aesthetics — delivering anti-graffiti, anti-carbonation, waterproofing and thermal-barrier performance for demanding Gulf environments.',
+  alternates: { canonical: '/services/functional-coatings' },
+  openGraph: {
+    url: '/services/functional-coatings',
+    images: [{
+      url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/Modern%20Infrastructure.jpeg',
+      width: 1200,
+      height: 630,
+      alt: 'Modern infrastructure with ECOTONE functional coating',
+    }],
+  },
+};
 
 export default function FunctionalCoatingsPage() {
   return (

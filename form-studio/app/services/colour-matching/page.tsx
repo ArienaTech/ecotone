@@ -1,6 +1,23 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EnquiryForm from '@/components/EnquiryForm';
+
+export const metadata: Metadata = {
+  title: 'Colour Matching | Precision Facade Colour Reproduction',
+  description:
+    'ECOTONE\'s precision colour matching service reproduces any hue to exact specification — ideal for heritage restorations, brand-standard facades and seamless repairs across the Gulf.',
+  alternates: { canonical: '/services/colour-matching' },
+  openGraph: {
+    url: '/services/colour-matching',
+    images: [{
+      url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/Custom%20Colour%20Solution.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Custom colour solution — ECOTONE precision colour matching',
+    }],
+  },
+};
 
 export default function ColourMatchingPage() {
   return (

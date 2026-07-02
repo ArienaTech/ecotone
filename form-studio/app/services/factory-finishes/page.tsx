@@ -1,6 +1,23 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EnquiryForm from '@/components/EnquiryForm';
+
+export const metadata: Metadata = {
+  title: 'Factory Finishes | Off-Site Coating Solutions',
+  description:
+    'ECOTONE factory finishes deliver controlled, high-quality off-site coating of architectural panels, cladding and building elements — consistent colour and finish at scale.',
+  alternates: { canonical: '/services/factory-finishes' },
+  openGraph: {
+    url: '/services/factory-finishes',
+    images: [{
+      url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Factory%20Finishes/Factory%20Finish.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'ECOTONE factory finish coating process',
+    }],
+  },
+};
 
 const finishRanges = [
   { name: 'Stone & Heritage', desc: 'Riyadh Yellow Limestone, Najdi mudbrick, coral stone, sandstone replication' },

@@ -1,6 +1,23 @@
+import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import EnquiryForm from '@/components/EnquiryForm';
+
+export const metadata: Metadata = {
+  title: 'Weather-Proof Finishes | 25-Year Climate Defence',
+  description:
+    'ECOTONE weather-proof facade systems withstand 55°C+ temperatures, sand, salt air and UV — delivering 25-year guaranteed performance across UAE, Saudi Arabia and Bahrain.',
+  alternates: { canonical: '/services/weather-proof-finishes' },
+  openGraph: {
+    url: '/services/weather-proof-finishes',
+    images: [{
+      url: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/Modern%20Commercial%20Complex.jpeg',
+      width: 1200,
+      height: 630,
+      alt: 'Modern commercial complex with ECOTONE weather-proof facade coating',
+    }],
+  },
+};
 
 const keyProperties = [
   {
