@@ -154,7 +154,7 @@ function CaseCard({ item, index }: { item: (typeof cases)[0]; index: number }) {
 
 export default function CaseStudies() {
   return (
-    <section id="work-grid" style={{ background: '#000000', padding: '120px 6%' }}>
+    <section id="work-grid" style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <p
           style={{

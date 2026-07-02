@@ -161,7 +161,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Category filter */}
-        <section style={{ background: '#000000', padding: '32px 6%', borderBottom: '1px solid #2a2a2a' }}>
+        <section style={{ background: '#0a0a0a', padding: '32px 6%', borderBottom: '1px solid #2a2a2a' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             {categories.map((cat) => (
               <button
@@ -189,7 +189,7 @@ export default function GalleryPage() {
         </section>
 
         {/* Gallery grid */}
-        <section style={{ background: '#000000', padding: '48px 6% 80px' }}>
+        <section style={{ background: '#0a0a0a', padding: '48px 6% 80px' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             {filtered.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '80px 0', fontFamily: 'Inter', color: '#888', fontSize: '15px' }}>

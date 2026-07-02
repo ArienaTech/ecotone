@@ -104,7 +104,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
     return (
       <div style={{ overflowX: 'hidden' }}>
         <Navbar />
-        <main style={{ paddingTop: '64px', minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '24px', background: '#000000' }}>
+        <main style={{ paddingTop: '64px', minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: '24px', background: '#0a0a0a' }}>
           <h1 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '48px', color: '#ffffff', textTransform: 'uppercase' }}>
             Project Not Found
           </h1>
@@ -172,7 +172,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
 
         {/* Content */}
-        <section style={{ background: '#0a0a0a', padding: '80px 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '80px', alignItems: 'start' }} className="contact-grid two-col">
             <div>
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '24px' }}>
@@ -204,7 +204,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div>
               {/* Project Details */}
               {(project.architect || project.builder || project.developer || project.year) && (
-                <div style={{ background: '#000000', padding: '28px', marginBottom: '24px' }}>
+                <div style={{ background: '#0a0a0a', padding: '28px', marginBottom: '24px' }}>
                   <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '20px' }}>
                     Project Details
                   </h3>
@@ -239,7 +239,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
               {/* Products Used */}
               {project.products && project.products.length > 0 && (
-                <div style={{ background: '#000000', padding: '28px' }}>
+                <div style={{ background: '#0a0a0a', padding: '28px' }}>
                   <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '14px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '20px' }}>
                     Products Used
                   </h3>

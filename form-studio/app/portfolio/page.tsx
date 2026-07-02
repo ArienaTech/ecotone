@@ -143,7 +143,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* Projects grid */}
-        <section style={{ background: '#000000', padding: '80px 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div
               style={{

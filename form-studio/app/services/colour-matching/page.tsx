@@ -65,7 +65,7 @@ export default function ColourMatchingPage() {
             </div>
 
             {/* Case study */}
-            <div style={{ background: '#000000', padding: '48px', borderLeft: '4px solid #8B6914' }}>
+            <div style={{ background: '#141414', padding: 'clamp(24px,4vw,48px)', borderLeft: '4px solid #8B6914' }}>
               <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Case Study — Standard and Bespoke
               </span>

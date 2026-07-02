@@ -35,7 +35,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" style={{ background: '#000000', padding: '120px 6%' }}>
+    <section id="process" style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <p
           style={{

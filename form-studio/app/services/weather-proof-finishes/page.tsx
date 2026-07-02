@@ -96,11 +96,11 @@ export default function WeatherProofFinishesPage() {
             </div>
 
             {/* Key properties */}
-            <div style={{ background: '#0a0a0a', padding: '56px', marginBottom: '80px' }}>
+            <div style={{ background: '#141414', padding: 'clamp(24px,4vw,56px)', marginBottom: '80px' }}>
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '36px' }}>
                 Key Performance Properties
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="projects-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="projects-grid three-col">
                 {keyProperties.map((prop) => (
                   <div key={prop.title} style={{ borderTop: '2px solid #8B6914', paddingTop: '20px' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '15px', color: '#C4902E', marginBottom: '10px' }}>{prop.title}</h3>

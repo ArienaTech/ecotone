@@ -119,7 +119,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={sectionRef} id="hero" style={{ background: '#000000', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
+    <section ref={sectionRef} id="hero" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
       <motion.div className="bg-brand-text" style={{ y: bgY }}>ECO</motion.div>
 
       {/* Gold atmosphere gradient */}
@@ -174,7 +174,7 @@ export default function Hero() {
             Explore Services
           </a>
           <a href="/contact" style={{ background: 'transparent', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', border: '1.5px solid rgba(255,255,255,0.5)', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; e.currentTarget.style.borderColor = '#ffffff'; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#0a0a0a'; e.currentTarget.style.borderColor = '#ffffff'; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'; }}>
             Project Enquiry
           </a>

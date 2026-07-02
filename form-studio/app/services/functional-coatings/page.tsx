@@ -62,7 +62,7 @@ export default function FunctionalCoatingsPage() {
                   By working in the dark through nanotechnology, these coatings can also be used in the interior surfaces of buildings and transport systems including workplaces, schools, universities, hospitals, shopping centres, retail stores, apartment buildings, public toilets, hotels, airports, aeroplanes, buses, trams, and trains.
                 </p>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }} className="inner-two-col">
                   <div>
                     <h4 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', color: '#ffffff', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '12px' }}>External Benefits</h4>
                     {['Maintains long-term appearance', 'Reduced lifecycle cost', 'Reduced cleaning cost', 'Longer asset life', 'Air purifying properties'].map((item) => (
@@ -83,7 +83,7 @@ export default function FunctionalCoatingsPage() {
               </div>
             </div>
 
-            <div style={{ background: '#000000', padding: '48px', borderLeft: '4px solid #8B6914', marginBottom: '48px' }}>
+            <div style={{ background: '#141414', padding: 'clamp(24px,4vw,48px)', borderLeft: '4px solid #8B6914', marginBottom: '48px' }}>
               <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Project References
               </span>

@@ -47,7 +47,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact info + form */}
-        <section style={{ background: '#000000', padding: 'clamp(60px,8vh,100px) 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div
             style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '80px', alignItems: 'start' }}
             className="contact-grid two-col"

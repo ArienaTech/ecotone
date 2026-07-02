@@ -131,7 +131,7 @@ export default function EcotoneProductsPage() {
         </section>
 
         {/* Technical presentations */}
-        <section style={{ background: '#8B6914', padding: '48px 6%' }}>
+        <section style={{ background: '#8B6914', padding: 'clamp(32px,5vw,48px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <p style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.7)', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '16px' }}>
               Technical Presentations
@@ -175,7 +175,7 @@ export default function EcotoneProductsPage() {
         </section>
 
         {/* Products grid */}
-        <section id="catalogue" style={{ background: '#000000', padding: '80px 6%' }}>
+        <section id="catalogue" style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="products-grid three-col">
               {products.map((product) => (
@@ -267,7 +267,7 @@ export default function EcotoneProductsPage() {
         </section>
 
         {/* CTA */}
-        <section id="technical" style={{ background: '#0a0a0a', padding: '80px 6%', textAlign: 'center' }}>
+        <section id="technical" style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%', textAlign: 'center' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
             <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(28px, 3.5vw, 48px)', color: '#ffffff', letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '20px' }}>
               Need Technical Support?

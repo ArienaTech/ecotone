@@ -15,7 +15,7 @@ const comparisons = [
 
 export default function ComparisonSection() {
   return (
-    <section style={{ background: '#000000', padding: '120px 6%', overflow: 'hidden' }}>
+    <section style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Header */}

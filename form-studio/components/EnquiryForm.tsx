@@ -39,7 +39,7 @@ export default function EnquiryForm() {
   }
 
   return (
-    <section id="enquiry" style={{ background: '#000000', padding: '120px 6%' }}>
+    <section id="enquiry" style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         {/* Header */}
         <motion.div
@@ -88,7 +88,7 @@ export default function EnquiryForm() {
           transition={{ duration: 0.6, delay: 0.1 }}
           style={{
             background: '#0a0a0a',
-            padding: '56px',
+            padding: 'clamp(24px,5vw,56px)',
             border: '1px solid #2a2a2a',
           }}
         >

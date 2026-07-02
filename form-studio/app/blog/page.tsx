@@ -28,8 +28,8 @@ export default function BlogPage() {
         </section>
 
         {/* Blog listing */}
-        <section style={{ background: '#000000', padding: '80px 6%' }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 340px', gap: '64px', alignItems: 'start' }} className="contact-grid two-col">
+        <section style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr minmax(0, 320px)', gap: '64px', alignItems: 'start' }} className="contact-grid two-col">
 
             <div>
               {/* Placeholder - no real Ecotone posts yet */}

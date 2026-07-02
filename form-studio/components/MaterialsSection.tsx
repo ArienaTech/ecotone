@@ -14,7 +14,7 @@ const materials = [
 
 export default function MaterialsSection() {
   return (
-    <section style={{ background: '#0a0a0a', padding: '120px 6%', overflow: 'hidden' }}>
+    <section style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Header */}

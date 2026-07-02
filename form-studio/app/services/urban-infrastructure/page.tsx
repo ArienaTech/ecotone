@@ -110,7 +110,7 @@ export default function UrbanInfrastructurePage() {
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="projects-grid three-col">
                 {whereWeWork.map((item) => (
-                  <div key={item.name} style={{ background: '#000000', padding: '32px 24px', borderTop: '3px solid #8B6914' }}>
+                  <div key={item.name} style={{ background: '#0a0a0a', padding: '32px 24px', borderTop: '3px solid #8B6914' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#ffffff', marginBottom: '12px' }}>{item.name}</h3>
                     <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65 }}>{item.desc}</p>
                   </div>

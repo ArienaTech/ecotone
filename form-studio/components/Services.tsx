@@ -109,7 +109,7 @@ function ServiceRow({ service, index }: { service: (typeof services)[0]; index: 
 
 export default function Services() {
   return (
-    <section id="services" style={{ background: '#000000', padding: '120px 6%' }}>
+    <section id="services" style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <p
           style={{

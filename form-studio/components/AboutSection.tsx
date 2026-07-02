@@ -49,7 +49,7 @@ function AnimatedStat({ val, numericVal, suffix, label, delay }: { val: string; 
 
 export default function AboutSection() {
   return (
-    <section style={{ background: '#000000', padding: '120px 6%', overflow: 'hidden' }}>
+    <section style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid two-col">
 
@@ -131,7 +131,7 @@ export default function AboutSection() {
               <a
                 href="/contact"
                 style={{ background: 'transparent', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', padding: '12px 28px', border: '1.5px solid rgba(255,255,255,0.5)', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; e.currentTarget.style.borderColor = '#ffffff'; }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#0a0a0a'; e.currentTarget.style.borderColor = '#ffffff'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'; }}
               >
                 Get in Touch

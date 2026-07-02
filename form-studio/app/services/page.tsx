@@ -154,7 +154,7 @@ export default function ServicesPage() {
           <section
             key={service.slug}
             id={service.slug}
-            style={{ background: i % 2 === 0 ? '#000000' : '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%', scrollMarginTop: '64px' }}
+            style={{ background: i % 2 === 0 ? '#0a0a0a' : '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%', scrollMarginTop: '64px' }}
           >
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }} className="about-grid two-col">
@@ -216,7 +216,7 @@ export default function ServicesPage() {
                     </p>
                   ))}
                   {/* Performance callout */}
-                  <div style={{ background: '#0a0a0a', padding: '24px', marginTop: '8px' }}>
+                  <div style={{ background: '#141414', padding: '24px', marginTop: '8px' }}>
                     <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
                       {[
                         { val: '25yr', label: 'Warranty' },

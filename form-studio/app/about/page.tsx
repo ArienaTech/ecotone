@@ -135,7 +135,7 @@ export default function AboutPage() {
           <section
             key={section.label}
             style={{
-              background: i % 2 === 0 ? '#000000' : '#0a0a0a',
+              background: i % 2 === 0 ? '#0a0a0a' : '#0a0a0a',
               padding: 'clamp(60px,8vh,100px) 6%',
             }}
           >

@@ -79,7 +79,7 @@ export default function FactoryFinishesPage() {
             </div>
 
             {/* What this means */}
-            <div style={{ background: '#0a0a0a', padding: '56px', marginBottom: '80px' }}>
+            <div style={{ background: '#141414', padding: 'clamp(24px,4vw,56px)', marginBottom: '80px' }}>
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
                 What This Means For Your Operation
               </h2>
@@ -107,7 +107,7 @@ export default function FactoryFinishesPage() {
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="projects-grid three-col">
                 {finishRanges.map((range) => (
-                  <div key={range.name} style={{ background: '#000000', padding: '32px 24px', borderTop: '3px solid #8B6914' }}>
+                  <div key={range.name} style={{ background: '#0a0a0a', padding: '32px 24px', borderTop: '3px solid #8B6914' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '17px', color: '#ffffff', marginBottom: '10px' }}>{range.name}</h3>
                     <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65 }}>{range.desc}</p>
                   </div>

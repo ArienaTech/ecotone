@@ -88,7 +88,7 @@ export default function ColourByDesignPage() {
                   { name: 'Prefabricated Facades', desc: 'Factory-applied facade solutions' },
                   { name: 'Material Finishes', desc: 'Industrial-grade surface treatments' },
                 ].map((item) => (
-                  <div key={item.name} style={{ background: '#000000', padding: '28px 24px', borderTop: '3px solid #8B6914' }}>
+                  <div key={item.name} style={{ background: '#0a0a0a', padding: '28px 24px', borderTop: '3px solid #8B6914' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#ffffff', marginBottom: '8px' }}>{item.name}</h3>
                     <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>{item.desc}</p>
                   </div>
@@ -136,7 +136,7 @@ export default function ColourByDesignPage() {
             </div>
 
             {/* Process */}
-            <div style={{ background: '#0a0a0a', padding: '56px', marginBottom: '80px' }}>
+            <div style={{ background: '#141414', padding: 'clamp(24px,4vw,56px)', marginBottom: '80px' }}>
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '40px' }}>
                 Customer Experience Process
               </h2>
@@ -164,7 +164,7 @@ export default function ColourByDesignPage() {
             </div>
 
             {/* Case study */}
-            <div style={{ background: '#000000', padding: '48px', borderLeft: '4px solid #8B6914' }}>
+            <div style={{ background: '#141414', padding: 'clamp(24px,4vw,48px)', borderLeft: '4px solid #8B6914' }}>
               <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '16px' }}>
                 Case Study
               </span>
