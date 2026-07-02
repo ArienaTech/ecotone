@@ -121,6 +121,15 @@ export default function Hero() {
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '12%']);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.play().catch(() => {
+        // Autoplay blocked; video remains paused until user interaction
+      });
+    }
+  }, []);
+
   function toggleMute() {
     if (videoRef.current) {
       videoRef.current.muted = !muted;
@@ -138,6 +147,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
         style={{
           position: 'absolute',
           inset: 0,
@@ -155,12 +165,6 @@ export default function Hero() {
 
       {/* Gold atmosphere gradient */}
       <div style={{ position: 'absolute', top: 0, right: 0, width: '65%', height: '100%', background: 'radial-gradient(ellipse at 85% 25%, rgba(139,105,20,0.15) 0%, rgba(139,105,20,0.06) 45%, transparent 72%)', zIndex: 2, pointerEvents: 'none' }} />
-
-      {/* Subtle grid */}
-      <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}
-        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.08) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 2, pointerEvents: 'none' }}
-      />
 
       {/* Left accent line — hidden on mobile via media query */}
       <motion.div
