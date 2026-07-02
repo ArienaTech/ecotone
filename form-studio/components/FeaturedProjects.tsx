@@ -43,12 +43,6 @@ const featured = [
     src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Cladding%20Finishes/Queen%20Victoria%20Market.png',
     span: 1,
   },
-  {
-    title: 'Contemporary Architecture',
-    category: 'Concrete Facades',
-    src: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/Contemporary%20Architecture.jpeg',
-    span: 1,
-  },
 ];
 
 function GalleryCard({ item, index }: { item: typeof featured[0]; index: number }) {
