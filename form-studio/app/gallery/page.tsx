@@ -16,6 +16,8 @@ const categories = [
 const CBD = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/';
 const CLF = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Cladding%20Finishes/';
 const CNF = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Concrete%20Facades/';
+const FAF = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Factory%20Finishes/';
+const FTP = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Featured%20Projects/';
 
 // --- Colour By Design ---
 // Psychology: aspiration → premium → authority → emotion/local → versatility → personalisation
@@ -65,7 +67,45 @@ const concreteFacades = [
   { title: 'Urban Project',               src: CNF + 'Urban%20Project.jpeg'               },
 ].map((item) => ({ ...item, category: 'Concrete Facades' }));
 
-const allItems = [...colourByDesign, ...claddingFinishes, ...concreteFacades].map((item, i) => ({ ...item, id: i + 1 }));
+// --- Factory Finishes ---
+// Psychology: finished result first (wow factor) → quality close-ups build confidence →
+//             process/manufacturing shows capability → landmark project closes with prestige
+const factoryFinishes = [
+  { title: 'Factory Finish',          src: FAF + 'Factory%20Finish.jpg'          },
+  { title: 'Industrial Coating',      src: FAF + 'Industrial%20Coating.jpg'      },
+  { title: 'Factory Coating',         src: FAF + 'Factory%20Coating.jpg'         },
+  { title: 'Production Quality',      src: FAF + 'Production%20Quality.JPG'      },
+  { title: 'Industrial Application',  src: FAF + 'Industrial%20Application.jpg'  },
+  { title: 'Factory Application',     src: FAF + 'Factory%20Application.jpg'     },
+  { title: 'Manufacturing Detail',    src: FAF + 'Manufacturing%20Detail.jpg'    },
+  { title: 'Manufacturing Process',   src: FAF + 'Manufacturing%20Process.jpg'   },
+  { title: 'Factory Process',         src: FAF + 'Factory%20Process.jpg'         },
+  { title: 'Wee Hur Regent',          src: FAF + 'Wee%20Hur%20Regent.JPG'        },
+  { title: 'Woodford Prison Sample',  src: FAF + 'Woodford%20Prison%20Sample.png'},
+].map((item) => ({ ...item, category: 'Factory Finishes' }));
+
+// --- Featured Projects ---
+// Psychology: lead with prestige brand names (Saint Moritz) → architectural excellence →
+//             contemporary/modern aspiration → premium finish → bridge to broader portfolio
+const featuredProjects = [
+  { title: 'Saint Moritz Esplanade',  src: FTP + 'Saint%20Moritz%20Esplanade.jpg' },
+  { title: 'Saint Moritz',            src: FTP + 'Saint%20Moritz.jpg'             },
+  { title: 'Architectural Excellence',src: FTP + 'Architectural%20Excellence.jpg' },
+  { title: 'Contemporary Design',     src: FTP + 'Contemporary%20Design.jpg'      },
+  { title: 'Modern Architecture',     src: FTP + 'Modern%20Architecture.jpg'      },
+  { title: 'Premium Finish',          src: FTP + 'Premium%20Finish.jpg'           },
+  { title: 'Lusher Road Croydon',     src: FTP + 'Lusher%20Road%20Croydon.png'    },
+  { title: 'Lusher Road Artboard',    src: FTP + 'Lusher%20Road%20Artboard.png'   },
+  { title: 'Bridge Road Project',     src: FTP + 'Bridge%20Road%20Project.jpg'    },
+].map((item) => ({ ...item, category: 'Featured Projects' }));
+
+const allItems = [
+  ...colourByDesign,
+  ...claddingFinishes,
+  ...concreteFacades,
+  ...factoryFinishes,
+  ...featuredProjects,
+].map((item, i) => ({ ...item, id: i + 1 }));
 
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState('All');
