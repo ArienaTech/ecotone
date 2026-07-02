@@ -68,7 +68,6 @@ function GalleryCard({ item, index }: { item: typeof featured[0]; index: number 
         position: 'relative',
         overflow: 'hidden',
         gridColumn: item.span === 2 ? 'span 2' : 'span 1',
-        aspectRatio: item.span === 2 ? '16 / 7' : '4 / 3',
         textDecoration: 'none',
         background: '#1a1a1a',
         cursor: 'pointer',
@@ -211,8 +210,8 @@ export default function FeaturedProjects() {
           </motion.a>
         </div>
 
-        {/* Image grid — 3 columns, first card spans 2 */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px' }} className="projects-grid">
+        {/* Image grid — 3 columns, first card spans 2, fixed row height keeps all cards equal */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridAutoRows: '320px', gap: '4px' }} className="projects-grid">
           {featured.map((item, i) => (
             <GalleryCard key={item.title} item={item} index={i} />
           ))}
