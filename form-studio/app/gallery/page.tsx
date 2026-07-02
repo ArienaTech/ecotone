@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -222,15 +223,13 @@ export default function GalleryPage() {
                       (e.currentTarget.querySelector('.overlay') as HTMLElement | null)?.style.setProperty('opacity', '0');
                     }}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={item.src}
                       alt={item.title}
+                      fill
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       style={{
-                        width: '100%',
-                        height: '100%',
                         objectFit: 'cover',
-                        display: 'block',
                         transition: 'transform 0.4s ease',
                       }}
                     />

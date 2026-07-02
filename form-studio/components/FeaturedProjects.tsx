@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'motion/react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -63,12 +64,16 @@ function GalleryCard({ item, index, onOpen }: { item: typeof featured[0]; index:
         outline: 'none',
       }}
     >
-      <motion.img
+      <Image
         src={item.src}
         alt={item.title}
-        animate={{ scale: hovered ? 1.07 : 1 }}
-        transition={{ duration: 0.55, ease: EASE }}
-        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        fill
+        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+        style={{
+          objectFit: 'cover',
+          transform: hovered ? 'scale(1.07)' : 'scale(1)',
+          transition: `transform 0.55s cubic-bezier(${EASE.join(',')})`,
+        }}
       />
 
       <div style={{

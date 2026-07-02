@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -185,19 +186,16 @@ export default function PortfolioPage() {
                   </span>
 
                   {/* Project image */}
-                  <div style={{ width: '100%', height: '220px', overflow: 'hidden', marginBottom: '20px' }}>
-                    <img
+                  <div style={{ position: 'relative', width: '100%', height: '220px', overflow: 'hidden', marginBottom: '20px' }}>
+                    <Image
                       src={project.image}
                       alt={project.name}
+                      fill
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       style={{
-                        width: '100%',
-                        height: '100%',
                         objectFit: 'cover',
-                        display: 'block',
                         transition: 'transform 0.4s ease',
                       }}
-                      onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
-                      onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                     />
                   </div>
 
