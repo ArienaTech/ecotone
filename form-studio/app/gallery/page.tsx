@@ -1,17 +1,42 @@
 'use client';
 
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const categories = ['All', 'Colour By Design', 'Colour Matching', 'Factory Finishes', 'Functional Coatings', 'Urban Infrastructure', 'Weather Defense'];
 
-const galleryItems = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  category: categories[(i % (categories.length - 1)) + 1],
-  label: `Project ${i + 1}`,
-}));
+const BASE = 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Gallery/Colour%20by%20Design/';
+
+// Ordered for optimal sale psychology:
+// 1. Open with the most impressive/aspirational to grab attention (Design Excellence)
+// 2. Reinforce premium positioning early (Premium Complex, Waterfront Development)
+// 3. Build authority and breadth (Architectural Design, Commercial Hospitality, ECOTONE Presentation)
+// 4. Sustain emotion and local relevance (Eden View, Canvas QLD)
+// 5. Demonstrate versatility (Bond Project, Colour Design Project)
+// 6. Close with personalisation/invitation (Custom Colour Solution, Custom Project)
+const colourByDesignItems = [
+  { title: 'Design Excellence',      src: BASE + 'Design%20Excellence.jpeg',        ext: 'jpeg' },
+  { title: 'Premium Complex',        src: BASE + 'Premium%20Complex.jpeg',           ext: 'jpeg' },
+  { title: 'Waterfront Development', src: BASE + 'Waterfront%20Development.jpeg',    ext: 'jpeg' },
+  { title: 'Architectural Design',   src: BASE + 'Architectural%20Design.png',       ext: 'png'  },
+  { title: 'Commercial Hospitality', src: BASE + 'Commercial%20Hospitality.jpg',     ext: 'jpg'  },
+  { title: 'ECOTONE Presentation',   src: BASE + 'ECOTONE%20Presentation.jpg',       ext: 'jpg'  },
+  { title: 'Eden View',              src: BASE + 'Eden%20View.png',                  ext: 'png'  },
+  { title: 'Canvas QLD',             src: BASE + 'Canvas%20QLD.png',                 ext: 'png'  },
+  { title: 'Bond Project',           src: BASE + 'Bond%20Project.png',               ext: 'png'  },
+  { title: 'Colour Design Project',  src: BASE + 'Colour%20Design%20Project.png',    ext: 'png'  },
+  { title: 'Custom Colour Solution', src: BASE + 'Custom%20Colour%20Solution.jpg',   ext: 'jpg'  },
+  { title: 'Custom Project',         src: BASE + 'Custom%20Project.png',             ext: 'png'  },
+].map((item, i) => ({ ...item, id: i + 1, category: 'Colour By Design' }));
 
 export default function GalleryPage() {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filtered = activeCategory === 'All'
+    ? colourByDesignItems
+    : colourByDesignItems.filter((item) => item.category === activeCategory);
+
   return (
     <div style={{ overflowX: 'hidden' }}>
       <Navbar />
@@ -41,6 +66,7 @@ export default function GalleryPage() {
             {categories.map((cat) => (
               <button
                 key={cat}
+                onClick={() => setActiveCategory(cat)}
                 style={{
                   fontFamily: 'Inter',
                   fontWeight: 500,
@@ -48,10 +74,10 @@ export default function GalleryPage() {
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   padding: '8px 18px',
-                  background: cat === 'All' ? '#8B6914' : 'transparent',
-                  color: cat === 'All' ? '#ffffff' : '#0a0a0a',
+                  background: activeCategory === cat ? '#8B6914' : 'transparent',
+                  color: activeCategory === cat ? '#ffffff' : '#0a0a0a',
                   border: '1px solid',
-                  borderColor: cat === 'All' ? '#8B6914' : '#d6d6d6',
+                  borderColor: activeCategory === cat ? '#8B6914' : '#d6d6d6',
                   cursor: 'pointer',
                   transition: 'all 0.15s ease',
                 }}
@@ -65,43 +91,98 @@ export default function GalleryPage() {
         {/* Gallery grid */}
         <section style={{ background: '#f5f4f2', padding: '48px 6% 80px' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: '4px',
-              }}
-              className="materials-grid four-col"
-            >
-              {galleryItems.map((item, i) => (
-                <div
-                  key={item.id}
-                  style={{
-                    background: '#e8e5e0',
-                    aspectRatio: i % 5 === 0 ? '1 / 1.4' : '1 / 1',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'flex-end',
-                    padding: '16px',
-                    position: 'relative',
-                    overflow: 'hidden',
-                    cursor: 'pointer',
-                    transition: 'transform 0.2s ease',
-                    gridRow: i % 5 === 0 ? 'span 1' : 'auto',
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.02)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-                >
-                  <span style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '11px', color: '#a0a0a0', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '24px' }}>
-                    Image {item.id}
-                  </span>
-                  <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '10px', color: '#ffffff', background: '#8B6914', padding: '3px 10px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                    {item.category}
-                  </span>
-                </div>
-              ))}
-            </div>
+            {filtered.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: '80px 0', fontFamily: 'Inter', color: '#888', fontSize: '15px' }}>
+                No projects in this category yet. Check back soon.
+              </div>
+            ) : (
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(4, 1fr)',
+                  gap: '4px',
+                }}
+              >
+                {filtered.map((item, i) => (
+                  <div
+                    key={item.id}
+                    style={{
+                      position: 'relative',
+                      aspectRatio: i % 5 === 0 ? '3 / 4' : '1 / 1',
+                      overflow: 'hidden',
+                      cursor: 'pointer',
+                      background: '#e8e5e0',
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget.querySelector('img') as HTMLImageElement | null)?.style.setProperty('transform', 'scale(1.06)');
+                      (e.currentTarget.querySelector('.overlay') as HTMLElement | null)?.style.setProperty('opacity', '1');
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget.querySelector('img') as HTMLImageElement | null)?.style.setProperty('transform', 'scale(1)');
+                      (e.currentTarget.querySelector('.overlay') as HTMLElement | null)?.style.setProperty('opacity', '0');
+                    }}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        transition: 'transform 0.4s ease',
+                      }}
+                    />
+                    {/* Persistent title bar */}
+                    <div style={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      background: 'linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 100%)',
+                      padding: '28px 14px 14px',
+                    }}>
+                      <span style={{
+                        fontFamily: 'Space Grotesk',
+                        fontWeight: 700,
+                        fontSize: '12px',
+                        color: '#ffffff',
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        display: 'block',
+                      }}>
+                        {item.title}
+                      </span>
+                      <span style={{
+                        fontFamily: 'Inter',
+                        fontWeight: 500,
+                        fontSize: '10px',
+                        color: '#C4902E',
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        marginTop: '3px',
+                        display: 'block',
+                      }}>
+                        {item.category}
+                      </span>
+                    </div>
+                    {/* Hover overlay */}
+                    <div
+                      className="overlay"
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: 'rgba(139,105,20,0.18)',
+                        opacity: 0,
+                        transition: 'opacity 0.3s ease',
+                        pointerEvents: 'none',
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 
