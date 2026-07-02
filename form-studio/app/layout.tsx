@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   keywords: 'colour coatings, functional coatings, building materials, sustainable coatings, architectural finishes, Arabia',
   manifest: '/manifest.json',
   icons: {
-    icon: '/favicon.svg',
-    apple: '/icons/icon-192x192.png',
+    icon: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Ecotone-logo.png',
+    apple: 'https://cpvmmxiiwlzkqapnimws.supabase.co/storage/v1/object/public/Ecotone/Ecotone-logo.png',
   },
   appleWebApp: {
     capable: true,
