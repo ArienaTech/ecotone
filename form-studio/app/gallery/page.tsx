@@ -409,13 +409,19 @@ export default function GalleryPage() {
               alignItems: 'center',
             }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
+              key={activeLightboxItem.src}
               src={activeLightboxItem.src}
               alt={activeLightboxItem.title}
+              width={1600}
+              height={1067}
+              quality={85}
+              sizes="(max-width: 639px) 90vw, 80vw"
               style={{
                 maxWidth: '90vw',
                 maxHeight: '78vh',
+                width: 'auto',
+                height: 'auto',
                 objectFit: 'contain',
                 display: 'block',
                 boxShadow: '0 24px 80px rgba(0,0,0,0.6)',
