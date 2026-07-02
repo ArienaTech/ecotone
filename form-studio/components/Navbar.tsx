@@ -32,14 +32,14 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%]"
         style={{
           height: '64px',
-          background: 'rgba(245,244,242,0.97)',
+          background: 'rgba(0,0,0,0.97)',
           backdropFilter: 'blur(12px)',
-          borderBottom: '1px solid #d6d6d6',
+          borderBottom: '1px solid #1f1f1f',
         }}
       >
         {/* Logo */}
         <a href="/" className="flex items-baseline no-underline" style={{ textDecoration: 'none' }}>
-          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '16px', color: '#0a0a0a', letterSpacing: '-0.01em' }}>
+          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '16px', color: '#ffffff', letterSpacing: '-0.01em' }}>
             ECOTONE
           </span>
         </a>
@@ -54,11 +54,11 @@ export default function Navbar() {
               fontSize: '12px',
               letterSpacing: '0.10em',
               textTransform: 'uppercase',
-              color: '#0a0a0a',
+              color: '#ffffff',
               textDecoration: 'none',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#8B6914')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#ffffff')}
           >
             Home
           </a>
@@ -76,7 +76,7 @@ export default function Navbar() {
                 fontSize: '12px',
                 letterSpacing: '0.10em',
                 textTransform: 'uppercase',
-                color: '#0a0a0a',
+                color: '#ffffff',
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
@@ -86,7 +86,7 @@ export default function Navbar() {
                 padding: '0',
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = '#8B6914')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#ffffff')}
             >
               Services <ChevronDown size={12} />
             </button>
@@ -103,9 +103,9 @@ export default function Navbar() {
                     left: '50%',
                     transform: 'translateX(-50%)',
                     marginTop: '12px',
-                    background: '#ffffff',
-                    border: '1px solid #e5e5e5',
-                    boxShadow: '0 8px 32px rgba(0,0,0,0.10)',
+                    background: '#0a0a0a',
+                    border: '1px solid #2a2a2a',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
                     minWidth: '220px',
                     zIndex: 100,
                   }}
@@ -120,18 +120,18 @@ export default function Navbar() {
                         fontFamily: 'Space Grotesk',
                         fontWeight: 400,
                         fontSize: '13px',
-                        color: '#0a0a0a',
+                        color: 'rgba(255,255,255,0.8)',
                         textDecoration: 'none',
-                        borderBottom: '1px solid #f0f0f0',
+                        borderBottom: '1px solid #1f1f1f',
                         transition: 'background 0.12s ease, color 0.12s ease',
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = '#f5f4f2';
+                        e.currentTarget.style.background = '#1a1a1a';
                         e.currentTarget.style.color = '#8B6914';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = 'transparent';
-                        e.currentTarget.style.color = '#0a0a0a';
+                        e.currentTarget.style.color = 'rgba(255,255,255,0.8)';
                       }}
                     >
                       {link.label}
@@ -151,7 +151,7 @@ export default function Navbar() {
                       textDecoration: 'none',
                       transition: 'background 0.12s ease',
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.background = '#f5f4f2')}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = '#1a1a1a')}
                     onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
                   >
                     All Services →
@@ -166,16 +166,16 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               style={{
-                fontFamily: 'Inter',
-                fontWeight: 400,
-                fontSize: '12px',
-                letterSpacing: '0.10em',
-                textTransform: 'uppercase',
-                color: '#0a0a0a',
-                textDecoration: 'none',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#8B6914')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#0a0a0a')}
+              fontFamily: 'Inter',
+              fontWeight: 400,
+              fontSize: '12px',
+              letterSpacing: '0.10em',
+              textTransform: 'uppercase',
+              color: '#ffffff',
+              textDecoration: 'none',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#8B6914')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#ffffff')}
             >
               {link.label}
             </a>
@@ -225,7 +225,7 @@ export default function Navbar() {
           onClick={() => setMobileOpen(true)}
           style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }}
         >
-          <Menu size={22} color="#0a0a0a" />
+          <Menu size={22} color="#ffffff" />
         </button>
       </nav>
 

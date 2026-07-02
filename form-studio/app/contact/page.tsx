@@ -47,14 +47,14 @@ export default function ContactPage() {
         </section>
 
         {/* Contact info + form */}
-        <section style={{ background: '#f5f4f2', padding: 'clamp(60px,8vh,100px) 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div
             style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '80px', alignItems: 'start' }}
             className="contact-grid two-col"
           >
             {/* Info panel */}
             <div>
-              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '24px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
+              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '24px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
                 Contact Information
               </h2>
 
@@ -63,10 +63,10 @@ export default function ContactPage() {
                   <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Phone
                   </span>
-                  <a href="tel:+971558934401" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#0a0a0a', textDecoration: 'none', display: 'block', marginBottom: '4px' }}>
+                  <a href="tel:+971558934401" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#ffffff', textDecoration: 'none', display: 'block', marginBottom: '4px' }}>
                     UAE: +971 55 893 4401
                   </a>
-                  <a href="tel:+966501109913" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#0a0a0a', textDecoration: 'none', display: 'block' }}>
+                  <a href="tel:+966501109913" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#ffffff', textDecoration: 'none', display: 'block' }}>
                     Saudi Arabia: +966 50 110 9913
                   </a>
                 </div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Email
                   </span>
-                  <a href="mailto:info@ecotonearabia.com" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#0a0a0a', textDecoration: 'none' }}>
+                  <a href="mailto:info@ecotonearabia.com" style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '15px', color: '#ffffff', textDecoration: 'none' }}>
                     info@ecotonearabia.com
                   </a>
                 </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   <span style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#8B6914', letterSpacing: '0.16em', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Location
                   </span>
-                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '15px', color: '#0a0a0a', lineHeight: 1.6 }}>
+                  <p style={{ fontFamily: 'Space Grotesk', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
                     Building A1 – Dubai Silicon Oasis<br />Dubai, United Arab Emirates
                   </p>
                 </div>

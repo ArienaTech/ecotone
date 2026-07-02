@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -142,7 +143,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* Projects grid */}
-        <section style={{ background: '#f5f4f2', padding: '80px 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div
               style={{
@@ -158,7 +159,7 @@ export default function PortfolioPage() {
                   href={`/portfolio/${project.slug}`}
                   style={{
                     display: 'block',
-                    background: '#ffffff',
+                    background: '#0a0a0a',
                     padding: '36px 28px',
                     textDecoration: 'none',
                     transition: 'transform 0.2s ease',
@@ -185,26 +186,23 @@ export default function PortfolioPage() {
                   </span>
 
                   {/* Project image */}
-                  <div style={{ width: '100%', height: '220px', overflow: 'hidden', marginBottom: '20px' }}>
-                    <img
+                  <div style={{ position: 'relative', width: '100%', height: '220px', overflow: 'hidden', marginBottom: '20px' }}>
+                    <Image
                       src={project.image}
                       alt={project.name}
+                      fill
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       style={{
-                        width: '100%',
-                        height: '100%',
                         objectFit: 'cover',
-                        display: 'block',
                         transition: 'transform 0.4s ease',
                       }}
-                      onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
-                      onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                     />
                   </div>
 
-                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '18px', color: '#0a0a0a', marginBottom: '12px', lineHeight: 1.3 }}>
+                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '18px', color: '#ffffff', marginBottom: '12px', lineHeight: 1.3 }}>
                     {project.name}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.65, marginBottom: '20px' }}>
+                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '20px' }}>
                     {project.description}
                   </p>
                   <span style={{ fontFamily: 'Space Grotesk', fontWeight: 600, fontSize: '12px', color: '#8B6914', textTransform: 'uppercase', letterSpacing: '0.06em' }}>

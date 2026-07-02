@@ -135,7 +135,7 @@ export default function AboutPage() {
           <section
             key={section.label}
             style={{
-              background: i % 2 === 0 ? '#ffffff' : '#f5f4f2',
+              background: i % 2 === 0 ? '#0a0a0a' : '#0a0a0a',
               padding: 'clamp(60px,8vh,100px) 6%',
             }}
           >
@@ -171,7 +171,7 @@ export default function AboutPage() {
                     fontFamily: 'Space Grotesk',
                     fontWeight: 800,
                     fontSize: 'clamp(24px, 2.5vw, 40px)',
-                    color: '#0a0a0a',
+                    color: '#ffffff',
                     lineHeight: 1.1,
                     letterSpacing: '-0.02em',
                     textTransform: 'uppercase',
@@ -188,7 +188,7 @@ export default function AboutPage() {
                       fontFamily: 'Inter',
                       fontWeight: 400,
                       fontSize: '16px',
-                      color: '#505050',
+                      color: 'rgba(255,255,255,0.6)',
                       lineHeight: 1.75,
                     }}
                   >

@@ -36,7 +36,7 @@ function StatCard({ number, suffix, label, delay }: { number: number; suffix: st
       onViewportEnter={() => setStarted(true)}
       style={{ borderLeft: '2px solid #8B6914', paddingLeft: '16px' }}
     >
-      <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 3vw, 30px)', color: '#0a0a0a', letterSpacing: '-0.03em', display: 'block', lineHeight: 1 }}>
+      <span style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 3vw, 30px)', color: '#ffffff', letterSpacing: '-0.03em', display: 'block', lineHeight: 1 }}>
         {count}{suffix}
       </span>
       <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '11px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '4px', display: 'block' }}>
@@ -51,7 +51,7 @@ function MarqueeContent() {
     <>
       {marqueeItems.map((name, i) => (
         <span key={i} className="flex items-center">
-          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(10,10,10,0.4)' }}>
+          <span style={{ fontFamily: 'Space Grotesk', fontWeight: 300, fontSize: '13px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
             {name}
           </span>
           {i < marqueeItems.length - 1 && (
@@ -82,7 +82,7 @@ function AnimatedHeadline() {
             initial={{ y: '110%', opacity: 0 }}
             animate={{ y: '0%', opacity: 1 }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.2 + i * 0.1 }}
-            style={{ display: 'inline-block', color: '#0a0a0a' }}
+            style={{ display: 'inline-block', color: '#ffffff' }}
           >
             {word.text}
           </motion.span>
@@ -119,16 +119,16 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={sectionRef} id="hero" style={{ background: '#f5f4f2', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
+    <section ref={sectionRef} id="hero" style={{ background: '#0a0a0a', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
       <motion.div className="bg-brand-text" style={{ y: bgY }}>ECO</motion.div>
 
       {/* Gold atmosphere gradient */}
-      <div style={{ position: 'absolute', top: 0, right: 0, width: '65%', height: '100%', background: 'radial-gradient(ellipse at 85% 25%, rgba(139,105,20,0.09) 0%, rgba(139,105,20,0.04) 45%, transparent 72%)', zIndex: 1, pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 0, right: 0, width: '65%', height: '100%', background: 'radial-gradient(ellipse at 85% 25%, rgba(139,105,20,0.15) 0%, rgba(139,105,20,0.06) 45%, transparent 72%)', zIndex: 1, pointerEvents: 'none' }} />
 
       {/* Subtle grid */}
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2, delay: 0.5 }}
-        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.06) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none' }}
+        style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(139,105,20,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(139,105,20,0.08) 1px, transparent 1px)', backgroundSize: '80px 80px', zIndex: 1, pointerEvents: 'none' }}
       />
 
       {/* Left accent line — hidden on mobile via media query */}
@@ -173,9 +173,9 @@ export default function Hero() {
             onMouseEnter={(e) => (e.currentTarget.style.background = '#664A0E')} onMouseLeave={(e) => (e.currentTarget.style.background = '#8B6914')}>
             Explore Services
           </a>
-          <a href="/contact" style={{ background: 'transparent', color: '#0a0a0a', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', border: '1.5px solid #0a0a0a', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = '#0a0a0a'; e.currentTarget.style.color = '#ffffff'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0a0a0a'; }}>
+          <a href="/contact" style={{ background: 'transparent', color: '#ffffff', fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '13px', letterSpacing: '0.08em', padding: '13px 28px', border: '1.5px solid rgba(255,255,255,0.5)', textDecoration: 'none', textTransform: 'uppercase', display: 'inline-block', transition: 'all 0.15s ease' }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#0a0a0a'; e.currentTarget.style.borderColor = '#ffffff'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'; }}>
             Project Enquiry
           </a>
         </motion.div>
@@ -192,7 +192,7 @@ export default function Hero() {
 
         {/* Divider */}
         <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.8, ease: EASE, delay: 1.0 }}
-          style={{ height: '1px', background: '#0a0a0a', width: '100%', marginBottom: '24px', transformOrigin: 'left' }} />
+          style={{ height: '1px', background: 'rgba(255,255,255,0.15)', width: '100%', marginBottom: '24px', transformOrigin: 'left' }} />
 
         {/* Marquee */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.1 }} style={{ overflow: 'hidden', marginBottom: '32px' }}>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'motion/react';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -63,12 +64,16 @@ function GalleryCard({ item, index, onOpen }: { item: typeof featured[0]; index:
         outline: 'none',
       }}
     >
-      <motion.img
+      <Image
         src={item.src}
         alt={item.title}
-        animate={{ scale: hovered ? 1.07 : 1 }}
-        transition={{ duration: 0.55, ease: EASE }}
-        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        fill
+        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+        style={{
+          objectFit: 'cover',
+          transform: hovered ? 'scale(1.07)' : 'scale(1)',
+          transition: `transform 0.55s cubic-bezier(${EASE.join(',')})`,
+        }}
       />
 
       <div style={{
@@ -168,7 +173,7 @@ export default function FeaturedProjects() {
   const activeItem = lightboxIndex !== null ? featured[lightboxIndex] : null;
 
   return (
-    <section style={{ background: '#f5f4f2', padding: '120px 6%', overflow: 'hidden' }}>
+    <section style={{ background: '#0a0a0a', padding: 'clamp(64px,10vh,120px) 6%', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Header */}
@@ -189,7 +194,7 @@ export default function FeaturedProjects() {
                 whileInView={{ y: '0%' }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-                style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(32px, 4vw, 64px)', color: '#0a0a0a', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '16px' }}
+                style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(32px, 4vw, 64px)', color: '#ffffff', lineHeight: 0.96, letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '16px' }}
               >
                 Featured Projects
               </motion.h2>
@@ -199,7 +204,7 @@ export default function FeaturedProjects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#606060', maxWidth: '560px', lineHeight: 1.7 }}
+              style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.55)', maxWidth: '560px', lineHeight: 1.7 }}
             >
               A selection of our most iconic projects — from landmark facades to bespoke colour solutions across residential, commercial and infrastructure.
             </motion.p>

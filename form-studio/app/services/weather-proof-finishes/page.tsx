@@ -67,40 +67,40 @@ export default function WeatherProofFinishesPage() {
           </div>
         </section>
 
-        <section style={{ background: '#ffffff', padding: 'clamp(60px,8vh,100px) 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   Why Conventional Coatings Fail in the Gulf
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '20px' }}>
                   Standard paint systems form a surface film that expands and contracts with temperature fluctuations, eventually cracking, peeling and allowing moisture to penetrate. In the Gulf climate, this cycle accelerates dramatically.
                 </p>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                   Buildings repainted every 3–5 years represent a significant and avoidable ongoing cost. ECOTONE eliminates that cycle entirely with a single application.
                 </p>
               </div>
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   How ECOTONE Weather Defense Works
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '20px' }}>
                   ECOTONE is a mineral stain, not a paint. It chemically bonds into concrete, masonry, and cementitious surfaces at a molecular level — becoming part of the substrate rather than sitting on top of it.
                 </p>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                   The result is a breathable, permanently bonded finish that cannot crack, peel or delaminate regardless of temperature or UV exposure.
                 </p>
               </div>
             </div>
 
             {/* Key properties */}
-            <div style={{ background: '#0a0a0a', padding: '56px', marginBottom: '80px' }}>
+            <div style={{ background: '#141414', padding: 'clamp(24px,4vw,56px)', marginBottom: '80px' }}>
               <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '36px' }}>
                 Key Performance Properties
               </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="projects-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="projects-grid three-col">
                 {keyProperties.map((prop) => (
                   <div key={prop.title} style={{ borderTop: '2px solid #8B6914', paddingTop: '20px' }}>
                     <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '15px', color: '#C4902E', marginBottom: '10px' }}>{prop.title}</h3>
@@ -113,7 +113,7 @@ export default function WeatherProofFinishesPage() {
             {/* Compatible surfaces + applications */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', marginBottom: '48px' }} className="about-grid two-col">
               <div>
-                <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>Compatible Surfaces</h3>
+                <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>Compatible Surfaces</h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                   {['Precast concrete', 'GFRC', 'GRC', 'Fair-faced concrete', 'Fibre cement', 'Brick', 'Masonry', 'CFC'].map((s) => (
                     <span key={s} style={{ background: '#F5EAD0', border: '1px solid #D4A838', color: '#664A0E', fontFamily: 'Inter', fontWeight: 500, fontSize: '12px', padding: '5px 12px' }}>{s}</span>
@@ -121,10 +121,10 @@ export default function WeatherProofFinishesPage() {
                 </div>
               </div>
               <div>
-                <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>Gulf Applications</h3>
+                <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>Gulf Applications</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   {['Building facades and residential towers', 'Commercial and hospitality developments', 'Heritage district restoration and replication', 'Coastal and marine-adjacent buildings', 'Government and civic infrastructure', 'Colour rescue and repair on existing structures'].map((a) => (
-                    <p key={a} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#505050', display: 'flex', gap: '8px' }}>
+                    <p key={a} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.6)', display: 'flex', gap: '8px' }}>
                       <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0 }}>→</span>{a}
                     </p>
                   ))}

@@ -8,7 +8,7 @@ export default function CtaSection() {
       id="contact"
       style={{
         background: '#d42a1a',
-        padding: '120px 6%',
+        padding: 'clamp(64px,10vh,120px) 6%',
         textAlign: 'center',
       }}
     >

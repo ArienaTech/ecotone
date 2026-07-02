@@ -131,7 +131,7 @@ export default function EcotoneProductsPage() {
         </section>
 
         {/* Technical presentations */}
-        <section style={{ background: '#8B6914', padding: '48px 6%' }}>
+        <section style={{ background: '#8B6914', padding: 'clamp(32px,5vw,48px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <p style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.7)', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: '16px' }}>
               Technical Presentations
@@ -175,14 +175,14 @@ export default function EcotoneProductsPage() {
         </section>
 
         {/* Products grid */}
-        <section id="catalogue" style={{ background: '#f5f4f2', padding: '80px 6%' }}>
+        <section id="catalogue" style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="products-grid three-col">
               {products.map((product) => (
                 <div
                   key={product.name}
                   style={{
-                    background: '#ffffff',
+                    background: '#0a0a0a',
                     padding: '36px 28px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -206,10 +206,10 @@ export default function EcotoneProductsPage() {
                     {product.category}
                   </span>
 
-                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '18px', color: '#0a0a0a', marginBottom: '10px' }}>
+                  <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '18px', color: '#ffffff', marginBottom: '10px' }}>
                     {product.name}
                   </h3>
-                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.65, marginBottom: '20px', flex: 1 }}>
+                  <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, marginBottom: '20px', flex: 1 }}>
                     {product.description}
                   </p>
 
@@ -227,11 +227,11 @@ export default function EcotoneProductsPage() {
                   </div>
 
                   <div style={{ marginBottom: '20px' }}>
-                    <p style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: '#808080', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+                    <p style={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '11px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
                       Applications
                     </p>
                     {product.applications.map((a) => (
-                      <p key={a} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: '#606060', marginBottom: '4px', display: 'flex', gap: '6px' }}>
+                      <p key={a} style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '12px', color: 'rgba(255,255,255,0.55)', marginBottom: '4px', display: 'flex', gap: '6px' }}>
                         <span style={{ color: '#8B6914', flexShrink: 0 }}>→</span>{a}
                       </p>
                     ))}
@@ -267,7 +267,7 @@ export default function EcotoneProductsPage() {
         </section>
 
         {/* CTA */}
-        <section id="technical" style={{ background: '#0a0a0a', padding: '80px 6%', textAlign: 'center' }}>
+        <section id="technical" style={{ background: '#0a0a0a', padding: 'clamp(48px,8vh,80px) 6%', textAlign: 'center' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
             <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(28px, 3.5vw, 48px)', color: '#ffffff', letterSpacing: '-0.02em', textTransform: 'uppercase', marginBottom: '20px' }}>
               Need Technical Support?

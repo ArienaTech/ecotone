@@ -67,23 +67,23 @@ export default function UrbanInfrastructurePage() {
           </div>
         </section>
 
-        <section style={{ background: '#ffffff', padding: 'clamp(60px,8vh,100px) 6%' }}>
+        <section style={{ background: '#0a0a0a', padding: 'clamp(60px,8vh,100px) 6%' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', marginBottom: '80px' }} className="about-grid two-col">
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   Infrastructure Challenges in the Gulf
                 </h2>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75, marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, marginBottom: '20px' }}>
                   Gulf infrastructure faces extreme demands — intense UV, severe thermal expansion, salt air in coastal zones and the constant visual scrutiny of landmark public projects. Conventional coatings require frequent maintenance cycles that disrupt operations and create ongoing cost.
                 </p>
-                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: '#505050', lineHeight: 1.75 }}>
+                <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75 }}>
                   ECOTONE&apos;s permanent silicate bonding technology eliminates this cycle with a single factory applied application, backed by a 25 year guarantee.
                 </p>
               </div>
               <div>
-                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+                <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: 'clamp(22px, 2.2vw, 36px)', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.02em', marginBottom: '20px' }}>
                   Why Specify ECOTONE for Infrastructure
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -96,7 +96,7 @@ export default function UrbanInfrastructurePage() {
                   ].map((item) => (
                     <div key={item} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                       <span style={{ color: '#8B6914', fontWeight: 700, flexShrink: 0, marginTop: '2px' }}>✓</span>
-                      <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: '#505050', lineHeight: 1.6 }}>{item}</span>
+                      <span style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '14px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -105,14 +105,14 @@ export default function UrbanInfrastructurePage() {
 
             {/* Where we work */}
             <div>
-              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#0a0a0a', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
+              <h2 style={{ fontFamily: 'Space Grotesk', fontWeight: 800, fontSize: '28px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '-0.01em', marginBottom: '32px' }}>
                 Where We Work
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2px' }} className="projects-grid three-col">
                 {whereWeWork.map((item) => (
-                  <div key={item.name} style={{ background: '#f5f4f2', padding: '32px 24px', borderTop: '3px solid #8B6914' }}>
-                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#0a0a0a', marginBottom: '12px' }}>{item.name}</h3>
-                    <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: '#606060', lineHeight: 1.65 }}>{item.desc}</p>
+                  <div key={item.name} style={{ background: '#0a0a0a', padding: '32px 24px', borderTop: '3px solid #8B6914' }}>
+                    <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '16px', color: '#ffffff', marginBottom: '12px' }}>{item.name}</h3>
+                    <p style={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65 }}>{item.desc}</p>
                   </div>
                 ))}
               </div>
